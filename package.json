@@ -1,0 +1,22 @@
+{
+  "name": "bv-online.project",
+  "version": "1.0.0",
+  "description": "Website voor BV-Online, www.bvonline.nl",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Velddier/bv-online.project.git"
+  },
+  "author": "Frederik DeVilder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Velddier/bv-online.project/issues"
+  },
+  "homepage": "https://github.com/Velddier/bv-online.project#readme",
+  "devDependencies": {
+    "sass": "^1.32.11"
+  }
+}
