@@ -4,7 +4,8 @@
   "description": "Website voor BV-Online, www.bvonline.nl",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "sass:watch": "sass --watch sass:css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/Velddier/bv-online.project#readme",
   "devDependencies": {
     "sass": "^1.32.11"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3"
   }
 }
