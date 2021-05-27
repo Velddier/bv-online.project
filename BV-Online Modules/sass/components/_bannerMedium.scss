@@ -1,0 +1,56 @@
+.bannerMedium {
+  background: url(https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  margin: 0;
+  margin-left: -$sidePadding;
+  margin-right: -$sidePadding;
+  padding: 4rem;
+  background-color: rgb(32, 25, 22);
+
+  height: fit-content;
+
+  &Container {
+    background-color: $color-white--80;
+    padding: 4rem 0;
+    padding-left: $sidePadding;
+    padding-right: $sidePadding;
+
+    border-radius: 2rem;
+
+    display: flex;
+    align-items: baseline;
+    gap: 4vw;
+  }
+
+  &__header {
+    display: initial;
+  }
+
+  &__spacer {
+    width: 0;
+    height: 0;
+    border-top: 1.2rem solid transparent;
+    border-bottom: 1.2rem solid transparent;
+    border-left: .8rem solid $color-black--10;
+    margin-left: -2rem;
+    align-self: center;
+
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__paragraph {
+    font-size: $p-fontSize*1.1;
+    max-width: 80ch;
+  }
+
+  &__button {
+    background-color: red;
+  }
+}

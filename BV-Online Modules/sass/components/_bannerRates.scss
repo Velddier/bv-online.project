@@ -1,0 +1,98 @@
+.bannerRates {
+
+  background-color: orangered;
+  margin: 0;
+  margin-left: -$sidePadding;
+  margin-right: -$sidePadding;
+
+  &Container {
+    padding: 0;
+    
+  }
+
+  &__layerTop {
+    background-color: $color-primary-dark;
+    padding: 2rem;
+    padding-left: $sidePadding;
+    padding-right: $sidePadding;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__copy {
+    color: $color-white;
+  }
+  
+  &__layerBottom {
+    background: linear-gradient($color-primary-dark--80, $color-primary-dark--20), url(https://images.unsplash.com/photo-1497366216548-37526070297c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 0;
+    box-shadow: inset 0rem 0.8rem 2rem $color-black--20; 
+    padding-left: $sidePadding;
+    padding-right: $sidePadding;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2vw;
+  }
+}
+
+.ratesCard {
+
+  &Container {
+    background-color: $color-white--70;
+    width: 24vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+
+    border-radius: 0.4rem;
+  }
+
+  &__header h3{
+    margin-top: 2rem;
+  }
+
+  &__img {
+    object-fit: cover;
+    background-color: $color-black;
+    height: 12rem;
+    width: 100%;
+  }
+
+  &__description p {
+    font-size: 1rem;
+    line-height: 1.1;
+    font-weight: 500;
+    margin: 2rem 2vw;
+    text-align: left;
+  }
+
+  &__figures {
+    height: 4.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__button {
+    background-color: $color-button-primary;
+    color: $color-white;
+    margin: 1.8rem;
+    width: 100%;
+    height: 4rem;
+
+  }
+
+
+}

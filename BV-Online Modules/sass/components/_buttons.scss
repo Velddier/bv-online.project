@@ -1,0 +1,36 @@
+.button {
+  font-size: $p-fontSize;
+  font-weight: 600;
+  letter-spacing: -0.06rem;
+  word-spacing: 0.4rem;
+  cursor: pointer;
+  border: none;
+  
+  transition: all 0.2s;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  &:hover {
+    top: $lift-lowest;
+    left: $lift-lowest/1.62;
+  }
+  
+  &--small {
+    color: $color-button-primary;
+    background-color: transparent;
+  }
+
+  &--large {
+    color: $color-white;
+    background: $color-button-primary;
+    padding: 0.8rem 2.4rem;
+    padding-bottom: 0.9rem;
+    padding-right: 2.5rem;
+    border-radius: 0.8rem;
+    text-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.651);
+    box-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.315);
+  }
+}

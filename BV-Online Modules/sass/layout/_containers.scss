@@ -1,0 +1,45 @@
+.containerHalf {
+  margin: 0;
+  margin-left: -$sidePadding;
+  margin-right: -$sidePadding;
+  padding: 0 4vw;
+  // background-color: orangered;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+  &__sideLeft{
+    // background-color: green;
+    width: 50%;
+  }
+  &__sideRight{
+    // background-color: green;
+    width: 50%;
+  }
+}
+
+.containerThird {
+  margin: 0 -2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+
+  &__sideLeft{
+    & img {
+      width: 10rem;
+      height: auto;
+    }
+  }
+  
+  &__sideRight{
+    max-width: 30vw;
+    & img {
+      width: 16rem;
+      height: auto;
+    }
+  }
+}

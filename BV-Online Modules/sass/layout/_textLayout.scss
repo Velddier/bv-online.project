@@ -1,0 +1,57 @@
+.paragraphs{
+  margin: 0 -2rem;
+  
+  max-width: 150ch;
+  width: 100%;
+  min-width: 44ch;
+  
+  &Container {
+    padding: 4vw;
+  }
+
+  &__header {
+    margin-bottom: 0.8vw;
+    margin-left: -.2rem;
+  }
+
+  &__text {
+    margin-bottom: 2vw;
+
+    &:last-of-type {
+      margin-bottom: 1vw;
+    }
+  }
+
+  &__button {
+    color: $color-primary-dark;
+    padding: 0.4rem 0;
+    justify-content: flex-end;
+    &::after {
+      content: ' ->';
+      margin-left: 0.2rem;
+    }
+  }
+  
+}
+
+
+.quoted {
+  $quotationMarkMargin: 0;
+  position: relative;
+  &::before {
+    content: '“';
+    display: inline-block;
+    font-size: inherit;
+    position: absolute;
+    top:0;
+    left: $quotationMarkMargin;
+  }
+  &::after {
+    content: '„';
+    display: inline-block;
+    font-size: inherit;
+    position: absolute;
+    bottom:0;
+    right: $quotationMarkMargin;
+  }
+}

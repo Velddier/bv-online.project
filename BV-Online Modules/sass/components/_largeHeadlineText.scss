@@ -1,0 +1,29 @@
+.headliner {
+
+  margin: 0 auto;
+  color: $color-primary-dark;
+  background-color: transparent;
+  vertical-align: center;
+
+  max-width: 50vw;
+  &Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4vw;
+  }
+
+  &__icon {
+    & img {
+      width: 4.8vw;
+      height: auto;
+    }
+  }
+
+  &__text {
+
+    &--center {
+      text-align: center;
+    }
+  }
+}

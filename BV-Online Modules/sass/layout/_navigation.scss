@@ -1,0 +1,75 @@
+.navbar {
+  background-color: $color-white;
+  z-index: 100000;
+  margin: 0;
+  margin-left: -$sidePadding;
+  margin-right: -$sidePadding;
+  box-shadow: 0 0.1rem 1.2rem $shadow-30;
+  // MAKES THE NAVBAR STICK ON TOP
+  // position: sticky;
+  // top:0;
+  // left: 0;
+
+  &Container__main {
+    height: $navbarHeight;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &Container__sub {
+    background-color: $color-primary;
+    color: $color-white;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__brand {
+    max-height: 4rem;
+    max-width: 24rem;
+    width: 20vw;
+    min-width: 16rem;
+    margin-left: -2.4vw;
+  
+  }
+  &__navigation {
+    margin-left: auto;
+  }
+  &__link {
+    font-size: 1.2rem;
+    margin-right: 1.6rem;
+    border-bottom:solid 0 $color-primary-light;
+    transition: all 0.1s;
+    
+    &:hover {
+      position: relative;
+      top: $lift-lowest;
+      left: $lift-lowest;
+      border-bottom:solid 0.16rem $color-primary-light;
+    }
+    &:active {
+      position: relative;
+      top: 0;
+      left: $lift-lowest;
+      border-bottom:none;
+    }
+  }
+  &__button {
+    background-color: $color-button-primary;
+    width: 10rem;
+    height: 2.8rem;
+    margin: 0 2rem;
+    color: $color-white;
+    border-radius: $borderRadius;
+    text-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.651);
+    box-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.315);
+  }
+  &__message {
+    margin: 0 auto;
+    font-size: $h4-fontSize;
+
+    &--close {
+      margin: 0 1rem;
+    }
+  }
+}

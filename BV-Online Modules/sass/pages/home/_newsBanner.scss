@@ -1,0 +1,53 @@
+.bannerNews {
+  margin: 0;
+  margin-left: -$sidePadding;
+  margin-right: -$sidePadding;
+  background-color: $color-white;
+  box-shadow: 0 0.1rem 1.2rem -0.5rem $shadow-30;
+
+  margin-bottom: $elementSpacer;
+
+  &Container {
+    padding: 2rem 4vw;
+  }
+
+  &__header h3 {
+    margin: 0;
+  }
+
+  &__contentList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3.2vw;
+  }
+
+  &__itemLink {
+    font-size: $p-fontSize;
+    max-width: 32rem;
+    min-width: 17rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.02) translate(-0.1rem, -0.1rem);
+    }
+
+    &:active {
+      transform: scale(1.01) translate(-0.06rem, -0.06rem);
+    }
+
+    &::before {
+      content: '▶';
+      font-size: 1rem;
+      margin-right: 0.2rem;
+    }
+  }
+}
