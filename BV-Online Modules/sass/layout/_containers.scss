@@ -1,44 +1,111 @@
 .containerHalf {
-  margin: 0;
-  margin-left: -$sidePadding;
-  margin-right: -$sidePadding;
-  padding: 0 4vw;
+  margin: $verticalSpacing--medium;
+  @include sidePadElement;
+  padding: 0 $pageTextPadding;
+  @include mediumLayoutPadding;
   // background-color: orangered;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 4vw;
-  &__sideLeft{
-    // background-color: green;
-    width: 50%;
+  gap: 6vw;
+
+  @media screen and (max-width: $bp-smaller) {
+    flex-direction: column-reverse;    
+    margin: 0;
   }
-  &__sideRight{
+
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: $borderRadius;
+  }
+
+  .testimonialQuote__profileImg {
+    $imgSize: 12rem;
+    height: $imgSize;
+    width: $imgSize;
+    border-radius: 100rem;
+    margin-bottom: $imgSize/6.25;
+    box-shadow: 0.2rem 0.2rem 0.6rem $shadow-30;
+  }
+
+  svg {
+    font-size: 12vw;
+    color: $color-primary-dark;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__sideLeft {
     // background-color: green;
     width: 50%;
+    @media screen and (max-width: $bp-smaller) {
+      width: 100%;
+    }
+  }
+
+  &__sideRight {
+    // background-color: green;
+    width: 50%;
+    @media screen and (max-width: $bp-smaller) {
+     width: 100%; 
+    }
   }
 }
 
 .containerThird {
-  margin: 0 -2rem;
+  margin: $verticalSpacing--medium;
+  @include sidePadElement;
+  padding: 0 $pageTextPadding;
+  @include mediumLayoutPadding;
   background-color: transparent;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 2vw;
 
-  &__sideLeft{
+  @media screen and (max-width: $bp-smaller) {
+      flex-direction: column-reverse;
+      margin: 0;
+  }
+
+  svg {
+    font-size: 8vw;
+    color: $color-primary-dark;
+    background-color: $shadow-10;
+    border-radius: 100px;
+  }
+
+  &__sideLeft {
+    width: 66vw;
+    @media screen and (max-width: $bp-smaller) {
+    min-width: none; 
+    width: 100%;
+    max-width: none;
+    }
+    
     & img {
       width: 10rem;
       height: auto;
     }
   }
   
-  &__sideRight{
-    max-width: 30vw;
+  &__sideRight {
+    min-width: 24rem;
+    width: 33vw;
+    max-width: 36rem;
+    @media screen and (max-width: $bp-smaller) {
+    min-width: none; 
+    width: 100%;
+    max-width: none;
+    }
+
     & img {
-      width: 16rem;
+      border-radius: $borderRadius;
+      width: 100%;
       height: auto;
     }
   }

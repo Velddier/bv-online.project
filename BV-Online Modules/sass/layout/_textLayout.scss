@@ -1,12 +1,17 @@
 .paragraphs{
   margin: 0 -2rem;
   
-  max-width: 150ch;
-  width: 100%;
   min-width: 44ch;
+  max-width: 66vw;
+  @media screen and (max-width: $bp-smaller) {
+      min-width: none;
+      max-width: none;
+      width: 88vw;
+  }
   
   &Container {
-    padding: 4vw;
+    padding: 0 $pageTextPadding;
+    @include mediumLayoutPadding;
   }
 
   &__header {

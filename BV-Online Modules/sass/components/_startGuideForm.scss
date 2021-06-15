@@ -1,0 +1,89 @@
+.bannerSignup {
+  margin: $verticalSpacing--large;
+  @include sidePadElement;
+  background-color: $color-primary;
+  background: linear-gradient((90deg), $color-secondary-dark, $color-secondary--50);
+  color: $color-black;
+  overflow: hidden;
+
+  &Container {
+    z-index: 10;
+    padding: $verticalSpacing--large $pageTextPadding;
+    @include mediumLayoutPadding;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: $bp-medium) {
+      justify-content: space-around;      
+    }
+    @media screen and (max-width: $bp-smaller) {
+      flex-direction: column;  
+      gap: $verticalSpacing--medium;
+    }
+  }
+
+  // LEFT SIDE
+  &__leftSide {
+    z-index: 10;
+    max-width: 90ch;
+  }
+
+  &__largeHeader {
+    font-size: $h2-fontSize;
+    color: $color-white;
+    @include underline($color: $color-secondary-dark);
+  }
+  
+  &__paragraph {
+    font-size: $h3-fontSize;
+    color: $color-white;
+  }
+
+  // RIGHT SIDE
+  &__form {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $verticalSpacing--smaller;
+  }
+
+  &__smallHeader {
+    align-self: flex-start;
+    margin-bottom: -$verticalSpacing--small;
+    font-size: $h3-fontSize;
+  }
+
+  &__button {
+    margin-top: 1.2rem;
+    background-color: $color-button-primary;
+    width: 94%;
+    color: $color-white;
+  }
+
+  &__buttonDescription {
+    margin-left: auto;
+    width: fit-content;
+  }
+
+  &__summary {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  &__summary--item {
+    font-size: $h4-fontSize;
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+
+  &__figure {
+    z-index: 1;
+    position: absolute;
+    right: 24vw;
+    opacity: 0.3;
+    height: 32rem;
+    width: 32rem;
+  }
+}

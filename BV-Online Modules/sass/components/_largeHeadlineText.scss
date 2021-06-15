@@ -1,13 +1,15 @@
 .headliner {
 
-  margin: 0 auto;
+  margin: $verticalSpacing--largest auto;
   color: $color-primary-dark;
   background-color: transparent;
   vertical-align: center;
 
-  max-width: 50vw;
+  max-width: 66vw;
+
   &Container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2.4vw;
@@ -18,7 +20,11 @@
       width: 4.8vw;
       height: auto;
     }
+    & svg {
+      font-size: 4vw;
+    }
   }
+
 
   &__text {
 

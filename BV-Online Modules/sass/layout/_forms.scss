@@ -8,8 +8,9 @@ input {
   font-family: inherit;
   font-weight: 500;
   font-size: $p-fontSize;
+  min-width: 32rem;
   width: 24vw;
-  border-radius: 0.3rem;
+  border-radius: $borderRadius;
   border: none;
   box-shadow: 0.3rem 0.3rem 1.2rem $shadow-30;
   padding: 0.8rem;
@@ -27,8 +28,9 @@ textarea {
   font-family: inherit;
   font-weight: 500;
   font-size: $p-fontSize;
+  min-width: 32rem;
   width: 24vw;
-  border-radius: 0.3rem;
+  border-radius: $borderRadius;
     border: none;
     box-shadow: 0.3rem 0.3rem 1.2rem $shadow-30;
   padding: 0.8rem;

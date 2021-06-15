@@ -2,74 +2,177 @@
   background-color: $color-white;
   z-index: 100000;
   margin: 0;
-  margin-left: -$sidePadding;
-  margin-right: -$sidePadding;
+  @include sidePadElement;
   box-shadow: 0 0.1rem 1.2rem $shadow-30;
+
   // MAKES THE NAVBAR STICK ON TOP
-  // position: sticky;
-  // top:0;
-  // left: 0;
+  position: sticky;
+  top:0;
+  left: 0;
 
   &Container__main {
     height: $navbarHeight;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 3rem;
+    @media screen and (max-width: $bp-small) {
+      
+    }
   }
-  &Container__sub {
-    background-color: $color-primary;
-    color: $color-white;
-    height: 2.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+
   &__brand {
+    @include noSelectionStyle;
     max-height: 4rem;
-    max-width: 24rem;
-    width: 20vw;
-    min-width: 16rem;
-    margin-left: -2.4vw;
-  
+    max-width: 16rem;
+    width: 12vw;
+    min-width: 8rem;
+    margin-left: 1rem;
+    
   }
+
   &__navigation {
     margin-left: auto;
+    margin-right: 2vw;
+    transform: translateY(5px);
   }
+
   &__link {
-    font-size: 1.2rem;
-    margin-right: 1.6rem;
-    border-bottom:solid 0 $color-primary-light;
+    @include noSelectionStyle;
+    font-size: 1.3rem;
+    margin-right: 1.3rem;
+    margin-bottom: 0;
+    border-bottom: solid 0 $color-primary-light;
     transition: all 0.1s;
-    
+
     &:hover {
       position: relative;
       top: $lift-lowest;
       left: $lift-lowest;
-      border-bottom:solid 0.16rem $color-primary-light;
+      border-bottom: solid 0.16rem $color-primary-light;
     }
+
     &:active {
       position: relative;
       top: 0;
       left: $lift-lowest;
-      border-bottom:none;
+      border-bottom: none;
     }
   }
-  &__button {
-    background-color: $color-button-primary;
-    width: 10rem;
-    height: 2.8rem;
-    margin: 0 2rem;
-    color: $color-white;
-    border-radius: $borderRadius;
-    text-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.651);
-    box-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.315);
+
+  /* HIDDEN NAVIGATION */
+  &__dropdown {
+    z-index: 9999;
+    transition: all 0.2s;
+    display: none;
+
+    &Container {
+      background-color: $color-white;
+      position: absolute;
+      // top: -24rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+      
+      margin: 0;
+      margin-top: 6rem;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &Icon {
+      display: none;
+      font-size: 1.6rem;
+      line-height: 1;
+      padding: 0.8rem;
+      margin-left: auto;
+      justify-self: flex-end;
+      margin-right: 2rem;
+      color: $color-black;
+      &:hover {
+        color: $color-button-primary;
+      }
+      
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+
+    & a {
+      text-align: center;
+    }
   }
+
+  &__button {
+    @include noSelectionStyle;
+    background-color: $color-button-primary;
+    color: $color-white;
+    text-shadow: 0.1rem 0.1rem 0.8rem $shadow-30;
+
+    & * {
+      font-size: 1.6rem;
+      transform: translateY(3px);
+    }
+    
+    & h3::after {
+      content: ' ▸';
+    }
+    
+    @media screen and (max-width: $bp-small) {
+      & * {
+        font-size: 1.4rem;
+        transform: translateY(7px);
+        text-shadow: none;
+     }
+    }
+  }
+
+  /* UNDERNAV MESSAGE */
+
+  &Container__sub {
+    background-color: $color-primary;
+    padding: 0;
+  }
+
   &__message {
-    margin: 0 auto;
-    font-size: $h4-fontSize;
+    transform: translateY(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+
+    & .text {
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
 
     &--close {
-      margin: 0 1rem;
+      font-size: 1.5rem;
+      transform: translatey(3px);
+      margin-left: 2rem;
+
+      &:hover {
+        color: grey;
+      }
     }
   }
+
+  @media screen and (max-width: $bp-medium) {
+    &Container__main {
+      padding: 0.4rem;
+      height: 3rem;
+    }
+    &__button {
+      margin-right: 0.8rem;
+      height: 1rem;
+    }
+
+    &__navigation {
+      // display: none;
+    }
+  }
+
 }
+
+

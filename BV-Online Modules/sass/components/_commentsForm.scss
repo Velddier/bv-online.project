@@ -1,21 +1,28 @@
 .comments {
   margin: 0;
-  margin-left: -$sidePadding;
-  margin-right: -$sidePadding;
-  background: linear-gradient(rgba(241, 196, 48, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.unsplash.com/photo-1560264418-c4445382edbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&);
-  background-origin: border-box;
+  margin-top: $verticalSpacing--largest;
+  @include sidePadElement;
+  background: linear-gradient($color-primary-dark--70, $color-primary-dark--70), url(https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
+  background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
 
   &Container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
+    padding: $verticalSpacing--large $pageTextPadding;
   }
 
   &__header {
     color: $color-white;
   }
 
-  &__form {}
+  &__form {
+    & button {
+      width: 100%;
+      color: $color-white;
+      background-color: $color-button-primary;
+    }
+  }
 }

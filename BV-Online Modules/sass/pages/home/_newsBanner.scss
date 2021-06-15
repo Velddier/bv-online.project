@@ -1,38 +1,67 @@
 .bannerNews {
   margin: 0;
-  margin-left: -$sidePadding;
-  margin-right: -$sidePadding;
+  @include sidePadElement;
   background-color: $color-white;
-  box-shadow: 0 0.1rem 1.2rem -0.5rem $shadow-30;
-
-  margin-bottom: $elementSpacer;
+  margin-bottom: $verticalSpacing--smaller;
 
   &Container {
-    padding: 2rem 4vw;
+    padding: $verticalSpacing--medium $pageTextPadding $verticalSpacing--small;
+    @include mediumLayoutPadding;
+
   }
 
   &__header h3 {
     margin: 0;
+    margin-right: 4rem;
+    margin-bottom: $verticalSpacing--small;
+    flex-shrink: 1;
   }
 
   &__contentList {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 3.2vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: $bp-smaller) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    gap: 2rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: row;
   }
 
   &__itemLink {
-    font-size: $p-fontSize;
-    max-width: 32rem;
-    min-width: 17rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    max-width: 120ch;
 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* number of lines to show */
-    -webkit-box-orient: vertical;
+    @media screen and (max-width: $bp-smaller) {
+      max-width: none;
+    }
+
+    line-height: 1.6;
+
+    & .text {
+      margin-right: 0.8rem;
+
+      @media screen and (max-width: $bp-smaller) {
+        margin-right: 0.4rem;
+      }
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+
+      @media screen and (max-width: $bp-smaller) {
+        -webkit-line-clamp: 2;
+      }
+
+      /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+
+    font-weight: 400;
 
     transition: all 0.2s;
 
@@ -44,10 +73,32 @@
       transform: scale(1.01) translate(-0.06rem, -0.06rem);
     }
 
+    position: relative;
+
     &::before {
-      content: '▶';
-      font-size: 1rem;
-      margin-right: 0.2rem;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -0.4rem;
+      height: 90%;
+      width: 0.2rem;
+      border-radius: 100px;
+      background-color: $color-primary--40;
+    }
+  }
+
+  position: relative;
+
+  &__more {
+    position: absolute;
+    right: $pageTextPadding;
+    bottom: -2rem;
+    width: 10rem;
+  }
+
+  &__more {
+    &:hover {
+      border-bottom: solid 1px $color-primary-dark;
     }
   }
 }

@@ -1,7 +1,6 @@
 .appContainer {
   padding: 0 $sidePadding;
-}
-
-img {
-  max-width: 50vw;
+  background-image: radial-gradient($color-primary--40 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-color: #ffffff;
 }

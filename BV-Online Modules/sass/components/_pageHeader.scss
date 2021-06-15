@@ -1,39 +1,44 @@
 .pageHeader {
   margin: 0;
-  margin-left: -$sidePadding;
-  margin-right: -$sidePadding;
+  @include sidePadElement;
+  background-size: auto;
+  margin-bottom: $verticalSpacing--larger;
 
   &__banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80);
     height: 8rem;
-    padding: 2vw 4vw;
+    overflow: hidden;
+    position: relative;
 
     display: flex;
     align-items: flex-end;
+    padding: $verticalSpacing--large $pageTextPadding;
+    @include mediumLayoutPadding;
   }
 
   &__title {
     color: $color-white;
     text-transform: capitalize;
     text-shadow: 0.2rem 0.2rem 0.6rem $shadow-30;
+    margin-bottom: -$verticalSpacing--small;
   }
 
   &__navigation {
     background-color: white;
-    padding: 1rem 2vw;
+    padding: $verticalSpacing--small $pageTextPadding;
+    @include mediumLayoutPadding;
 
     box-shadow: 0 0.1rem 0.6rem -0.4rem $shadow-30;
 
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: baseline;
     gap: 1.2rem;
   }
 
   &__link {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     height: 2rem;
 
     border-bottom: 0.4px solid transparent;
@@ -43,7 +48,7 @@
     }
 
     &:not(:last-child)::after {
-      content: '|';
+      content: ' ';
       margin: 1.2rem;
       border: none;
     }

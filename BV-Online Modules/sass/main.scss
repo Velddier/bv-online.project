@@ -16,6 +16,7 @@
 @import "./components/commentsForm";
 @import "./components/largeHeadlineText";
 @import "./components/pageHeader";
+@import "./components/startGuideForm";
 @import "./components/testimonial";
 
 // LAYOUT
@@ -24,9 +25,13 @@
 @import "./layout/forms";
 @import "./layout/layout";
 @import "./layout/navigation";
+@import "./layout/breakpoints";
 @import "./layout/textLayout";
 
 // pages
+@import "./pages/contact/contactBanner";
+@import "./pages/faqs/mostAsked.scss";
+@import "./pages/faqs/faqCategory";
 @import "./pages/home/homeBanner";
 @import "./pages/home/newsBanner";
 @import "./pages/terms";

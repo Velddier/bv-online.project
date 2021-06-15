@@ -1,0 +1,34 @@
+@mixin underline($color) {
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0.4rem;
+    background-color: $color;
+  }
+}
+
+@mixin sidePadElement {
+  margin-left: -$sidePadding;
+  margin-right: -$sidePadding;
+}
+
+@mixin layoutTextPadding {
+  padding-left: $pageTextPadding;
+  padding-right: $pageTextPadding;
+}
+
+@mixin noSelectionStyle {
+  &::selection {
+    background: none;
+    color: none;
+  }
+}
+
+
+@mixin mediumLayoutPadding {
+  @media screen and (max-width: $bp-medium) {
+    padding-left: $pageTextPadding--small;
+    padding-right: $pageTextPadding--small;
+  }
+}

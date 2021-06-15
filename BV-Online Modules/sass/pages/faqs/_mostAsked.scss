@@ -1,0 +1,167 @@
+.faqMost {
+  @include sidePadElement;
+  margin-top: 12rem;
+
+  &Container {
+    padding-right: $pageTextPadding;
+    padding-left: $pageTextPadding;
+    @include mediumLayoutPadding;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    height: fit-content;
+
+    color: $color-white;
+
+    @media screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  &__leftSide {
+    padding: 3.2rem 4rem;
+    background-color: $color-primary;
+    border-radius: 2.8rem;
+    width: 66vw;
+    overflow-y: scroll;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 0.6rem 1rem $shadow-30;
+    max-height: 60rem;
+    @media screen and (max-width: $bp-medium) {
+      width: 100%;
+      padding: 3rem;
+      border-radius: 0;
+      margin-left: -3rem;
+      overflow: hidden;
+    }
+    @media screen and (max-width: $bp-smaller) {
+      margin-left: 0;
+      width: fit-content;
+      margin: 0 -1rem;
+      padding: $verticalSpacing--smaller;
+    }
+
+  }
+
+  &__rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    width: 45vw;
+
+    @media screen and (max-width: $bp-medium) {
+      flex-direction: row;
+      gap: 2rem;
+      width: 100%;
+    }
+
+    &Copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: $color-white;
+      border: solid 1rem $color-secondary;
+      min-height: 10rem;
+      padding: 2rem 6rem;
+      border-radius: 2rem;
+      color: $color-black; 
+
+      box-shadow: 1rem 0 $color-secondary-dark;
+      @media screen and (max-width: $bp-medium) {
+        height: 100%;
+        padding: 1rem;
+      }
+
+      & h4 {
+        font-size: $h4-fontSize;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__header {
+    font-size: $h2-fontSize;
+    margin-bottom: $verticalSpacing--smaller;
+  }
+
+  &__listQuestions {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding-left: 2rem;
+    @media screen and (max-width: $bp-medium) {
+      padding-left: 1rem;
+      gap: 1rem;
+    }
+  }
+
+  &__questionContainer {
+    position: relative;
+    padding-bottom: 1.2rem;
+    max-width: 66vw;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: $color-primary-dark;
+      height: 100%;
+      width: 0.4rem;
+      border-radius: $borderRadius;
+      position: absolute;
+      left: -1.4rem;
+    }
+
+    @media screen and (max-width: $bp-smaller) {
+     max-width: none; 
+    }
+  }
+
+  &__question {
+    font-size: $h4-fontSize;
+    font-weight: 500;
+  }
+
+  &__answer {
+    font-size: $p-fontSize+0.1;
+    max-width: 88ch;
+    @media screen and (max-width: $bp-smaller) {
+      max-width: none; 
+    }
+  }
+
+  &__cta {
+    color: $color-black;
+    background-color: $color-white;
+    box-shadow: 0 0.6rem 1rem $shadow-30;
+    padding: 2rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    height: fit-content;
+
+    @media screen and (max-width: $bp-medium) {
+      height: 100%;
+    }
+
+    & h3 {
+      @include underline($color: $color-primary);
+    }
+
+    & a {
+      color: $color-white;
+      background-color: $color-button-primary;
+      width: 15rem;
+      margin: $verticalSpacing--small 0;
+    }
+  }
+}
