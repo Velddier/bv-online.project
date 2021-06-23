@@ -1,0 +1,110 @@
+.processHeader {
+  margin: 0;
+
+  &Container {
+    overflow: hidden;
+  }
+
+  &__titleFigureContainer {
+    margin: 0 $pageTextPadding;
+    padding: $verticalSpacing--medium 0;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__title {
+    // margin: 0 auto;
+    max-width: 32rem;
+    & h1.text {
+      transform: translateX(-0.8rem);
+      &::before {
+        content: '▶';
+        color: $color-primary;
+      }
+    }
+    
+    & subtitle.sub {
+      color: $color-black--60;
+    }
+
+    & p.text {
+      transform: translateY(1.2rem);
+    }
+  }
+  
+  &__figure {
+
+    & img,
+    svg {
+      height: 40vh;
+      max-height: 40rem;
+      width: auto;
+    }
+  }
+
+  &__progressBarContainer {
+    z-index: 9999;
+
+    position: sticky;
+    top: $navbarHeight;
+    left: 0;
+
+    margin-bottom: $sectionSpacerVertical;
+    padding: $verticalSpacing--smaller $pageTextPadding;
+    
+    background-color: $color-white;
+    box-shadow: 0 4px 8px -8px $shadow-20;
+
+  }
+
+  &__progressBar {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-primary;
+    opacity: 0.2;
+    
+    & svg.stepIcon {
+      font-size: $emphasis-fontSize;
+    }
+    
+    & span.stepText {
+      font-size: $h5-fontSize;
+    }
+
+    &Divider {
+      transform: translateY(1.6rem);
+      
+      margin: 0 1.6rem;
+      width: 16vw;
+      max-width: 20rem;
+      height: 2.4px;
+      
+      background: linear-gradient(90deg, $color-primary--20, $color-primary--20);
+      border-radius: $borderRadius;
+
+      &--active {
+        background: linear-gradient(90deg, $color-primary, $color-primary--20);
+      }
+      &--completed {
+        background: linear-gradient(90deg, $color-primary, $color-primary);
+      }
+    }
+
+    &--current {
+      // color: $color-primary;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}
+

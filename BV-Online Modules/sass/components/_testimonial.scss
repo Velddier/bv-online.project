@@ -1,40 +1,87 @@
-.testimonialQuote {
-  margin: 4rem auto;
-  width: fit-content;
-  transform: translateY(-1rem);
+.testimonial {
+  margin: 0 $pageTextPadding;
+  margin-bottom: $sectionSpacerVertical;
 
   &Container {
+    z-index: 100;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 5rem;
   }
+  
+  position: relative;
+  &__shape {
+    z-index: 1;
+    position: absolute;
+    inset: 0;
 
-  &__profileImg {
-    $imgSize: 8rem;
-    height: $imgSize;
-    width: $imgSize;
-    border-radius: 100rem;
-    margin-bottom: $imgSize/6.25;
-    box-shadow: 0.2rem 0.2rem 0.6rem $shadow-30;
-  }
-
-  &__text {
-    color: $color-primary-dark;
-    text-align: center;
-    min-width: 90ch;
-    width: 16vw;
-    max-width: 140ch;
-    margin-bottom: 0.8rem;
-  }
-
-  &__source h5 {
     width: 100%;
+    height: 100%;
+    
+    background-color: $color-primary-light--20;
 
-    &::before {
-      content: "—";
+    &1 {  
+      clip-path: polygon(98% 2%, 95% 88%, 81% 16%, 53% 19%, 9% 5%);
+    }
+    &2 {  
+      clip-path: polygon(16% 87%, 39% 90%, 100% 100%, 3% 97%, 6% 50%);
     }
   }
 
+  &__userQuote {
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 
+  &__userProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: $verticalSpacing--smaller;
+
+    & img.profileImg {
+      $imgSize: 8rem;
+      height: $imgSize;
+      width: $imgSize;
+      
+      border-radius: 100px;
+    }
+  }
+
+  &__blockquote {
+    text-align: justify;
+    & blockquote {
+      max-width: 40ch;
+      color: $color-primary-dark;
+      text-align: center;
+      &::before {
+        content: open-quote;
+        color: $color-primary;
+      }
+      &::after {
+        content: close-quote;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__source {
+    margin-left: auto;
+    margin-right: 3.2rem;
+    opacity: 0.8;
+  }
+
+  &__text {
+    $sideBorderDistance: 3.2rem;
+    border-left: 1px solid $color-primary--40;
+    padding-left: $sideBorderDistance;
+    & p {
+      max-width: 120ch;
+    }
+  }
 }

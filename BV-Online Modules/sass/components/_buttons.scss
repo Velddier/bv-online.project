@@ -1,14 +1,19 @@
 .button {
+
+  @include noSelectionStyle;
+
+  transform: translateX(-8px);
+
+  
+  box-shadow: 0.8rem 0 1px $color-primary-dark;
+  border: solid 4px transparent;
+
   font-size: $emphasis-fontSize;
   font-weight: 600;
   letter-spacing: -0.06rem;
   word-spacing: 0.4rem;
-  cursor: pointer;
-  border: solid 4px transparent;
-
   
-
-  box-shadow: 0.8rem 0 1px $color-primary-dark;
+  cursor: pointer;
 
 
   border-radius: $borderRadius;
@@ -21,25 +26,25 @@
   justify-content: center;
   position: relative;
 
-  transition: all 0.2s;
+  transition: all 0s;
 
   &:hover {
     filter: brightness(1.1);
-    transform: translateX(0);
-    box-shadow: 0.8rem 0 1px $color-primary-dark;
+    transform: translateX(-9px);
+    box-shadow: 0.9rem 0 1px $color-primary-dark;
   }
   &:active {
     position: relative;
+    transform: translateX(-1px);
     filter: brightness(0.9);
     box-shadow: 0.2rem 0 1px $color-primary-dark;
-    transform: translateX(0.7rem);
   }
   
   &--small {
     box-shadow: none;
     &:hover {
-      bottom: 0.05rem;
       filter: none;
+      bottom: 0.05rem;
       box-shadow: none;
     }
   }

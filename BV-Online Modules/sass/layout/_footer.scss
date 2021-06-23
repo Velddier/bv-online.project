@@ -1,22 +1,28 @@
 .footer {
   margin: 0;
-  margin-top: $verticalSpacing--larger;
 
-  @include sidePadElement;
+  // @include sidePadElement;
 
   background-color: $color-white;
 
   &Container {
+    padding: 0 $pageTextPadding;
     padding-bottom: 12rem;
+
+    box-shadow: 0 -0.2rem 0.8rem $shadow-20;
   }
 
   /* TOP LAYER */
-  &__layerTop {
-    padding: 0 .8vw;
-    padding-top: 0.8rem;
-    height: 4.8rem;
-    background-color: $color-primary;
-    color: $color-white;
+  &__layerContact {
+    z-index: 1000;
+    position: sticky;
+    bottom: 0;
+    padding: 0 1.6rem;
+    // padding-top: 0.8rem;
+    height: 3.2rem;
+    background-color: $color-white;
+    border-top: solid 0.1rem $color-primary--50;
+    color: $color-primary;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +34,6 @@
     gap: 1rem;
 
     &--logo {
-      opacity: 0.8;
       font-size: 1.8rem;
 
       &:hover {
@@ -37,9 +42,7 @@
     }
   }
 
-  &__contactUs {
-    opacity: 0.8;
-    
+  &__contactUs {   
     display: flex;
     align-items: center;
     gap: 0;
@@ -55,16 +58,15 @@
 
   /* MAIN FOOTER */
   &__main {
-    padding: 2vw;
-    height: 14rem;
-    display: flex;
+    padding-top: $verticalSpacing--large;
   }
 
 
   &__navigation {
     display: flex;
     align-items: flex-start;
-    gap: 4vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     @media screen and (max-width: $bp-smaller) {
       margin-top: $verticalSpacing--medium;
@@ -83,13 +85,13 @@
     justify-content: center;
 
     @media screen and (max-width: $bp-smaller) {
-      HERE
+      /* HERE */
     }
   }
 
   &__logoSubline {
+    font-size: $h5-fontSize;
     opacity: 0.6;
-    font-size: 1.2rem;
   }
 
   &__list {
@@ -101,8 +103,9 @@
   }
 
   &__listHeader h4 {
-    margin-bottom: 0.4rem;
-    opacity: 0.6;
+    margin-bottom: 0.1rem;
+    opacity: 0.4;
+    font-weight: 600;
   }
 
   &__link {
@@ -112,6 +115,5 @@
     &:hover {
       color: $color-button-primary;
     }
-
   }
 }

@@ -1,0 +1,142 @@
+@mixin sectionStyleCommon {
+  margin-bottom: $sectionSpacerVertical;
+  background-color: $color-white;
+  overflow: hidden;
+  
+  &Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    column-gap: 2.4rem;
+    // grid-area: 'a b';
+  }
+  
+  &__copy {
+    padding-top: $verticalSpacing--medium;
+    // grid-area: 'a';
+    max-width: 98ch;
+
+    & h3 {
+      max-width: 28ch;
+    }
+
+    & p:last-of-type {
+      margin-bottom: $verticalSpacing--medium;
+    }
+
+    $listSize: 2rem;
+    ul {
+      margin: $listSize*2 0;
+      padding: $listSize*0.33 0;
+      padding-left: $listSize;
+      padding-bottom: $listSize*0.66;
+
+      border-left: $listSize*.05 solid $color-primary;
+
+      list-style: none;
+    }
+
+    li {
+      font-size: $emphasis-fontSize;
+      font-weight: 400;
+      color: $color-black;
+
+      &::before {
+        content: '▪';
+        margin-right: $listSize*0.2;
+        color: $color-primary-dark--90;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: $listSize*0.62;
+      }
+    }
+  }
+
+  // &__figure {
+  //   // width: 26vw;
+  // }
+
+  &__ctaRow {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2vw;
+  }
+
+  &__button {
+    width: 40%;
+    background-color: $color-button-primary;
+    text-align: center;
+    color: $color-white;
+  }
+}
+
+@mixin contentFigureStyle {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & svg {
+    font-size: $svgSize;
+    color: $color-primary-dark--90;
+    min-height: 16rem;
+  }
+}
+
+/* SVG SIZE */
+$svgSize: 8vw;
+
+
+
+.contentSectionCard {
+  margin: 0 $pageTextPadding - 3.6;
+  @include sectionStyleCommon;
+
+  $borderSize: $verticalSpacing--small;
+  border-left: $borderSize solid $color-primary;
+  border-radius: $borderRadius;
+  box-shadow: 2px 2px 8px $shadow-10;
+
+  &Container {
+    padding: $borderSize $borderSize*2;
+  }
+
+  &__figure {
+    margin: -$borderSize 0;
+    margin-right: -$borderSize*2;
+
+    grid-area: 'b';
+
+    overflow: hidden;
+
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include contentFigureStyle;
+  }
+}
+
+
+.contentSection {
+  margin: 0 $pageTextPadding;
+
+  @include sectionStyleCommon;
+
+  &__figure {
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    @include contentFigureStyle;
+    clip-path: polygon(4% 4%, 100% 0%, 96% 96%, 0% 100%);
+
+
+  }
+}
+

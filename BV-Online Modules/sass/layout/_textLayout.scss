@@ -1,17 +1,75 @@
-.paragraphs{
-  margin: 0 -2rem;
-  
-  min-width: 44ch;
-  max-width: 66vw;
-  @media screen and (max-width: $bp-smaller) {
-      min-width: none;
-      max-width: none;
-      width: 88vw;
+.quoted {
+  $quotationMarkMargin: 0;
+  position: relative;
+
+  &::before {
+    content: '“';
+    position: absolute;
+    top: 0;
+    left: $quotationMarkMargin;
+
+    display: inline-block;
+
+    font-size: inherit;
   }
+
+  &::after {
+    content: '„';
+    position: absolute;
+    bottom: 0;
+    right: $quotationMarkMargin;
+
+    display: inline-block;
+
+    font-size: inherit;
+  }
+}
+
+
+.pageHeader {
+
+  &__h2 {
+    margin: 0 $pageTextPadding;
+    margin-bottom: $verticalSpacing--small;
+    padding-top: $navbarHeight*1.1;
   
+    width: fit-content;
+    max-width: 14ch;
+
+    &::after {
+      content: '';
+      transform: translateY(-2rem);
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: $color-primary-light;
+    }
+
+    @media screen and (max-width: $bp-small) {
+      margin: 0 auto;
+      margin-bottom: $verticalSpacing--medium;
+      width: 100%;
+    }
+  }
+}
+
+
+.singleParagraph {
+  // margin: 0 -2rem;
+  margin: 0 auto $sectionSpacerVertical;
+
+  min-width: 44ch;
+  max-width: 125ch;
+
+  @media screen and (max-width: $bp-smaller) {
+    min-width: none;
+    max-width: none;
+    width: 88vw;
+  }
+
   &Container {
-    padding: 0 $pageTextPadding;
-    @include mediumLayoutPadding;
+    // padding: 0 $pageTextPadding;
+    // @include mediumLayoutPadding;
   }
 
   &__header {
@@ -28,35 +86,42 @@
   }
 
   &__button {
-    color: $color-primary-dark;
     padding: 0.4rem 0;
+    color: $color-primary-dark;
     justify-content: flex-end;
+
     &::after {
       content: ' ->';
       margin-left: 0.2rem;
     }
   }
-  
+
 }
 
 
 .quoted {
   $quotationMarkMargin: 0;
   position: relative;
+
   &::before {
     content: '“';
-    display: inline-block;
-    font-size: inherit;
     position: absolute;
-    top:0;
+    top: 0;
     left: $quotationMarkMargin;
+
+    display: inline-block;
+
+    font-size: inherit;
   }
+
   &::after {
     content: '„';
-    display: inline-block;
-    font-size: inherit;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     right: $quotationMarkMargin;
+
+    display: inline-block;
+
+    font-size: inherit;
   }
 }

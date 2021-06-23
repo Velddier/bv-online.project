@@ -5,543 +5,479 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BV-Online Components</title>
+  <title>Home&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren</title>
   <link rel="stylesheet" href="css/main.css" />
 
 
   <script defer src=".\node_modules\@fortawesome\fontawesome-free\css\all.css"></script>
   <script defer src=".\node_modules\@fortawesome\fontawesome-free\js\all.js"></script>
-
-
-
-
 </head>
 
 <body>
-  <div class="appContainer" id="#app">
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <div class="navbarContainer__main">
-        <!-- Brand logo -->
-        <img class="navbar__brand" src="img/logo.svg" alt="BV-Online logo">
-        <!-- Navigation links -->
-        <div class="navbar__navigation">
-          <a href="#" class="navbar__link" id="#linkid">Home</a>
-          <a href="#" class="navbar__link" id="#linkid">Ontdek BV-Online</a>
-          <a href="#" class="navbar__link" id="#linkid">Veelgestelde vragen</a>
-          <a href="#" class="navbar__link" id="#linkid">Onze praktijk</a>
-          <a href="#" class="navbar__link" id="#linkid">Contact</a>
-        </div>
-        <div class="navbar__dropdownIcon">
-          <i class="fas fa-bars"></i>
-        </div>
-        <div class='navbar__dropdown'>
-          <div class="navbar__dropdownContainer">
-            <a href="#" class="navbar__link" id="#linkid">Home</a>
-            <a href="#" class="navbar__link" id="#linkid">Ontdek BV-Online</a>
-            <a href="#" class="navbar__link" id="#linkid">Veelgestelde vragen</a>
-            <a href="#" class="navbar__link" id="#linkid">Onze praktijk</a>
-            <a href="#" class="navbar__link" id="#linkid">Contact</a>
-          </div>
-        </div>
-        <!-- CTA Button -->
-        <div href="#" class="navbar__CTA button navbar__button button" id="#button__startRegistratie">
-          <h3>Start registratie</h3>
-        </div>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbarContainer">
+      <div class="navbar__companyLogo">
+        <a href="index.html" class="navbar__homeLink">
+          <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
+        </a>
       </div>
-      <!-- Navbar Banner Messages -->
-      <div class="navbarContainer__sub">
-        <div class="navbar__message" id="#navbar__message--sticked">
-          <span class="text">Nu 20% korting op een nieuwe registratie - nog 3 dagen geldig</span>
-          <div class="navbar__message--close">
-            <i class="far fa-times-circle"></i>
-          </div>
-        </div>
+      <!-- NAVBAR MENU -->
+      <div class="navbar__navMenu">
+        <a href="index.html" class="navbar__link">
+          <span class="text">Home</span>
+        </a>
+        <a href="_about.html" class="navbar__link">
+          <span class="text">Ontdek BV-Online</span>
+        </a>
+        <a href="_faqs.html" class="navbar__link">
+          <span class="text">Veelgestelde vragen</span>
+        </a>
+        <a href="_aboutus.html" class="navbar__link">
+          <span class="text">Onze praktijk</span>
+        </a>
+        <a href="_contact.html" class="navbar__link">
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <div class="navbar__cta">
+        <a href="../registratie_formulier/stap_introductie.html" class="button button--large navbar__button">
+          Start registratie
+        </a>
       </div>
     </div>
+  </div>
 
 
 
-
-
-
-
-
-
-
-
+  <!-- CONTENT CONTAINER -->
+  <div class="appContainer" id="#app">
 
     <!-- HOMEPAGE BANNER LARGE -->
-    <div class="homeBanner">
-      <div class="homeBannerContainer">
-        <!-- Banner text and buttons -->
-        <div class="homeBanner__copy">
-          <div class="homeBanner__title" id="#pageTitle">
-            <h1>Een BV registreren was nooit zo makkelijk</h1>
+    <div class="homeTop">
+      <div class="homeTopContainer">
+        <div class="homeTop__pageHeader">
+          <div class="homeTop__cta--message">
+            <h4 class="text">Nu al vanaf &euro;123&comma;&mdash;</h4>
           </div>
-          <subtitle class="homeBanner__subtitle subtitle" id="#pageSubtitle">
-            Regel de volledige registratie met de notaris.
-          </subtitle>
+          <div class="homeTop__title">
+            <h1 class="text">Een bv oprichten <br> was nog nooit zo makkelijk </h1>
+          </div>
+          <div class="homeTop__subtitle">
+            <subtitle class="text">Start snel en gemakkelijk een nieuw bv of zet een bestaande zaak om, zelf of met onze
+              assistentie.</subtitle>
+          </div>
         </div>
-        <!-- Banner Modal Element -->
-        <div class="homeBanner__modal">
-          <div class="homeBanner__list">
-            <li>
-              <i class="homeBanner__list--icon fas fa-pen"></i>
-              <div class="homeBanner__list--label">Probleemloos registreren</div>
-            </li>
-            <li>
-              <i class="homeBanner__list--icon fas fa-globe"></i>
-              <div class="homeBanner__list--label">Volledig op afstand</div>
-            </li>
-            <li>
-              <i class="homeBanner__list--icon fas fa-lock"></i>
-              <div class="homeBanner__list--label">Beveiligd met eIDAS</div>
-            </li>
-            <li>
-              <i class="homeBanner__list--icon fas fa-feather-alt"></i>
-              <div class="homeBanner__list--label">Nu ook met UBO registratie</div>
-            </li>
+        <div class="homeTop__modal">
+          <div class="homeTop__modalHeader">
+            <h3 class="text">Registreren is&hellip;</h3>
           </div>
-          <div href="#" class="homeBanner__CTA button" id="#button__ontdek-tarieven">
+          <div class="homeTop__figureList">
+            <div class="homeTop__figure">
+              <i class="icon fas fa-feather"></i>
+              <span class="label">snel, gemakkelijk<i class="check fas fa-check"></i></span>
+            </div>
+            <div class="homeTop__figure">
+              <i class="icon fas fa-desktop"></i>
+              <span class="label">volledig digitaal<i class="check fas fa-check"></i></span>
+            </div>
+            <div class="homeTop__figure">
+              <i class="icon fas fa-lock"></i>
+              <span class="label">confidentieel<i class="check fas fa-check"></i></span>
+            </div>
+            <div class="homeTop__figure">
+              <i class="icon fas fa-clock"></i>
+              <span class="label">vandaag gedaan<i class="check fas fa-check"></i></span>
+            </div>
+          </div>
+          <a href="#tarieven" class="homeTop__cta button" id="#ID_NODIG">
             Ontdek onze tarieven
-          </div>
+          </a>
         </div>
       </div>
     </div>
 
     <!-- NEWS -->
     <div class="bannerNews">
+      <div class="bannerNews__shape1"></div>
       <div class="bannerNewsContainer">
-        <div class="bannerNews__header">
-          <h3>BV Online Nieuws & actualiteit</h3>
-        </div>
-        <div class="bannerNews__contentList">
-          <a href="#" class="bannerNews__itemLink" id="#nieuwsArtikel__link"><span class="text">Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Sequi pariatur voluptatum labore sint veniam magni quasi?</span></a>
-          <a href="#" class="bannerNews__itemLink" id="#nieuwsArtikel__link"><span class="text">Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Sequi pariatur voluptatum labore sint veniam magni quasi?</span></a>
-          <a href="#" class="bannerNews__itemLink" id="#nieuwsArtikel__link"><span class="text">Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Sequi pariatur voluptatum labore sint veniam magni quasi?</span></a>
-          <a href="#" class="bannerNews__itemLink" id="#nieuwsArtikel__link"><span class="text">Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Sequi pariatur voluptatum labore sint veniam magni quasi?</span></a>
-        </div>
-        <div class="bannerNews__more">
-          <a href="" class="bannerNews__button button--small">Meer nieuws</a>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- CONTAINTER 2-SIDE -->
-    <div class="containerHalf">
-      <div class="containerHalf__sideLeft">
-        <!-- Content for left side -->
-      </div>
-      <div class="containerHalf__sideRight">
-        <!-- Content for right side -->
-      </div>
-    </div>
-    <!-- TEST -->
-    <div class="__TEST__ containerHalf">
-      <div class="containerHalf__sideLeft">
-        <div class="paragraphs">
-          <div class="paragraphsContainer" id="#paragraphsObjectID">
-            <!-- Header h3 -->
-            <h3 class="paragraphs__header" id="#HeaderID">
-              Snelle beschrijving van BV-Online service
-            </h3>
-            <!-- Paragraphs -->
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <!-- Button -->
-            <a href="#" class="paragraphs__button button button--small" target="_self">Klik hier</a>
+        <div class="bannerNews__content">
+          <div class="bannerNews__header">
+            <h3>Laatste nieuws</h3>
+          </div>
+          <ul class="bannerNews__list">
+            <li class="bannerNews__item" id="ID_NODIG">
+              <a href="#" class="bannerNews__link" id="ID_NODIG">
+                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. iusto perferendis recusandae
+                  inventore illum.</span>
+              </a>
+            </li>
+            <li class="bannerNews__item" id="ID_NODIG">
+              <a href="#" class="bannerNews__link" id="ID_NODIG">
+                <span class="text">Lorem ipsum dolor possimus, consequatur iusto perferendis recusandae inventore
+                  illum.</span>
+              </a>
+            </li>
+            <li class="bannerNews__item" id="ID_NODIG">
+              <a href="#" class="bannerNews__link" id="ID_NODIG">
+                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum possimus, consequatur
+                  iusto perferendis recusandae inventore illum.</span>
+              </a>
+            </li>
+            <div class="bannerNews__more">
+              <a href="_about.html#nieuws" class="bannerNews__button link bannerNews__link">Meer</a>
+            </div>
+          </ul>
+          <div class="bannerNews__highlight">
+            <span class="text">Wij bieden nu ook assistentie bij UBO registraties <i
+                class="icon fas fa-check"></i></span>
+            <a href="_contact.html" class="sub link">Neem snel contact op</a>
           </div>
         </div>
       </div>
-      <div class="containerHalf__sideRight">
-        <img style="clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-        " src="https://images.unsplash.com/photo-1557425493-6f90ae4659fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
-          alt="">
+    </div>
+
+    <h2 class="pageHeader__h2">Nu is de tijd voor het online opzetten van een bv</h2>
+
+    <div class="contentSection" id="###ID_NODIG">
+      <div class="contentSectionContainer">
+        <div class="contentSection__copy">
+          <h3>De nieuwe manier is zakelijk digitaal</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+        </div>
+        <div class="contentSection__figure">
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            alt="picture">
+        </div>
       </div>
     </div>
-    <div class="__TEST__ containerHalf">
-      <div class="containerHalf__sideLeft">
-        <div class="paragraphs">
-          <div class="paragraphsContainer" id="#paragraphsObjectID">
-            <!-- Header h3 -->
-            <h3 class="paragraphs__header" id="#HeaderID">
-              Snelle beschrijving van BV-Online service
-            </h3>
-            <!-- Paragraphs -->
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <!-- Button -->
-            <a href="#" class="paragraphs__button button button--small" target="_self">Klik hier</a>
+
+
+    <div class="contentSection" id="###ID_NODIG">
+      <div class="contentSectionContainer">
+        <div class="contentSection__figure">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1533229613598-751dc97ec35f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            alt="picture">
+        </div>
+        <div class="contentSection__copy">
+          <h3>Online vestigen is sneller, makkelijker en veiliger </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <a href="#tarieven" class="link">Bekijk onze tarieven</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNER STEPS PROCESS -->
+    <div class="steps">
+      <div class="stepsContainer">
+        <div class="steps__header">
+          <h3>Het process in 4 simpele stappen</h3>
+        </div>
+        <div class="steps__list">
+          <div class="steps__step">
+            <span class="stage">1</span>
+            <i class="fas fa-keyboard"></i>
+            <span class="text">Vul het gegevensformulier in (8&ndash;12 min)</span>
+          </div>
+          <div class="steps__step">
+            <span class="stage">2</span>
+            <i class="fas fa-key"></i>
+            <span class="text">Ontvang toegang tot de veilige digitale omgeving voor interactie met de notaris</span>
+          </div>
+          <div class="steps__step">
+            <span class="stage">3</span>
+            <i class="fas fa-fingerprint"></i>
+            <span class="text">Zet uw handtekening en maak het document officieel</span>
+          </div>
+          <div class="steps__step">
+            <span class="stage">4</span>
+            <i class="fas fa-thumbs-up"></i>
+            <span class="text">De registratie is gedaan!</span>
+          </div>
+          <div class="steps__step">
+            <span class="stage">5</span>
+            <i class="fas fa-envelope-open-text"></i>
+            <span class="text">Ontvangt alle relevante documenten per post of email</span>
           </div>
         </div>
       </div>
-      <div class="containerHalf__sideRight">
-        <i class="fas fa-feather-alt"></i>
-      </div>
     </div>
 
-    <!-- CONTAINER 2-SIDE COPY PRIORITIZED -->
-    <div class="containerThird">
-      <div class="containerThird__sideLeft">
-        <!-- Content for left side -->
-      </div>
-      <div class="containerThird__sideRight">
-        <!-- Content for right side -->
-      </div>
-    </div>
 
-    <!-- BLOCKQUOTE HEADLINER -->
-    <div class="headliner">
-      <div class="headlinerContainer">
-        <div class="headliner__icon">
-          <i class="fas fa-feather-alt"></i>
+    <h2 class="pageHeader__h2">Gegarandeerde zekerheid over de gegevens van onze gebruikers</h2>
+
+
+    <div class="contentSection" id="###ID_NODIG">
+      <div class="contentSectionContainer">
+        <div class="contentSection__figure">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            alt="picture">
         </div>
-        <div class="headliner__text headliner__text--center">
-          <blockquote class="quoted">
+        <div class="contentSection__copy">
+          <h3>Beveiligde interactie, waar dan ook</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <a href="_about.html" class="link">Ontdek hoe ons veilige systeem werkt</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlightedText">
+      <div class="highlightedTextContainer">
+        <div class="highlightedText__blockquoteArea">
+          <div class="highlightedText__figure">
+            <i class="fas fa-pen-alt"></i>
+          </div>
+          <blockquote class="text">
             Velen maken al gebruik van een volledig digitale werkwijze in het runnen van hun bedrijf.
           </blockquote>
         </div>
+        <div class="highlightedText__cta">
+          <div class="highlightedText__message">
+            <span class="text">Nu is de beste tijd een bv te starten</span>
+          </div>
+          <a href="registratie_formulier\stap_introductie.html" class="highlightedText__button button button--large">
+            <span class="text">Registreer nu</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contentSection" id="###ID_NODIG">
+      <div class="contentSectionContainer">
+        <div class="contentSection__copy">
+          <h3>We opereren volgens de meest recente richtlijnen</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <a href="https://www.digitaleoverheid.nl/dossiers/eidas/" target="_blank" class="link"><i
+              class="fas fa-external-link-square-alt"></i>Lees meer over de eIDAS wetgeving</a>
+        </div>
+        <div class="contentSection__figure">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1554007460-791a7b8945d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2096&q=80"
+            alt="picture">
+        </div>
       </div>
     </div>
 
 
-    <!-- UNIQUE BANNER: Tarieven -->
-    <div class="bannerRates">
-      <div class="bannerRatesContainer">
-        <!-- Top layer -->
-        <div class="bannerRates__layerTop">
-          <div class="bannerRates__copy" id="#serviceRates__copy">
-            <h3>Is er een BV-Online pakket voor jouw bedrijf?</h3>
-          </div>
-        </div>
-        <!-- Bottom layer -->
-        <div class="bannerRates__layerBottom">
-          <!-- - CARD -->
-          <div class="ratesCard" id="#cardID_1">
-            <div class="ratesCardContainer">
-              <!-- -- header -->
-              <div class="ratesCard__header" id="#cardHeaderID_1">
-                <h3>Startend bedrijf</h3>
-              </div>
-              <!-- -- banner image -->
-              <img
+    <div style="margin: 6rem 0;" class="decorator decoratorLine decoratorLine__10deg"></div>
+
+
+
+    <h2 id="tarieven" class="pageHeader__h2">Is er een bv-online <br> pakket voor jou bedrijf?</h2>
+
+    <div class="ratesDeck">
+      <div class="ratesDeck__shape1"></div>
+      <div class="ratesDeck__shape2"></div>
+      <div class="ratesDeckContainer">
+
+        <div class="ratesCard">
+          <div class="ratesCardContainer">
+            <span class="badge">Zeer voordelig</span>
+            <div class="ratesCard__backgroundImg">
+              <img loading="lazy"
                 src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-                alt="#" class="ratesCard__img">
-              <!-- -- description -->
-              <div class="ratesCard__description" id="#cardDescriptionID_1">
-                <p>Li Europan lingues es membres del sam familie. Lor separat
-                  existentie es un myth. Por scientie, musica, sport etc, litot
-                  Europa usa li sam vocabular.</p>
-              </div>
-              <!-- -- figures -->
-              <div class="ratesCard__figures" id="#cardFiguresID_1">
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Snelle registratie</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Snelle registratie</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Smartphone toegang</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>UBO registratie</h5>
-                  </div>
-                </div>
-              </div>
-              <!-- -- button CTA -->
-              <a href="#" class="ratesCard__button button" id="#cardButtonID_1"><span class="button__text">Al vanaf
-                  123,-</span></a>
+                alt="">
             </div>
-          </div>
-
-          <!-- - CARD -->
-          <div class="ratesCard" id="#cardID_1">
-            <div class="ratesCardContainer">
-              <!-- -- header -->
-              <div class="ratesCard__header" id="#cardHeaderID_1">
-                <h3>Overstappend bedrijf</h3>
+            <div class="ratesCard__header">
+              <h3 class="text">Voor Starters</h3>
+              <span class="subheader">De beste service</span>
+            </div>
+            <div class="ratesCard__description">
+              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem, sequi sed id quam
+                ipsam
+                modi, consectetur a quibusdam, tempora sapiente alias doloremque distinctio nihil. Voluptatum, vel
+                veniam!
+                Numquam provident magni exercitationem.</p>
+            </div>
+            <div class="ratesCard__figureList">
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
               </div>
-              <!-- -- banner image -->
-              <img
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+            </div>
+            <div class="ratesCard__cta">
+              <span class="text">Al vanaf &euro;123&comma;&ndash;</span>
+            </div>
+            <a href="#" class="ratesCard__link">Ontdek nu</a>
+          </div>
+        </div>
+        <div class="ratesCard">
+          <div class="ratesCardContainer">
+            <span class="badge">Alles inbegrepen</span>
+            <div class="ratesCard__backgroundImg">
+              <img loading="lazy"
                 src="https://images.unsplash.com/photo-1603202662747-00e33e7d1468?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1958&q=80"
-                alt="#" class="ratesCard__img">
-              <!-- -- description -->
-              <div class="ratesCard__description" id="#cardDescriptionID_1">
-                <p>Li Europan lingues es membres del sam familie. Lor separat
-                  existentie es un myth. Por scientie, musica, sport etc, litot
-                  Europa usa li sam vocabular.</p>
-              </div>
-              <!-- -- figures -->
-              <div class="ratesCard__figures" id="#cardFiguresID_1">
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Snelle registratie</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Snelle registratie</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Smartphone toegang</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>UBO registratie</h5>
-                  </div>
-                </div>
-              </div>
-              <!-- -- button CTA -->
-              <a href="#" class="ratesCard__button button" id="#cardButtonID_1"><span class="button__text">Al vanaf
-                  123,-</span></a>
+                alt="">
             </div>
-          </div>
-          <!-- - CARD -->
-          <div class="ratesCard" id="#cardID_1">
-            <div class="ratesCardContainer">
-              <!-- -- header -->
-              <div class="ratesCard__header" id="#cardHeaderID_1">
-                <h3>...of op maat gemaakt</h3>
+            <div class="ratesCard__header">
+              <h3 class="text">Business Class</h3>
+              <span class="subheader">De beste service</span>
+            </div>
+            <div class="ratesCard__description">
+              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem, sequi sed id quam
+                ipsam
+                modi, consectetur a quibusdam, tempora sapiente alias doloremque distinctio nihil. Voluptatum, vel
+                veniam!
+                Numquam provident magni exercitationem.</p>
+            </div>
+            <div class="ratesCard__figureList">
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
               </div>
-              <!-- -- banner image -->
-              <img
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+            </div>
+            <div class="ratesCard__cta">
+              <span class="text">Al vanaf &euro;123&comma;&ndash;</span>
+            </div>
+            <a href="#" class="ratesCard__link">Ontdek nu</a>
+          </div>
+        </div>
+        <div class="ratesCard">
+          <div class="ratesCardContainer">
+            <span class="badge">Niet zeker?</span>
+            <div class="ratesCard__backgroundImg">
+              <img loading="lazy"
                 src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"
-                alt="#" class="ratesCard__img">
-              <!-- -- description -->
-              <div class="ratesCard__description" id="#cardDescriptionID_1">
-                <p>Li Europan lingues es membres del sam familie. Lor separat
-                  existentie es un myth. Por scientie, musica, sport etc, litot
-                  Europa usa li sam vocabular.</p>
-              </div>
-              <!-- -- figures -->
-              <div class="ratesCard__figures" id="#cardFiguresID_1">
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Snelle registratie</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Snelle registratie</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>Smartphone toegang</h5>
-                  </div>
-                </div>
-                <div class="ratesCard__figure" id="#figureID">
-                  <i class="ratesCard__figure--icon fas fa-feather-alt" id="#figureIconID"></i>
-                  <div class="ratesCard__figure--text" id="#figureTextID">
-                    <h5>UBO registratie</h5>
-                  </div>
-                </div>
-              </div>
-              <!-- -- button CTA -->
-              <a href="#" class="ratesCard__button button" id="#cardButtonID_1"><span class="button__text">Neem contact
-                  op</span></a>
+                alt="">
             </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-
-    <!-- PAGE TITLE + SUBNAV -->
-    <div
-      style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1549923746-b7f3a7e3c35d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80); background-position: center;"
-      class="pageHeader">
-      <div class="pageHeader__banner">
-        <div class="pageHeader__title" id="pageTitleID">
-          <h1>Pagina titel</h1>
-        </div>
-      </div>
-      <div class="pageHeader__navigation" id="pageNavigationID">
-        <a href="#" class="pageHeader__link" id="pageHeader__navigationLinkID">Nieuws en actualiteit</a>
-        <a href="#" class="pageHeader__link" id="pageHeader__navigationLinkID">Informatie over BV-Online</a>
-        <a href="#" class="pageHeader__link" id="pageHeader__navigationLinkID">Neem contact op</a>
-      </div>
-    </div>
-
-    <!-- TEST -->
-    <div class="__TEST__ containerThird">
-      <div class="containerThird__sideLeft">
-        <div class="paragraphs">
-          <div class="paragraphsContainer" id="#paragraphsObjectID">
-            <!-- Header h3 -->
-            <h3 class="paragraphs__header" id="#HeaderID">
-              Snelle beschrijving van BV-Online service
-            </h3>
-            <!-- Paragraphs -->
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <!-- Button -->
-            <a href="#" class="paragraphs__button button button--small" target="_self">Klik hier</a>
-          </div>
-        </div>
-      </div>
-      <div class="containerThird__sideRight">
-        <img
-          src="https://images.unsplash.com/photo-1594810205183-18a8b0ce6c13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-          alt="">
-      </div>
-    </div>
-
-
-
-
-    <!-- CONTACTBANNER -->
-    <div class="contactBanner">
-      <div class="contactBannerContainer">
-        <!-- Left side -->
-        <div class="contactBanner__panelDetails">
-          <div class="contactBanner__header">
-            <h2>
-              Contact informatie
-            </h2>
-          </div>
-          <div class="contactBanner__contactDetails">
-            <!-- item -->
-            <div class="contactBanner__contactItem">
-              <i class="fas fa-map-marked"></i>
-              <div>
-                <p>Peulenstraat 151, <br>3371 AL Hardinxveld-Giessendam</p>
-                <p>Spijksedijk 20G, <br>4207 GN Gorinchem</p>
+            <div class="ratesCard__header">
+              <h3 class="text">Service op maat</h3>
+              <span class="subheader">Wij staan klaar bij het process</span>
+            </div>
+            <div class="ratesCard__description">
+              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem, sequi sed id quam
+                ipsam
+                modi, consectetur a quibusdam, tempora sapiente alias doloremque distinctio nihil. Voluptatum, vel
+                veniam!
+                Numquam provident magni exercitationem.</p>
+            </div>
+            <div class="ratesCard__figureList">
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
+              </div>
+              <div class="ratesCard__figure">
+                <i class="icon fas fa-pen"></i>
+                <span class="label">Label hier</span>
               </div>
             </div>
-            <!-- item -->
-            <div class="contactBanner__contactItem">
-              <i class="fas fa-phone"></i>
-              <p>03 9242 2314</p>
+            <div class="ratesCard__cta">
+              <span class="text">Neem contact op</span>
             </div>
-            <!-- item -->
-            <div class="contactBanner__contactItem">
-              <i class="fas fa-envelope"></i>
-              <p>contact@bvonline.nl</p>
-            </div>
+            <a href="#" class="ratesCard__link">Ontdek nu</a>
           </div>
-        </div>
-        <!-- Right side -->
-        <div class="contactBanner__panelMap">
-          <img class="mapPlaceholder" src="img/placeholder_map.png" alt="">
-        </div>
-        <a href="#" class="contactBanner__button button">Toon route</a>
-      </div>
-    </div>
-
-
-
-
-
-    <!-- COPY TYPE: PARAGRAPH -->
-    <div class="paragraphs">
-      <div class="paragraphsContainer" id="#paragraphsObjectID">
-        <!-- Header h3 -->
-        <h3 class="paragraphs__header" id="#HeaderID">
-          Snelle beschrijving van BV-Online service
-        </h3>
-        <!-- Paragraphs -->
-        <p class="paragraphs__text" id="#textID">
-          Li Europan lingues es membres del sam familie. Lor separat existentie
-          es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-          vocabular. Li lingues differe solmen in li grammatica, li e li plu
-          commun vocabules.
-        </p>
-        <p class="paragraphs__text" id="#textID">
-          Li Europan lingues es membres del sam familie. Lor separat existentie
-          es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-          vocabular. Li lingues differe solmen in li grammatica, li e li plu
-          commun vocabules.
-        </p>
-        <!-- Button -->
-        <a href="#" class="paragraphs__button button button--small" target="_self">Klik hier</a>
-      </div>
-    </div>
-
-    <!-- MEDIUM BANNER -->
-    <div class="bannerMedium">
-      <div class="bannerMediumContainer">
-        <div class="bannerMedium__header">
-          <div class="bannerMedium__badge">
-            <h4>Wist u dat...</h4>
-          </div>
-          <h1>Interactie met uw notaris. Op afstand. Volledig confidentieel.</h1>
-        </div>
-        <div class="bannerMedium__spacer">
-
-        </div>
-        <div class="bannerMedium__copy">
-          <div class="bannerMedium__paragraph">
-            <p>Binnen een paar minuten bent u klaar en wij gaan voor u aan de
-              slag om uw registratie af te handelen.</p>
-          </div>
-          <a href="#" target="_self" class="bannerMedium__button button">Lees meer ></a>
         </div>
       </div>
     </div>
 
+    <!-- TESTIMONIALS -->
+    <h2 class="pageHeader__h2">Wat onze <br> klanten zeggen <br> over BV-Online</h2>
+
+    <div class="testimonial" style="margin-bottom: 4rem">
+      <div class="testimonialContainer">
+        <div class="testimonial__userQuote">
+          <!-- PROFILE PICTURE -->
+          <div class="testimonial__userProfile">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
+              alt="#ALT_NODIG" class="profileImg">
+          </div>
+          <!-- QUOTE -->
+          <div class="testimonial__blockquote">
+            <blockquote>
+              De service was zeer snel en makkelijk te doen. Erg behulpzaam!
+            </blockquote>
+          </div>
+          <div class="testimonial__source">
+            <h5>Anne Hasselt, <i>Bedrijfshoudster</i></h5>
+          </div>
+        </div>
+        <!-- SHORT PARAGRAPH -->
+        <div class="testimonial__text">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis, nulla facilis reprehenderit
+            adipisci, eius quam consectetur, voluptatem animi sunt quidem blanditiis reiciendis facere in soluta placeat
+            itaque impedit deleniti ad modi. Eum quis porro sunt!</p>
+        </div>
+      </div>
+      <div class="testimonial__shape testimonial__shape1"></div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonialContainer">
+        <div class="testimonial__userQuote">
+          <!-- PROFILE PICTURE -->
+          <div class="testimonial__userProfile">
+            <img loading="lazy" src="https://uifaces.co/our-content/donated/FRdmYcK0.jpg" alt="#ALT_NODIG"
+              class="profileImg">
+          </div>
+          <!-- QUOTE -->
+          <div class="testimonial__blockquote">
+            <blockquote>
+              De service was zeer snel en makkelijk te doen. Erg behulpzaam!
+            </blockquote>
+          </div>
+          <div class="testimonial__source">
+            <h5>Jaap Alleman, <i>Entrepreneur</i></h5>
+          </div>
+        </div>
+        <!-- SHORT PARAGRAPH -->
+        <div class="testimonial__text">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis, nulla facilis reprehenderit
+            adipisci, eius quam consectetur, voluptatem animi sunt quidem blanditiis reiciendis facere in soluta placeat
+            itaque impedit deleniti ad modi. Eum quis porro sunt!</p>
+        </div>
+      </div>
+      <div class="testimonial__shape testimonial__shape2"></div>
+    </div>
 
 
-    <!-- BANNER SIGN UP STARTER GIDS -->
     <div class="bannerSignup">
       <div class="bannerSignupContainer">
         <!-- Left side copy -->
@@ -550,15 +486,11 @@
             <h2> Ontvang de gratis startergids en ga aan de slag</h2>
           </div>
           <p class="bannerSignup__paragraph" id="#bannerSignupParagraphID">
-            Gebruik deze handige startergids om alles te weten te komen over electronisch bv registreren en doorlopen
-            van het process.
+            Gebruik deze handige startergids om alles te weten te komen over digitaal stichten van een bv en kom meer te
+            weten over ons process.
           </p>
         </div>
         <!-- Right side form -->
-        <!-- Figure -->
-        <div class="bannerSignup__figure">
-          <img src="svg/Process-amico.svg" alt="">
-        </div>
         <div class="bannerSignup__form">
           <!-- -Header -->
           <div class="bannerSignup__smallHeader" id="#bannerSignupHeaderID">
@@ -568,267 +500,171 @@
           <a href="#" class="bannerSignup__button button button--large" id="#bannerSignupButtonID">Download de
             startergids</a>
           <div class="bannerSignup__buttonDescription" id="#bannerSignupButtonDescriptionID">
-            <h5>formaat: pdf / bestandgrootte: 32MB</h5>
+            <h5>formaat: pdf / bestandgrootte: 32MB###</h5>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- UNIQUE BANNER SUBMIT QUESTIONS OR COMMENTS -->
-    <div class="comments">
-      <div class="commentsContainer">
-        <form action="POST" class="comments__form" id="commentsFormID">
-          <div class="comments__header">
-            <h3>Vragen en opmerkingen</h3>
+    <div class="contentSection" id="###ID_NODIG">
+      <div class="contentSectionContainer">
+        <div class="contentSection__copy">
+          <h3>Registreer vandaag nog je bv</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
+            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+          <div class="contentSection__ctaRow">
+            <a href="../registratie_formulier/stap_introductie.html"
+              class="contentSection__button button button--large">Begin met een registratie
+            </a>
+            <a href="_about.html" class="link">ontdek meer over bv-online</a>
           </div>
-          <label for="userName">
-            <input type="text" name="userName" id="questionFormUserName" placeholder="Naam..." />
+        </div>
+        <div class="contentSection__figure">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1557425493-6f90ae4659fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            alt="picture">
+        </div>
+      </div>
+    </div>
+
+    <div class="contactForm">
+      <div class="contactForm__shape1"></div>
+      <div class="contactFormContainer">
+        <div class="contactForm__header">
+          <h2 class="text">Vragen of opmerkingen?</h2>
+        </div>
+        <div class="contactForm__subheader">
+          <h4 class="text">Wij reageren zo snel mogelijk</h4>
+        </div>
+        <form action="#ACTION_NODIG" class="contactForm__form">
+          <!-- NAAM -->
+          <label class="contactForm__label" for="contactFormName">
+            <span class="label__icon">
+              <i class="fas fa-portrait"></i>
+            </span>
+            <span class="label__text">
+              Naam&ast;
+            </span>
           </label>
-          <label for="userEmail">
-            <input type="email" name="userEmail" id="questionFormUserEmail" placeholder="E-mail..." />
+          <input class="contactForm__input" type="text" name="name" id="contactFormName" required>
+          <!-- EMAIL -->
+          <label class="contactForm__label" for="contactFormEmail">
+            <span class="label__icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="label__text">
+              Email&ast;
+            </span>
           </label>
-          <label for="questionFormUserComment">
-            <textarea name="userComment" id="questionFormUserComment" rows="6"
-              placeholder="Je vraag of opmerking..."></textarea>
+          <input class="contactForm__input" type="email" name="email" id="contactFormEmail" required>
+          <!-- TELEFOON -->
+          <label class="contactForm__label" for="contactFormTel">
+            <span class="label__icon">
+              <i class="fas fa-phone-alt"></i>
+            </span>
+            <span class="label__text">
+              Tel <span class="textAdd">&lpar;voor telefonisch contact&rpar;</span>
+            </span>
           </label>
-          <button class="button button--large" type="submit">Verstuur</button>
+          <input class="contactForm__input" type="tel" name="tel" id="contactFormTel">
+          <!-- TEXT AREA -->
+          <label class="contactForm__label" for="contactFormTextarea">
+            <span class="label__icon">
+              <i class="fas fa-question-circle"></i>
+            </span>
+            <span class="label__text">
+              Vraag/opmerking&ast;
+            </span>
+          </label>
+          <textarea class="contactForm__textarea" name="textarea" id="contactFormTextarea" cols="64"
+            rows="6"></textarea>
+          <div class="contactForm__message">
+            <span class="text">&ast;vereist</span>
+          </div>
+          <button class="contactForm__button button button--large">
+            Bericht versturen
+          </button>
         </form>
       </div>
     </div>
 
-    <!-- TESTIMONIAL QUOTE -->
-    <div class="testimonialQuote" id="#testimonialID">
-      <div class="testimonialQuoteContainer">
-        <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="#Een profiel foto"
-          class="testimonialQuote__profileImg" id="#testimonialQuoteImgID">
-        <div class="testimonialQuote__text" id="#testimonialQuoteTextID">
-          <blockquote class="quoted">
-            Het was super simpel en sneller dan gedacht en de service was geweldig
-          </blockquote>
-        </div>
-        <div class="testimonialQuote__source" id="#testimonialQuoteSourceID">
-          <h5>Klaas Makelaar, Bedrijfshouder</h5>
-        </div>
-      </div>
+
+
+
+
+  </div> <!-- END PAGE CONTAINER -->
+
+  <!-- Top Layer -->
+  <div class="footer__layerContact">
+    <div class="footer__socials">
+
+      <a href="#" class="socialLinkLogo">
+        <i class="footer__socials--logo fab fa-linkedin"></i>
+      </a>
+      <a href="#" class="socialLinkLogo">
+        <i class="footer__socials--logo fab fa-facebook-square"></i>
+      </a>
+      <a href="#" class="socialLinkLogo">
+        <i class="footer__socials--logo fab fa-facebook-messenger"></i>
+      </a>
+
     </div>
-
-    <!-- TEST -->
-    <div class="__TEST__ containerHalf">
-      <div class="containerHalf__sideLeft">
-        <!-- TESTIMONIAL QUOTE -->
-        <div class="testimonialQuote" id="#testimonialID">
-          <div class="testimonialQuoteContainer">
-            <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="#Een profiel foto"
-              class="testimonialQuote__profileImg" id="#testimonialQuoteImgID">
-            <div class="testimonialQuote__text" id="#testimonialQuoteTextID">
-              <blockquote class="quoted">
-                Het was super simpel en sneller dan gedacht en de service was geweldig
-              </blockquote>
-            </div>
-            <div class="testimonialQuote__source" id="#testimonialQuoteSourceID">
-              <h5>Klaas Makelaar, Bedrijfshouder</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="containerHalf__sideRight">
-        <div class="paragraphs">
-          <div class="paragraphsContainer" id="#paragraphsObjectID">
-            <!-- Header h3 -->
-            <h3 class="paragraphs__header" id="#HeaderID">
-              Snelle beschrijving van BV-Online service
-            </h3>
-            <!-- Paragraphs -->
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <p class="paragraphs__text" id="#textID">
-              Li Europan lingues es membres del sam familie. Lor separat existentie
-              es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
-              vocabular. Li lingues differe solmen in li grammatica, li e li plu
-              commun vocabules.
-            </p>
-            <!-- Button -->
-            <a href="#" class="paragraphs__button button button--small" target="_self">Klik hier</a>
-          </div>
-        </div>
-      </div>
+    <div class="footer__contactUs">
+      <h4>
+        <i class="icon icon--small fa fa-phone"></i>
+        0184-123-1234 <em>Neem contact met ons op tussen 9:00 en
+          17:00</em>
+      </h4>
     </div>
-
-    <!-- MEEST GESTELDE VRAGEN -->
-    <div class="faqMost">
-      <div class="faqMostContainer">
-        <!-- LEFT -->
-        <div class="faqMost__leftSide">
-          <div class="faqMost__header">
-            <h2>Meest gestelde vragen</h2>
-          </div>
-          <!-- Vragen -->
-          <div class="faqMost__listQuestions">
-            <!-- item -->
-            <div class="faqMost__questionContainer">
-              <div class="faqMost__question">
-                <h4>Wat gebeurd er met mijn registratie voordat ik deze ontvang om te tekenen?</h4>
-              </div>
-              <div class="faqMost__answer">
-                <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un
-                  myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
-                  li grammatica, li e li plu commun vocabules.</p>
-              </div>
-            </div>
-            <!-- item -->
-            <div class="faqMost__questionContainer">
-              <div class="faqMost__question">
-                <h4>Wat gebeurd er met mijn registratie voordat ik deze ontvang om te tekenen?</h4>
-              </div>
-              <div class="faqMost__answer">
-                <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un
-                  myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
-                  li grammatica, li e li plu commun vocabules.</p>
-              </div>
-            </div>
-            <!-- item -->
-            <div class="faqMost__questionContainer">
-              <div class="faqMost__question">
-                <h4>Wat gebeurd er met mijn registratie voordat ik deze ontvang om te tekenen?</h4>
-              </div>
-              <div class="faqMost__answer">
-                <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un
-                  myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
-                  li grammatica, li e li plu commun vocabules.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- RIGHT -->
-        <div class="faqMost__rightSide">
-          <div class="faqMost__rightSideCopy">
-            <h4>Verdere vragen?</h4>
-            <p><i class="fas fa-phone"></i></p>
-            <p class="text">0184-123-1234#</p>
-            <p><i class="fas fa-envelope"></i></p>
-            <p class="text">mail@email.com#</p>
-          </div>
-          <div class="faqMost__cta">
-            <h3>Klaar om met een registratie te beginnen?</h3>
-            <a href="" class="button--small button faqMost__button">Start hier</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!--FAQ SUB CATEGORY -->
-    <div class="faq">
-      <div class="faqContainer">
-        <div class="faq__header">
-          <h2>Over de voorbereiding</h2>
-        </div>
-        <!-- Vragen -->
-        <div class="faq__listQuestions">
-          <!-- item -->
-          <div class="faq__questionContainer">
-            <div class="faq__question">
-              <h3>Wat gebeurd er met mijn registratie voordat ik deze ontvang om te tekenen?</h3>
-            </div>
-            <div class="faq__answer">Li Europan lingues es membres del sam familie. Lor separat existentie es un
-              myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
-              li grammatica, li e li plu commun vocabules.</div>
-          </div>
-          <!-- item -->
-          <div class="faq__questionContainer">
-            <div class="faq__question">
-              <h3>Wat gebeurd er met mijn registratie voordat ik deze ontvang om te tekenen?</h3>
-            </div>
-            <div class="faq__answer">Li Europan lingues es membres del sam familie. Lor separat existentie es un
-              myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
-              li grammatica, li e li plu commun vocabules.</div>
-          </div>
-          <!-- item -->
-          <div class="faq__questionContainer">
-            <div class="faq__question">
-              <h3>Wat gebeurd er met mijn registratie voordat ik deze ontvang om te tekenen?</h3>
-            </div>
-            <div class="faq__answer">Li Europan lingues es membres del sam familie. Lor separat existentie es un
-              myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in
-              li grammatica, li e li plu commun vocabules.</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footerContainer">
-        <!-- Top Layer -->
-        <div class="footer__layerTop">
-          <div class="footer__socials">
-
-            <a href="#" class="socialLinkLogo">
-              <i class="footer__socials--logo fab fa-linkedin"></i>
-            </a>
-            <a href="#" class="socialLinkLogo">
-              <i class="footer__socials--logo fab fa-facebook-square"></i>
-            </a>
-            <a href="#" class="socialLinkLogo">
-              <i class="footer__socials--logo fab fa-facebook-messenger"></i>
-            </a>
-
-          </div>
-          <div class="footer__contactUs">
-            <h4>
-              <i class="icon icon--small fa fa-phone"></i>
-              0184-123-1234 <em>Neem contact met ons op tussen 9:00 en
-                17:00</em>
-            </h4>
-          </div>
-        </div>
-        <!-- Main Footer -->
-        <div class="footer__main">
-          <!-- --navigation -->
-          <div class="footer__navigation">
-            <!-- --brand Logo -->
-            <div class="footer__brandLogo">
-              <img src="./img/logo.svg" alt="Logo voor BV-Online" />
-              <div class="footer__logoSubline">
-                onderdeel van Notarispraktijk Interwaert
-              </div>
-            </div>
-            <div class="footer__list">
-              <div class="footer__listHeader" id="#footerListHeaderID">
-                <h4>BV-Online</h4>
-              </div>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-            </div>
-            <div class="footer__list">
-              <div class="footer__listHeader" id="#footerListHeaderID">
-                <h4>Voorwaarden</h4>
-              </div>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-            </div>
-            <div class="footer__list">
-              <div class="footer__listHeader" id="#footerListHeaderID">
-                <h4>Header</h4>
-              </div>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-              <a href="#" class="footer__link" id="#footerLinkID">Link</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- END________ -->
   </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footerContainer">
+
+      <!-- Main Footer -->
+      <div class="footer__main">
+        <!-- --navigation -->
+        <div class="footer__navigation">
+          <!-- --brand Logo -->
+          <div class="footer__brandLogo">
+            <img src="img/logo.svg" alt="Logo voor BV-Online" />
+            <div class="footer__logoSubline">
+              onderdeel van Notarispraktijk Interwaert
+            </div>
+          </div>
+          <div class="footer__list">
+            <div class="footer__listHeader" id="#footerListHeaderID">
+              <h4>BV-Online</h4>
+            </div>
+            <a href="../index.html" class="footer__link" id="#footerLinkID">Home</a>
+            <a href="../_about.html" class="footer__link" id="#footerLinkID">Ontdek Bv-online</a>
+            <a href="../_faqs.html" class="footer__link" id="#footerLinkID">Veelgestelde vragen</a>
+          </div>
+          <div class="footer__list">
+            <div class="footer__listHeader" id="#footerListHeaderID">
+              <h4>Wie zijn wij</h4>
+            </div>
+            <a href="../_aboutus.html" class="footer__link" id="#footerLinkID">Onze praktijk</a>
+            <a href="../_contact.html" class="footer__link" id="#footerLinkID">Contact</a>
+            <a href="https://www.interwaert.nl/" target="_blank" class="footer__link" id="#footerLinkID">Interwaert <i
+                class="fas fa-external-link-square-alt"></i></a>
+          </div>
+          <div class="footer__list">
+            <div class="footer__listHeader" id="#footerListHeaderID">
+              <h4>Gebruikersovereenkomst</h4>
+            </div>
+            <a href="../_algemene-voorwaarden.html" class="footer__link" id="#footerLinkID">Algemene voorwaarden</a>
+            <a href="../_privacy-verklaring.html" class="footer__link" id="#footerLinkID">Privacy verklaring</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- END________ -->
   <script type="module" src="/main.js"></script>
 </body>
 

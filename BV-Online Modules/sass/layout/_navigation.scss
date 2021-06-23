@@ -1,178 +1,92 @@
 .navbar {
-  background-color: $color-white;
-  z-index: 100000;
-  margin: 0;
-  @include sidePadElement;
-  box-shadow: 0 0.1rem 1.2rem $shadow-30;
 
-  // MAKES THE NAVBAR STICK ON TOP
+  $logoSize: 12vw;
+
+  z-index: 9999;
   position: sticky;
-  top:0;
-  left: 0;
+  top: 0;
+  background-color: $color-white;
+  box-shadow: 0 2px 8px $shadow-10;
 
-  &Container__main {
-    height: $navbarHeight;
+  &Container {
+    padding: 0 3.2rem;
+
+    display: grid;
+    grid-template-columns: $logoSize 1fr 12rem;
+    grid-template-rows: $navbarHeight;
+    grid-auto-rows: 1fr;
+    grid-template-areas: 
+    'logo links button'
+    'logo links button'
+    'logo links button';
+
+  }
+
+  &__companyLogo {
+    grid-area: 'logo';
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 3rem;
-    @media screen and (max-width: $bp-small) {
-      
+    justify-content: flex-start;
+    
+    & img.figure {
+      height: auto;
+      min-width: 8rem;
+      width: $logoSize;
+      max-width: 12rem;
     }
   }
-
-  &__brand {
-    @include noSelectionStyle;
-    max-height: 4rem;
-    max-width: 16rem;
-    width: 12vw;
-    min-width: 8rem;
-    margin-left: 1rem;
+  
+  &__navMenu {
+    // grid-area: 'links';
     
-  }
-
-  &__navigation {
+    margin-right: 1.2rem;
     margin-left: auto;
-    margin-right: 2vw;
-    transform: translateY(5px);
+    
+    // flex-shrink: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
   }
 
-  &__link {
-    @include noSelectionStyle;
-    font-size: 1.3rem;
-    margin-right: 1.3rem;
-    margin-bottom: 0;
-    border-bottom: solid 0 $color-primary-light;
-    transition: all 0.1s;
+  a.navbar__link {
+    padding: 2px 8px;
+    font-size: $p-fontSize;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-underline-offset: 0;
 
     &:hover {
-      position: relative;
-      top: $lift-lowest;
-      left: $lift-lowest;
-      border-bottom: solid 0.16rem $color-primary-light;
-    }
-
-    &:active {
-      position: relative;
-      top: 0;
-      left: $lift-lowest;
-      border-bottom: none;
+      transform: translateY(-2px) scale(1.04);
+      color: $color-button-primary;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
   }
+  
+  &__cta {
+    grid-area: 'button';
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    &::before {
+      content: '';
+      display: inline-block;
 
-  /* HIDDEN NAVIGATION */
-  &__dropdown {
-    z-index: 9999;
-    transition: all 0.2s;
-    display: none;
+      transform: translateX(-2rem);
+      height: 40%;
+      width: 1px;
 
-    &Container {
-      background-color: $color-white;
-      position: absolute;
-      // top: -24rem;
-      left: 50%;
-      transform: translate(-50%, 0);
-      
-      margin: 0;
-      margin-top: 6rem;
-      width: 100%;
-
-      display: flex;
-      flex-direction: column;
-    }
-
-    &Icon {
-      display: none;
-      font-size: 1.6rem;
-      line-height: 1;
-      padding: 0.8rem;
-      margin-left: auto;
-      justify-self: flex-end;
-      margin-right: 2rem;
-      color: $color-black;
-      &:hover {
-        color: $color-button-primary;
-      }
-      
-      &:active {
-        transform: translateY(1px);
-      }
-    }
-
-    & a {
-      text-align: center;
+      background-color: $color-primary-dark--20;
     }
   }
 
   &__button {
-    @include noSelectionStyle;
+    margin-right: -2rem;
+    font-size: $p-fontSize;
+    height: $navbarHeight*0.20;
     background-color: $color-button-primary;
     color: $color-white;
-    text-shadow: 0.1rem 0.1rem 0.8rem $shadow-30;
 
-    & * {
-      font-size: 1.6rem;
-      transform: translateY(3px);
-    }
-    
-    & h3::after {
-      content: ' ▸';
-    }
-    
-    @media screen and (max-width: $bp-small) {
-      & * {
-        font-size: 1.4rem;
-        transform: translateY(7px);
-        text-shadow: none;
-     }
-    }
   }
-
-  /* UNDERNAV MESSAGE */
-
-  &Container__sub {
-    background-color: $color-primary;
-    padding: 0;
-  }
-
-  &__message {
-    transform: translateY(5px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $color-white;
-
-    & .text {
-      font-size: 1.4rem;
-      margin-bottom: 0;
-    }
-
-    &--close {
-      font-size: 1.5rem;
-      transform: translatey(3px);
-      margin-left: 2rem;
-
-      &:hover {
-        color: grey;
-      }
-    }
-  }
-
-  @media screen and (max-width: $bp-medium) {
-    &Container__main {
-      padding: 0.4rem;
-      height: 3rem;
-    }
-    &__button {
-      margin-right: 0.8rem;
-      height: 1rem;
-    }
-
-    &__navigation {
-      // display: none;
-    }
-  }
-
 }
-
-

@@ -1,46 +1,50 @@
 .faq {
-  @include sidePadElement;
-  margin-top: 8rem;
-  margin-bottom: 12rem;
+  margin-bottom: $sectionSpacerVertical;
+  // @include sidePadElement;
 
   &Container {
-    padding-left: $pageTextPadding+2;
-    padding-right: $pageTextPadding;
-    @include mediumLayoutPadding;
+    // padding-left: $pageTextPadding+2;
+    padding: 0 $pageTextPadding;
+    // @include mediumLayoutPadding;
+    width: fit-content;
+
+    height: fit-content;
+    color: $color-black;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-    height: fit-content;
 
-    color: $color-black;
   }
 
   &__header h2 {
-    font-size: $h2-fontSize;
     margin-bottom: $verticalSpacing--smaller;
+    font-size: $h2-fontSize;
   }
 
   &__listQuestions {
+    padding-left: 2rem;
+
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    padding-left: 2rem;
   }
 
   &__questionContainer {
     position: relative;
-    padding-bottom: 1.2rem;
 
     &::before {
       content: '';
-      display: inline-block;
-      background-color: $color-primary-dark;
-      height: 100%;
-      width: 0.4rem;
-      border-radius: $borderRadius;
       position: absolute;
       left: -1.4rem;
+
+      height: 100%;
+      width: 0.4rem;
+
+      border-radius: $borderRadius;
+      background-color: $color-primary-dark;
+      display: inline-block;
     }
   }
 
@@ -50,8 +54,9 @@
   }
 
   &__answer {
+    max-width: 75ch;
+    line-height: 1.4;
     font-size: $p-fontSize;
-    max-width: 93ch;
   }
 
 }

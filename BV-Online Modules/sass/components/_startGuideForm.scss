@@ -1,19 +1,43 @@
 .bannerSignup {
-  margin: $verticalSpacing--large;
-  @include sidePadElement;
-  background-color: $color-primary;
-  background: linear-gradient((90deg), $color-secondary-dark, $color-secondary--50);
-  color: $color-black;
+  $angle: -4deg;
+  margin-bottom: $sectionSpacerVertical;
+  margin-top: $sectionSpacerVertical;
+  
+  // @include sidePadElement;
   overflow: hidden;
-
+  
+  color: $color-black;
+  transform: skewY($angle);
+  
   &Container {
     z-index: 10;
     padding: $verticalSpacing--large $pageTextPadding;
-    @include mediumLayoutPadding;
+    
+    // background: linear-gradient((90deg), $color-secondary-dark, $color-white);
+    
+    background-color: $color-primary;
+    background-image: linear-gradient($color-primary--20, $color-primary--20), url(https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    position: relative;
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: $color-primary--70;
+      height: 100%;
+      width: 88vw;
+      clip-path: polygon(47% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
+      position: absolute;
+      inset: 0;
+
+    }
+    
     @media screen and (max-width: $bp-medium) {
       justify-content: space-around;      
     }
@@ -22,26 +46,33 @@
       gap: $verticalSpacing--medium;
     }
   }
-
+  
   // LEFT SIDE
   &__leftSide {
+    transform: skewY(-$angle) translateY($verticalSpacing--small);
     z-index: 10;
     max-width: 90ch;
+    padding: 1.2rem;
+    background-color: transparent;
+    border-radius: $borderRadius;
+    color: $color-white;
   }
 
   &__largeHeader {
     font-size: $h2-fontSize;
-    color: $color-white;
-    @include underline($color: $color-secondary-dark);
+    @include underline($color: $color-white--40);
   }
   
   &__paragraph {
-    font-size: $h3-fontSize;
-    color: $color-white;
+    transform: translateY(-2rem);
+    font-size: $p-fontSize;
+    // color: $color-white;
   }
 
   // RIGHT SIDE
   &__form {
+    transform: skewY(-$angle);
+
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -50,21 +81,22 @@
   }
 
   &__smallHeader {
-    align-self: flex-start;
     margin-bottom: -$verticalSpacing--small;
+    align-self: flex-start;
     font-size: $h3-fontSize;
   }
 
   &__button {
     margin-top: 1.2rem;
-    background-color: $color-button-primary;
     width: 94%;
+    background-color: $color-button-secondary;
     color: $color-white;
   }
 
   &__buttonDescription {
     margin-left: auto;
     width: fit-content;
+    color: $color-white--80;
   }
 
   &__summary {
@@ -73,17 +105,17 @@
   }
 
   &__summary--item {
-    font-size: $h4-fontSize;
     margin-top: 0.8rem;
+    font-size: $h4-fontSize;
     font-style: italic;
   }
 
   &__figure {
     z-index: 1;
     position: absolute;
-    right: 24vw;
-    opacity: 0.3;
-    height: 32rem;
-    width: 32rem;
+    right: 5.2vw;
+    filter: contrast(0.5);
+    height: 24rem;
+    width: 24rem;
   }
 }

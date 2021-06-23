@@ -1,0 +1,215 @@
+$spacerSmall: 1.2vw;
+
+.registration {
+  margin: 0 $pageTextPadding * 1.4;
+  margin-bottom: $sectionSpacerVertical;
+
+  /* QUESTION SET */
+  &__section {
+    transition: all 0.2s;
+    padding: $spacerSmall * 3.2 0;
+
+    border-bottom: 1px solid $color-black--20;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacerSmall * 2.4;
+
+    &:focus-within {
+      border-color: $color-primary;
+
+      & h3.sectionHeader {
+        color: $color-primary;
+      }
+
+      & input {
+        border-color: $color-primary--40;
+      }
+    }
+
+  }
+
+  & h3.sectionHeader {
+    margin: 0;
+
+    & svg {
+      margin-left: $spacerSmall;
+      color: $color-primary;
+    }
+  }
+
+  /* ------------ */
+
+  &__inputContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* INPUT DIMENSIONS */
+$size: 0.4rem;
+$borderSize: 2px;
+$shadowSize: 0.4rem;
+/* ---------------- */
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"] {
+  align-self: flex-start;
+  margin-right: $spacerSmall*3;
+  padding: 0 $size;
+
+  min-width: 24rem;
+  width: $spacerSmall*24;
+  max-width: 36rem;
+  height: $size * 10;
+
+  border-radius: $size;
+  border: $borderSize solid $color-black--20;
+
+  font-size: $size * 3.2;
+  font-family: inherit;
+  font-weight: 500;
+
+  &::placeholder {
+    color: $color-black--20;
+  }
+
+  &:focus {
+    transform: translateX(-$shadowSize);
+
+    border: $borderSize solid $color-primary;
+    outline: none;
+    box-shadow: $shadowSize 0 1px $color-primary-dark;
+
+    font-size: $size * 3.6;
+    color: $color-black;
+  }
+
+}
+
+input[type="checkbox"] input[type="radio"] {
+  align-self: flex-start;
+  margin-right: $spacerSmall*3;
+  padding: 0 $size;
+
+  width: $size * 4;
+  height: $size * 4;
+
+  border-radius: $size;
+  border: $borderSize solid $color-black--20;
+}
+
+input:focus+.questionExplainer {
+  opacity: 1;
+  transform: translateX(0);
+  height: fit-content;
+}
+
+
+input[type="date"] {
+  min-width: 16rem;
+  width: $spacerSmall*10;
+}
+
+.question {
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: $spacerSmall * 0.5;
+
+  &:focus-within {
+    & span.labelText {
+      transform: scale(1.1);
+      color: $color-primary;
+    }
+  }
+
+  &Label {
+    display: flex;
+    align-items: center;
+    gap: $spacerSmall * 0.5;
+    font-size: $h4-fontSize;
+    font-weight: 600;
+  }
+
+  &Explainer {
+    opacity: 0;
+    transform: translateX($spacerSmall);
+    transition: all 0.2s;
+
+    align-self: end;
+    justify-self: end;
+    font-size: $h4-fontSize;
+    display: flex;
+    align-items: center;
+    gap: $spacerSmall * 0.5;
+
+    & span.text {
+      color: $color-black--40;
+      max-height: $spacerSmall * 2.4;
+      max-width: 36ch;
+    }
+
+    & svg {
+      align-self: flex-start;
+      font-size: $emphasis-fontSize;
+      color: $color-primary--50;
+    }
+  }
+}
+
+.questionRadioCheckbox {
+  padding: $spacerSmall 0;
+  flex-direction: column;
+  align-items: baseline;
+  gap: $spacerSmall * 2.4;
+
+  $borderSpacing: $spacerSmall;
+
+  padding-left: $borderSpacing;
+  margin-left: -$borderSpacing;
+
+  border-left: 2px $color-primary--20 solid;
+
+  &__selection {
+    display: flex;
+    align-items: center;
+    gap: $spacerSmall * 0.62;
+
+    $radioSize: $size * 4;
+
+    & input {
+      width: $radioSize;
+      height: $radioSize;
+
+    }
+
+    .questionLabel {
+      & span.radioLabelText {
+        &:hover {
+          text-decoration: underline;
+          color: $color-primary;
+        }
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  & span.text {
+    font-size: $h4-fontSize;
+    font-weight: 600;
+    margin-right: $spacerSmall;
+  }
+}
+
+.question--conditional {
+  display: none;
+}
+
+input#RADIOID1:checked label.question--conditional {
+  display: block;
+}

@@ -12,6 +12,7 @@
 // COMPONENTS
 @import "./components/bannerMedium";
 @import "./components/bannerRates";
+@import "./components/bannerSteps";
 @import "./components/buttons";
 @import "./components/commentsForm";
 @import "./components/largeHeadlineText";
@@ -21,6 +22,7 @@
 
 // LAYOUT
 @import "./layout/containers";
+@import "./layout/contentSection";
 @import "./layout/footer";
 @import "./layout/forms";
 @import "./layout/layout";
@@ -34,6 +36,8 @@
 @import "./pages/faqs/faqCategory";
 @import "./pages/home/homeBanner";
 @import "./pages/home/newsBanner";
+// registratie
+@import "./pages/registrationProcess/processPageBanner";
+@import "./pages/registrationProcess/registrationForm";
+//Terms and conditions
 @import "./pages/terms";
-
-

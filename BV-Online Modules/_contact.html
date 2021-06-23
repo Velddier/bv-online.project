@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren</title>
+  <link rel="stylesheet" href="css/main.css" />
+
+
+  <script defer src=".\node_modules\@fortawesome\fontawesome-free\css\all.css"></script>
+  <script defer src=".\node_modules\@fortawesome\fontawesome-free\js\all.js"></script>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbarContainer">
+      <div class="navbar__companyLogo">
+        <a href="index.html" class="navbar__homeLink">
+          <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
+        </a>
+      </div>
+      <!-- NAVBAR MENU -->
+      <div class="navbar__navMenu">
+        <a href="index.html" class="navbar__link">
+          <span class="text">Home</span>
+        </a>
+        <a href="_about.html" class="navbar__link">
+          <span class="text">Ontdek BV-Online</span>
+        </a>
+        <a href="_faqs.html" class="navbar__link">
+          <span class="text">Veelgestelde vragen</span>
+        </a>
+        <a href="_aboutus.html" class="navbar__link">
+          <span class="text">Onze praktijk</span>
+        </a>
+        <a href="_contact.html" class="navbar__link">
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <div class="navbar__cta">
+        <a href="../registratie_formulier/stap_introductie.html" class="button button--large navbar__button">
+          Start registratie
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="appContainer" id="#app">
+
+    <div class="contactBanner">
+      <div class="contactBannerContainer">
+        <!-- Left side -->
+        <div class="contactBanner__panelDetails">
+          <div class="contactBanner__header">
+            <h2>
+              Contact <br>informatie
+            </h2>
+          </div>
+          <div class="contactBanner__contactDetails">
+            <!-- item -->
+            <div class="contactBanner__contactItem">
+              <i class="fas fa-map-marked"></i>
+              <div>
+                <p>Peulenstraat 151, <br>3371 AL Hardinxveld-Giessendam</p>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="contactBanner__contactItem">
+              <i class="fas fa-phone"></i>
+              <p>0184-123-1234</p>
+            </div>
+            <!-- item -->
+            <div class="contactBanner__contactItem">
+              <i class="fas fa-envelope"></i>
+              <p>contact@bvonline.nl</p>
+            </div>
+          </div>
+        </div>
+        <!-- Right side -->
+        <div class="contactBanner__panelMap">
+          <img class="mapPlaceholder" src="img/placeholder_map.png" alt="">
+        </div>
+        <a href="#" class="contactBanner__button button">Toon route</a>
+      </div>
+    </div>
+
+    <div class="singleParagraph">
+      <div class="singleParagraphContainer" id="#singleParagraphObjectID">
+        <!-- Header h3 -->
+        <h3 class="singleParagraph__header" id="#HeaderID">
+          Snelle beschrijving van BV-Online service
+        </h3>
+        <!-- singleParagraph -->
+        <p class="singleParagraph__text" id="#textID">
+          Li Europan lingues es membres del sam familie. Lor separat existentie
+          es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
+          vocabular. Li lingues differe solmen in li grammatica, li e li plu
+          commun vocabules.
+        </p>
+        <p class="singleParagraph__text" id="#textID">
+          Li Europan lingues es membres del sam familie. Lor separat existentie
+          es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
+          vocabular. Li lingues differe solmen in li grammatica, li e li plu
+          commun vocabules.
+        </p>
+        <!-- Button -->
+        <a href="#" class="singleParagraph__button button button--small" target="_self">Klik hier</a>
+      </div>
+    </div>
+
+    <div class="contactForm">
+      <div class="contactForm__shape1"></div>
+      <div class="contactFormContainer">
+        <div class="contactForm__header">
+          <h2 class="text">Vragen of opmerkingen?</h2>
+        </div>
+        <div class="contactForm__subheader">
+          <h4 class="text">Wij reageren zo snel mogelijk</h4>
+        </div>
+        <form action="#ACTION_NODIG" class="contactForm__form">
+          <!-- NAAM -->
+          <label class="contactForm__label" for="contactFormName">
+            <span class="label__icon">
+              <i class="fas fa-portrait"></i>
+            </span>
+            <span class="label__text">
+              Naam&ast;
+            </span>
+          </label>
+          <input class="contactForm__input" type="text" name="name" id="contactFormName" required>
+          <!-- EMAIL -->
+          <label class="contactForm__label" for="contactFormEmail">
+            <span class="label__icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="label__text">
+              Email&ast;
+            </span>
+          </label>
+          <input class="contactForm__input" type="email" name="email" id="contactFormEmail" required>
+          <!-- TELEFOON -->
+          <label class="contactForm__label" for="contactFormTel">
+            <span class="label__icon">
+              <i class="fas fa-phone-alt"></i>
+            </span>
+            <span class="label__text">
+              Tel <span class="textAdd">&lpar;voor telefonisch contact&rpar;</span>
+            </span>
+          </label>
+          <input class="contactForm__input" type="tel" name="tel" id="contactFormTel">
+          <!-- TEXT AREA -->
+          <label class="contactForm__label" for="contactFormTextarea">
+            <span class="label__icon">
+              <i class="fas fa-question-circle"></i>
+            </span>
+            <span class="label__text">
+              Vraag/opmerking&ast;
+            </span>
+          </label>
+          <textarea class="contactForm__textarea" name="textarea" id="contactFormTextarea" cols="64"
+            rows="6"></textarea>
+          <div class="contactForm__message">
+            <span class="text">&ast;vereist</span>
+          </div>
+          <button class="contactForm__button button button--large">
+            Bericht versturen
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div><!-- END CONTENT -->
+
+
+
+
+
+  <!-- Top Layer -->
+  <div class="footer__layerContact">
+    <div class="footer__socials">
+
+      <a href="#" class="socialLinkLogo">
+        <i class="footer__socials--logo fab fa-linkedin"></i>
+      </a>
+      <a href="#" class="socialLinkLogo">
+        <i class="footer__socials--logo fab fa-facebook-square"></i>
+      </a>
+      <a href="#" class="socialLinkLogo">
+        <i class="footer__socials--logo fab fa-facebook-messenger"></i>
+      </a>
+
+    </div>
+    <div class="footer__contactUs">
+      <h4>
+        <i class="icon icon--small fa fa-phone"></i>
+        0184-123-1234 <em>Neem contact met ons op tussen 9:00 en
+          17:00</em>
+      </h4>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footerContainer">
+      <!-- Main Footer -->
+      <div class="footer__main">
+        <!-- --navigation -->
+        <div class="footer__navigation">
+          <!-- --brand Logo -->
+          <div class="footer__brandLogo">
+            <img src="img/logo.svg" alt="Logo voor BV-Online" />
+            <div class="footer__logoSubline">
+              onderdeel van Notarispraktijk Interwaert
+            </div>
+          </div>
+          <div class="footer__list">
+            <div class="footer__listHeader" id="#footerListHeaderID">
+              <h4>BV-Online</h4>
+            </div>
+            <a href="../index.html" class="footer__link" id="#footerLinkID">Home</a>
+            <a href="../registratie_formulier/stap_introductie.html" class="footer__link" id="#footerLinkID">Start
+              nieuwe registratie</a>
+            <a href="../_about.html" class="footer__link" id="#footerLinkID">Ontdek Bv-online</a>
+            <a href="../_faqs.html" class="footer__link" id="#footerLinkID">Veelgestelde vragen</a>
+          </div>
+          <div class="footer__list">
+            <div class="footer__listHeader" id="#footerListHeaderID">
+              <h4>Wie zijn wij</h4>
+            </div>
+            <a href="../_aboutus.html" class="footer__link" id="#footerLinkID">Onze praktijk</a>
+            <a href="../_contact.html" class="footer__link" id="#footerLinkID">Contact</a>
+            <a href="https://www.interwaert.nl/" target="_blank" class="footer__link" id="#footerLinkID">Interwaert <i
+                class="fas fa-external-link-square-alt"></i></a>
+          </div>
+          <div class="footer__list">
+            <div class="footer__listHeader" id="#footerListHeaderID">
+              <h4>Gebruikersovereenkomst</h4>
+            </div>
+            <a href="../_algemene-voorwaarden.html" class="footer__link" id="#footerLinkID">Algemene voorwaarden</a>
+            <a href="../_privacy-verklaring.html" class="footer__link" id="#footerLinkID">Privacy verklaring</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- END________ -->
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

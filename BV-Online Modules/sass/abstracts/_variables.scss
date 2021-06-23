@@ -1,19 +1,19 @@
 // COLORS
 $color-primary: rgb(17, 94, 182);
 $color-primary-light: rgb(161, 205, 255);
-$color-primary-dark: rgb(20, 53, 161);
+$color-primary-dark: #213b72;
 
-$color-secondary: rgb(30, 163, 130);
-$color-secondary-light: rgb(71, 221, 159);
+$color-secondary: rgb(32, 180, 143);
+$color-secondary-light: rgb(75, 175, 133);
 $color-secondary-dark: rgb(21, 129, 129);
 
 $color-black: #333;
-$color-white: #fff;
+$color-white: rgb(255, 255, 255);
 
-$color-button-primary: rgb(0, 110, 255);
+$color-button-primary: rgb(24, 105, 255);
 $color-button-primary--hover: rgb(40, 94, 165);
-$color-button-secondary: rgb(10, 190, 64);
-$color-button-secondary--hover: rgb(30, 163, 130);
+$color-button-secondary: rgb(53, 168, 87);
+$color-button-secondary--hover: rgb(35, 133, 124);
 
 $shadow-10: rgba(0, 0, 0, 0.1);
 $shadow-20: rgba(0, 0, 0, 0.2);
@@ -46,6 +46,16 @@ $color-primary-dark--30: rgba(20, 53, 161, 0.3);
 $color-primary-dark--20: rgba(20, 53, 161, 0.2);
 $color-primary-dark--10: rgba(20, 53, 161, 0.1);
 
+$color-primary-light--90: rgb(161, 205, 255, 0.9);
+$color-primary-light--80: rgb(161, 205, 255, 0.8);
+$color-primary-light--70: rgb(161, 205, 255, 0.7);
+$color-primary-light--60: rgb(161, 205, 255, 0.6);
+$color-primary-light--50: rgb(161, 205, 255, 0.5);
+$color-primary-light--40: rgb(161, 205, 255, 0.4);
+$color-primary-light--30: rgb(161, 205, 255, 0.3);
+$color-primary-light--20: rgb(161, 205, 255, 0.2);
+$color-primary-light--10: rgb(161, 205, 255, 0.1);
+
 $color-secondary--90: rgba(30, 163, 130, 0.9);
 $color-secondary--80: rgba(30, 163, 130, 0.8);
 $color-secondary--70: rgba(30, 163, 130, 0.7);
@@ -76,18 +86,11 @@ $color-black--30: rgba(0, 0, 0, 0.3);
 $color-black--20: rgba(0, 0, 0, 0.2);
 $color-black--10: rgba(0, 0, 0, 0.1);
 
-// SHADOWS
-$shadow--largest: 1rem 1rem 1rem 0.4rem $shadow-30;
-$shadow--large: 1rem 1rem 1rem 0.4rem $shadow-30;
-$shadow--medium: 1rem 1rem 1rem 0.4rem $shadow-30;
-$shadow--small: 1rem 1rem 1rem 0.4rem $shadow-30;
-$shadow--smallest: 1rem 1rem 1rem 0.4rem $shadow-30;
 
 
-// ELEMENT SIZES
-/* Navbar: */
-$navbarHeight: 6rem;
 
+/* NAVBAR HEIGHT */
+$navbarHeight: 5rem;
 
 
 // ANIMATIONS
@@ -97,13 +100,13 @@ $lift-moderate: -0.8rem;
 $lift-higher: -1.2rem;
 $lift-highest: -2rem;
 
-// SPACERS
-$elementSpacer: 0;
+// SPACE BETWEEN PAGE SECTIONS
+$sectionSpacerVertical: 6vw;
 
 // VERTICAL SPACING
 $verticalSpacing--smaller: 1rem;
 $verticalSpacing--small: 1.6rem;
-$verticalSpacing--medium: 2.4rem;
+$verticalSpacing--medium: 2.8rem;
 $verticalSpacing--large: 4.8rem;
 $verticalSpacing--larger: 12rem;
 $verticalSpacing--largest: 24rem;
@@ -112,8 +115,11 @@ $verticalSpacing--largest: 24rem;
 $borderRadius: 0.3rem;
 
 /* Padding screen edge to page content */
-$pageTextPadding: 8vw;
+$pageTextPadding: 12vw;
 $pageTextPadding--small: 2.4vw;
+
+/* Padding screen edge to wide page content */
+$pageWidePadding: $pageTextPadding * 0.3;
 
 
 
@@ -126,5 +132,6 @@ $bp-smaller: 632px;
 
 /* !!!DEV-UTILITY Margin of wide content */
 
-$sidePadding: 8vw;
-$sidePaddingMedium: 8vw;
+$sidePadding: 1.6vw;
+$sidePaddingMedium: 4vw;
+$sidePaddingSmall: 2.4vw;
