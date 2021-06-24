@@ -1,7 +1,6 @@
 // ABSTRACTS
-@import "./abstracts/functions";
+@import "./abstracts/breakpoints";
 @import "./abstracts/mixins";
-@import "./abstracts/placeholders";
 @import "./abstracts/variables";
 
 // BASE
@@ -9,16 +8,6 @@
 @import "./base/reset";
 @import "./base/typography";
 
-// COMPONENTS
-@import "./components/bannerMedium";
-@import "./components/bannerRates";
-@import "./components/bannerSteps";
-@import "./components/buttons";
-@import "./components/commentsForm";
-@import "./components/largeHeadlineText";
-@import "./components/pageHeader";
-@import "./components/startGuideForm";
-@import "./components/testimonial";
 
 // LAYOUT
 @import "./layout/containers";
@@ -27,7 +16,6 @@
 @import "./layout/forms";
 @import "./layout/layout";
 @import "./layout/navigation";
-@import "./layout/breakpoints";
 @import "./layout/textLayout";
 
 // pages
@@ -39,5 +27,15 @@
 // registratie
 @import "./pages/registrationProcess/processPageBanner";
 @import "./pages/registrationProcess/registrationForm";
-//Terms and conditions
+// Terms and conditions
 @import "./pages/terms";
+// COMPONENTS
+@import "./webComponents/bannerMedium";
+@import "./webComponents/bannerRates";
+@import "./webComponents/bannerSteps";
+@import "./webComponents/buttons";
+@import "./webComponents/commentsForm";
+@import "./webComponents/largeHeadlineText";
+@import "./webComponents/pageHeader";
+@import "./webComponents/startGuideForm";
+@import "./webComponents/testimonial";

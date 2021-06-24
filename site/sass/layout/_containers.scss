@@ -98,9 +98,9 @@
 
   background-color: transparent;
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  flex-direction: row;
 
   @media screen and (max-width: $bp-small) {
     margin: 0;
