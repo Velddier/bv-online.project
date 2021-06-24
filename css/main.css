@@ -2246,7 +2246,7 @@ input#RADIOID1:checked label.question--conditional {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 2.8rem;
 }
 .testimonial__shape {
@@ -2265,7 +2265,7 @@ input#RADIOID1:checked label.question--conditional {
 }
 .testimonial__userQuote {
   height: 28rem;
-  max-width: 24rem;
+  max-width: 32rem;
   display: flex;
   flex-direction: column;
   align-items: center;
