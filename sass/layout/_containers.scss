@@ -56,7 +56,7 @@
 
   
 
-  & svg {
+  & svg, i {
     align-items: center;
     font-size: 12vw;
     color: $color-primary-dark;
@@ -139,7 +139,7 @@
     margin-bottom: $verticalSpacing--small;
   }
 
-  & svg {
+  & svg, i {
     font-size: 8vw;
     color: $color-primary-dark;
     background-color: $shadow-10;
@@ -209,7 +209,7 @@
       height: 44vh;
       overflow: hidden;
 
-      & img, svg {
+      & img, svg, i {
         max-height: none;
         object-fit: cover;
         width: 90%;

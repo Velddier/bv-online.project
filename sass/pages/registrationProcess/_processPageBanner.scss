@@ -42,7 +42,7 @@
   &__figure {
     flex-shrink: 2;
     & img,
-    svg {
+    svg, i {
       height: 40vh;
       max-height: 40rem;
       width: auto;
@@ -79,7 +79,7 @@
     
     $stepSize: 1rem;
 
-    & svg.stepIcon {
+    & svg.stepIcon, i.stepIcon {
       font-size: $stepSize*1.62;
     }
     

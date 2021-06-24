@@ -120,7 +120,7 @@ $pWidth: 80ch;
 
     & span.contactMethod {
       color: $color-primary;
-      & svg {
+      & , i {
         font-size: $h4-fontSize;
         margin-right: 0.4rem;
       }

@@ -92,7 +92,7 @@ a {
     justify-content: flex-end;
     text-decoration: underline;
 
-    & svg {
+    & svg, i {
       transform: translateY(3px);
       margin-right: 4px;
       color: $color-black--50;

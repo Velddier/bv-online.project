@@ -33,7 +33,7 @@ $spacerSmall: 1.2vw;
     margin: 0;
     color: $color-black;
 
-    & svg {
+    & svg, i {
       margin-left: $spacerSmall;
       color: $color-primary;
     }
@@ -153,7 +153,7 @@ input[type="date"] {
       max-width: 36ch;
     }
 
-    & svg {
+    & svg, i {
       align-self: flex-start;
       font-size: $emphasis-fontSize;
       color: $color-primary--50;

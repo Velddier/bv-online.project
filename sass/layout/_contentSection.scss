@@ -76,7 +76,7 @@
     object-fit: cover;
   }
 
-  & svg {
+  & svg, i {
     font-size: $svgSize;
     color: $color-primary-dark--90;
     min-height: 16rem;

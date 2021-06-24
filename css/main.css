@@ -103,7 +103,7 @@ a.link {
   justify-content: flex-end;
   text-decoration: underline;
 }
-a.link svg {
+a.link svg, a.link i {
   transform: translateY(3px);
   margin-right: 4px;
   color: rgba(0, 0, 0, 0.5);
@@ -164,7 +164,7 @@ a.link:active {
   width: 8rem;
   border-radius: 100rem;
 }
-.containerHalf svg {
+.containerHalf svg, .containerHalf i {
   align-items: center;
   font-size: 12vw;
   color: #213b72;
@@ -229,7 +229,7 @@ a.link:active {
 .containerThird p {
   margin-bottom: 1.6rem;
 }
-.containerThird svg {
+.containerThird svg, .containerThird i {
   font-size: 8vw;
   color: #213b72;
   background-color: rgba(0, 0, 0, 0.1);
@@ -286,7 +286,7 @@ a.link:active {
     height: 44vh;
     overflow: hidden;
   }
-  .containerThird__sideRight img, .containerThird__sideRight svg {
+  .containerThird__sideRight img, .containerThird__sideRight svg, .containerThird__sideRight i {
     max-height: none;
     object-fit: cover;
     width: 90%;
@@ -369,7 +369,7 @@ a.link:active {
   height: 100%;
   object-fit: cover;
 }
-.contentSectionCard__figure svg {
+.contentSectionCard__figure svg, .contentSectionCard__figure i {
   font-size: 8vw;
   color: rgba(20, 53, 161, 0.9);
   min-height: 16rem;
@@ -441,7 +441,7 @@ a.link:active {
   height: 100%;
   object-fit: cover;
 }
-.contentSection__figure svg {
+.contentSection__figure svg, .contentSection__figure i {
   font-size: 8vw;
   color: rgba(20, 53, 161, 0.9);
   min-height: 16rem;
@@ -591,7 +591,7 @@ a.link:active {
   opacity: 0.6;
   margin-right: 4px;
 }
-.contactForm__label span.label__icon svg {
+.contactForm__label span.label__icon svg, .contactForm__label span.label__icon i {
   font-size: 1.1rem;
   transform: translatex(3px);
 }
@@ -944,7 +944,7 @@ img {
   font-size: 1.1rem;
   line-height: 1.4;
 }
-.contactBanner__contactItem svg {
+.contactBanner__contactItem svg, .contactBanner__contactItem i {
   position: absolute;
   top: 0.2rem;
   left: -2.4rem;
@@ -1058,7 +1058,7 @@ img {
 .mostAsked__contactInfo span.contactMethod {
   color: #115eb6;
 }
-.mostAsked__contactInfo span.contactMethod svg {
+.mostAsked__contactInfo span.contactMethod, .mostAsked__contactInfo span.contactMethod i {
   font-size: 1.1rem;
   margin-right: 0.4rem;
 }
@@ -1260,7 +1260,7 @@ ul.questionList p {
   align-items: flex-start;
   gap: 0.4rem;
 }
-.homeTop__figure svg.icon {
+.homeTop__figure svg.icon, .homeTop__figure i.icon {
   font-size: 2.4rem;
   color: #115eb6;
   transform: translateX(1.6rem);
@@ -1398,7 +1398,7 @@ ul.questionList p {
   flex-shrink: 2;
 }
 .processHeader__figure img,
-.processHeader__figure svg {
+.processHeader__figure svg, .processHeader__figure i {
   height: 40vh;
   max-height: 40rem;
   width: auto;
@@ -1425,7 +1425,7 @@ ul.questionList p {
   color: #115eb6;
   opacity: 0.2;
 }
-.processHeader__step svg.stepIcon {
+.processHeader__step svg.stepIcon, .processHeader__step i.stepIcon {
   font-size: 1.62rem;
 }
 .processHeader__step a.stepText {
@@ -1479,7 +1479,7 @@ ul.questionList p {
   margin: 0;
   color: #333;
 }
-.registration h3.sectionHeader svg {
+.registration h3.sectionHeader svg, .registration h3.sectionHeader i {
   margin-left: 1.2vw;
   color: #115eb6;
 }
@@ -1578,7 +1578,7 @@ input[type=date] {
   max-height: 2.88vw;
   max-width: 36ch;
 }
-.questionExplainer svg {
+.questionExplainer svg, .questionExplainer i {
   align-self: flex-start;
   font-size: 1.2rem;
   color: rgba(17, 94, 182, 0.5);
@@ -1796,7 +1796,7 @@ input#RADIOID1:checked label.question--conditional {
   align-items: center;
   gap: 0.8rem;
 }
-.ratesCard__figure svg.icon {
+.ratesCard__figure svg.icon, .ratesCard__figure i.icon {
   transform: scale(1);
 }
 .ratesCard__figure span.label {
@@ -1922,7 +1922,7 @@ input#RADIOID1:checked label.question--conditional {
   font-size: 1.1rem;
   text-align: center;
 }
-.steps__step svg {
+.steps__step svg, .steps__step i {
   transform: translateY(-1.2rem);
   font-size: 4rem;
 }
@@ -2033,7 +2033,7 @@ input#RADIOID1:checked label.question--conditional {
 .highlightedText__blockquoteArea blockquote.text::after {
   content: close-quote;
 }
-.highlightedText__figure svg {
+.highlightedText__figure svg, .highlightedText__figure i {
   font-size: 6rem;
   color: #213b72;
 }
