@@ -1,25 +1,19 @@
 .button {
-
-  @include noSelectionStyle;
-
-  transform: translateX(-8px);
-
   
+  @include noSelectionStyle;
+  transform: translateX(-8px);
+  padding: 1rem;
+
   box-shadow: 0.8rem 0 1px $color-primary-dark;
   border: solid 4px transparent;
-
-  font-size: $emphasis-fontSize;
-  font-weight: 600;
-  letter-spacing: -0.06rem;
-  word-spacing: 0.4rem;
-  
-  cursor: pointer;
-
-
   border-radius: $borderRadius;
   border-end-end-radius: 12px;
 
-  padding: 1rem;
+  font-size: $emphasis-fontSize;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
 
   display: flex;
   align-items: center;

@@ -35,6 +35,11 @@ $pWidth: 80ch;
     min-width: 24rem;
     width: 40vw;
     max-width: 90rem;
+
+    & a:hover {
+      color: $color-primary-light;
+    }
+
   }
 
   &__additionalInfo {
@@ -67,8 +72,8 @@ $pWidth: 80ch;
     }
 
     & h4 {
-      opacity: 0.7;
-      font-size: $p-fontSize;
+      opacity: 0.9;
+      font-size: $h4-fontSize;
       font-style: italic;
     }
 
@@ -185,12 +190,21 @@ ul.questionList {
     }
 
     & h4 {
-      opacity: 0.7;
-      font-size: $p-fontSize;
+      opacity: 0.9;
+      font-size: $emphasis-fontSize;
       font-style: italic;
     }
 
     & p {
       max-width: $pWidth;
     }
+}
+
+.questionList, h4 {
+  &:target:before {
+    content: "";
+    display: block;
+    height: $navbarHeight*4.8;
+    margin-top: -$navbarHeight*4.8;
+  }
 }

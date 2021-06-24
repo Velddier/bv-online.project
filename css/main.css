@@ -37,19 +37,15 @@ h1 {
   transform: translateX(-0.8rem);
   font-family: "Poppins", sans-serif;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.1rem;
   line-height: 1.2;
-  word-spacing: 0.1rem;
-  word-wrap: normal;
 }
 
 subtitle {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
-  font-weight: 300;
-  line-height: 1;
-  font-style: italic;
+  font-weight: 400;
   word-wrap: break-word;
 }
 
@@ -91,14 +87,18 @@ blockquote {
 }
 
 a {
+  color: inherit;
+}
+a:hover {
+  color: #115eb6;
+}
+a.link {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: -0.06rem;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-}
-a.link {
   display: flex;
   justify-content: flex-end;
   text-decoration: underline;
@@ -583,7 +583,6 @@ a.link:active {
   flex-direction: column;
 }
 .contactForm__label {
-  transform: translateX(-1.6rem);
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color: #115eb6;
@@ -738,8 +737,10 @@ img {
 .navbar a.navbar__link {
   padding: 2px 8px;
   font-size: 1.1rem;
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-  text-underline-offset: 0;
 }
 .navbar a.navbar__link:hover {
   transform: translateY(-2px) scale(1.04);
@@ -789,6 +790,9 @@ img {
   font-size: inherit;
 }
 
+.pageHeader__h1 {
+  margin: 4.8rem 12vw;
+}
 .pageHeader__h2 {
   margin: 0 12vw;
   margin-bottom: 1.6rem;
@@ -813,26 +817,49 @@ img {
 }
 
 .singleParagraph {
-  margin: 0 auto 6vw;
-  min-width: 44ch;
-  max-width: 125ch;
+  margin: 0 12vw;
 }
-@media screen and (max-width: 632px) {
-  .singleParagraph {
-    min-width: none;
-    max-width: none;
-    width: 88vw;
-  }
-}
-.singleParagraph__header {
+.singleParagraph h3 {
   margin-bottom: 0.8vw;
   margin-left: -0.2rem;
 }
-.singleParagraph__text {
+.singleParagraph p {
   margin-bottom: 2vw;
 }
-.singleParagraph__text:last-of-type {
-  margin-bottom: 1vw;
+.singleParagraph p:last-of-type {
+  margin-bottom: 12rem;
+}
+.singleParagraph ul {
+  margin: 2.8rem;
+  margin-right: 12vw;
+  padding: 0.462rem 0;
+  padding-left: 1.4rem;
+  padding-bottom: 0.924rem;
+  border-left: 0.07rem solid #115eb6;
+  list-style: none;
+}
+.singleParagraph ol {
+  margin: 2.8rem;
+  padding: 0.462rem 0;
+  padding-bottom: 0.924rem;
+  list-style-position: outside;
+  list-style: decimal;
+}
+.singleParagraph ol li::before {
+  content: "";
+}
+.singleParagraph li {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+}
+.singleParagraph li::before {
+  content: "▪";
+  margin-right: 0.28rem;
+  color: rgba(20, 53, 161, 0.9);
+}
+.singleParagraph li:not(:last-of-type) {
+  margin-bottom: 0.868rem;
 }
 .singleParagraph__button {
   padding: 0.4rem 0;
@@ -969,6 +996,9 @@ img {
   width: 40vw;
   max-width: 90rem;
 }
+.mostAsked__mainArea a:hover {
+  color: #a1cdff;
+}
 .mostAsked__additionalInfo {
   display: flex;
   flex-direction: column;
@@ -991,7 +1021,7 @@ img {
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 .mostAsked__questions h4 {
-  opacity: 0.7;
+  opacity: 0.9;
   font-size: 1.1rem;
   font-style: italic;
 }
@@ -1081,12 +1111,19 @@ ul.questionList li {
   border-left: 2px solid #115eb6;
 }
 ul.questionList h4 {
-  opacity: 0.7;
-  font-size: 1.1rem;
+  opacity: 0.9;
+  font-size: 1.2rem;
   font-style: italic;
 }
 ul.questionList p {
   max-width: 80ch;
+}
+
+.questionList:target:before, h4:target:before {
+  content: "";
+  display: block;
+  height: 24rem;
+  margin-top: -24rem;
 }
 
 .faq {
@@ -1284,6 +1321,11 @@ ul.questionList p {
   margin-left: -0.4rem;
   padding-left: 0.4rem;
   border-left: solid 2px #115eb6;
+}
+.bannerNews__item a.bannerNews__link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 500;
 }
 .bannerNews__item a.bannerNews__link span.text {
   overflow: hidden;
@@ -1903,16 +1945,15 @@ input#RADIOID1:checked label.question--conditional {
 
 .button {
   transform: translateX(-8px);
+  padding: 1rem;
   box-shadow: 0.8rem 0 1px #213b72;
   border: solid 4px transparent;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: -0.06rem;
-  word-spacing: 0.4rem;
-  cursor: pointer;
   border-radius: 0.3rem;
   border-end-end-radius: 12px;
-  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2061,6 +2102,7 @@ input#RADIOID1:checked label.question--conditional {
 .pageHeader__link {
   transform: translateY(2px);
   height: 2rem;
+  text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
 }
