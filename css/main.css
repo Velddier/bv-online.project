@@ -100,7 +100,6 @@ a.link {
   color: inherit;
   cursor: pointer;
   display: flex;
-  justify-content: flex-end;
   text-decoration: underline;
 }
 a.link svg, a.link i {
@@ -1173,7 +1172,7 @@ ul.questionList p {
 }
 
 .homeTop {
-  padding: 2.8rem 3.6vw;
+  padding: 4.8rem 3.6vw;
   background: url(https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
   background-size: cover;
   background-position: center;
@@ -1187,29 +1186,35 @@ ul.questionList p {
   display: inline-block;
   height: 100%;
   width: 33vw;
-  background: linear-gradient(rgba(17, 94, 182, 0.1), #115eb6);
-  filter: blur(3);
+  background: linear-gradient(rgba(17, 94, 182, 0.5), #115eb6);
   position: absolute;
   inset: 0;
 }
 .homeTopContainer {
   height: 50vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "left right";
-  column-gap: 4.8rem;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 2.8rem;
+  flex-wrap: wrap;
 }
 .homeTop__pageHeader {
-  grid-area: "left";
+  flex-grow: 1;
 }
 .homeTop__title h1.text {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 1.6rem;
   padding-bottom: 1.6rem;
-  border-bottom: solid 2px white;
   font-size: 4rem;
   color: white;
+}
+.homeTop__title h1.text::after {
+  content: "";
+  display: block;
+  margin-top: 2.8rem;
+  width: 33%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .homeTop__subtitle {
   max-width: 80ch;
@@ -1222,8 +1227,9 @@ ul.questionList p {
   position: relative;
 }
 .homeTop__modal {
-  justify-self: end;
-  margin-bottom: 2.8rem;
+  z-index: 1000;
+  margin: 0 auto;
+  margin-bottom: 4.8rem;
   padding: 1.6rem 2.8rem;
   min-width: 38rem;
   max-width: 44rem;
@@ -1231,8 +1237,8 @@ ul.questionList p {
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0.8rem 0.8rem 0 #213b72;
   border-radius: 1.6rem;
-  grid-area: "right";
-  align-self: end;
+  align-self: flex-end;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1260,7 +1266,8 @@ ul.questionList p {
   align-items: flex-start;
   gap: 0.4rem;
 }
-.homeTop__figure svg.icon, .homeTop__figure i.icon {
+.homeTop__figure svg.icon,
+.homeTop__figure i.icon {
   font-size: 2.4rem;
   color: #115eb6;
   transform: translateX(1.6rem);
@@ -1304,17 +1311,19 @@ ul.questionList p {
 }
 .bannerNews__header h3 {
   margin: 0;
+  max-width: 8rem;
   color: #213b72;
 }
 .bannerNews__content {
   display: flex;
+  flex-wrap: wrap;
   gap: 2.4rem;
 }
 .bannerNews__list {
   list-style: none;
-  width: 72vw;
   padding-right: 0.8rem;
   border-right: solid 1px rgba(20, 53, 161, 0.1);
+  flex-grow: 0.4;
 }
 .bannerNews__item {
   margin-bottom: 1rem;
@@ -1340,7 +1349,9 @@ ul.questionList p {
 .bannerNews__highlight {
   padding-left: 2rem;
   width: fit-content;
-  display: flex;
+  max-width: 30rem;
+  flex-grow: 0.2;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -1353,10 +1364,10 @@ ul.questionList p {
   color: #115eb6;
 }
 .bannerNews__highlight a.sub {
-  transform: translate(2px, -6px);
+  transform: translate(2px, 6px);
 }
 .bannerNews__more {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 
@@ -1885,8 +1896,7 @@ input#RADIOID1:checked label.question--conditional {
   clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
 }
 .stepsContainer {
-  padding: 0 12vw;
-  height: 32rem;
+  padding: 6rem 12vw;
   background-color: #115eb6;
   color: rgba(255, 255, 255, 0.9);
   border-top: solid rgba(20, 53, 161, 0.6) 3.2rem;
@@ -1895,7 +1905,7 @@ input#RADIOID1:checked label.question--conditional {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 4.8rem;
 }
 .steps__header h3 {
   color: rgba(255, 255, 255, 0.9);
@@ -1906,15 +1916,18 @@ input#RADIOID1:checked label.question--conditional {
   transform: translate(5px, 1.5px);
 }
 .steps__list {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.8rem;
 }
 .steps__step {
+  max-width: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
   position: relative;
 }
 .steps__step .text {
@@ -1929,7 +1942,7 @@ input#RADIOID1:checked label.question--conditional {
 .steps__step .stage {
   position: absolute;
   inset: -2rem;
-  left: 3.6rem;
+  left: 1.6rem;
   height: 2.2rem;
   width: 2.2rem;
   background-color: #20b48f;
@@ -2173,7 +2186,7 @@ input#RADIOID1:checked label.question--conditional {
   content: "";
   margin-bottom: 1.2rem;
   display: inline-block;
-  width: 100%;
+  width: 33%;
   height: 0.4rem;
   background-color: rgba(255, 255, 255, 0.4);
 }
@@ -2231,9 +2244,10 @@ input#RADIOID1:checked label.question--conditional {
 .testimonialContainer {
   z-index: 100;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 2.8rem;
 }
 .testimonial__shape {
   z-index: 1;
@@ -2251,6 +2265,7 @@ input#RADIOID1:checked label.question--conditional {
 }
 .testimonial__userQuote {
   height: 28rem;
+  max-width: 24rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2293,7 +2308,7 @@ input#RADIOID1:checked label.question--conditional {
   padding-left: 3.2rem;
 }
 .testimonial__text p {
-  max-width: 120ch;
+  max-width: 56ch;
 }
 
 /*# sourceMappingURL=main.css.map */

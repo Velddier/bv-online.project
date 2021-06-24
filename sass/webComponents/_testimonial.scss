@@ -6,9 +6,10 @@
     z-index: 100;
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 5rem;
+    gap: $verticalSpacing--medium;
   }
   
   position: relative;
@@ -32,6 +33,7 @@
 
   &__userQuote {
     height: 28rem;
+    max-width: 24rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +83,7 @@
     border-left: 1px solid $color-primary--40;
     padding-left: $sideBorderDistance;
     & p {
-      max-width: 120ch;
+      max-width: 56ch;
     }
   }
 }

@@ -24,19 +24,22 @@
 
   &__header h3 {
     margin: 0;
+    max-width: 8rem;
     color: $color-primary-dark;
   }
 
   &__content {
     display: flex;
+    flex-wrap: wrap;
     gap: 2.4rem;
   }
 
   &__list {
     list-style: none;
-    width: 72vw;
     padding-right: 0.8rem;
     border-right: solid 1px $color-primary-dark--10;
+
+    flex-grow: 0.4;
   }
 
   &__item {
@@ -67,15 +70,20 @@
 
   &__highlight {
     padding-left: 2rem;
-    width: fit-content;
 
-    display: flex;
+    width: fit-content;
+    max-width: 30rem;
+
+    flex-grow: 0.2;
+    
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 
     & span.text {
       transform: translateY(-12px);
+      
 
       font-size: $h2-fontSize;
       font-weight: 700;
@@ -84,12 +92,12 @@
     }
 
     & a.sub {
-      transform: translate(2px, -6px);
+      transform: translate(2px, 6px);
     }
   }
 
   &__more {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
   }
 }
