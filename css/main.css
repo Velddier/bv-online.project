@@ -1331,15 +1331,19 @@ ul.questionList p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap-reverse;
 }
 .processHeader__title {
   max-width: 32rem;
 }
 .processHeader__title h1.text {
   transform: translateX(-0.8rem);
+  margin-bottom: 1.6rem;
 }
 .processHeader__title h1.text::before {
   content: "▶";
+  position: absolute;
+  left: -4rem;
   color: #115eb6;
 }
 .processHeader__title subtitle.sub {
@@ -1347,6 +1351,9 @@ ul.questionList p {
 }
 .processHeader__title p.text {
   transform: translateY(1.2rem);
+}
+.processHeader__figure {
+  flex-shrink: 2;
 }
 .processHeader__figure img,
 .processHeader__figure svg {
@@ -1377,17 +1384,18 @@ ul.questionList p {
   opacity: 0.2;
 }
 .processHeader__step svg.stepIcon {
-  font-size: 1.2rem;
+  font-size: 1.62rem;
 }
-.processHeader__step span.stepText {
-  font-size: 0.9rem;
+.processHeader__step a.stepText {
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 .processHeader__stepDivider {
   transform: translateY(1.6rem);
+  flex-grow: 1;
   margin: 0 1.6rem;
-  width: 16vw;
-  max-width: 20rem;
-  height: 2.4px;
+  height: 1.6px;
   background: linear-gradient(90deg, rgba(17, 94, 182, 0.2), rgba(17, 94, 182, 0.2));
   border-radius: 0.3rem;
 }
@@ -1427,6 +1435,7 @@ ul.questionList p {
 }
 .registration h3.sectionHeader {
   margin: 0;
+  color: #333;
 }
 .registration h3.sectionHeader svg {
   margin-left: 1.2vw;

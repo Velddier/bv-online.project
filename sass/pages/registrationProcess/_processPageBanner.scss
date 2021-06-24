@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap-reverse;
   }
 
 
@@ -20,8 +21,11 @@
     max-width: 32rem;
     & h1.text {
       transform: translateX(-0.8rem);
+      margin-bottom: $verticalSpacing--small;
       &::before {
         content: '▶';
+        position: absolute;
+        left: -$h1-fontSize;
         color: $color-primary;
       }
     }
@@ -36,7 +40,7 @@
   }
   
   &__figure {
-
+    flex-shrink: 2;
     & img,
     svg {
       height: 40vh;
@@ -73,21 +77,25 @@
     color: $color-primary;
     opacity: 0.2;
     
+    $stepSize: 1rem;
+
     & svg.stepIcon {
-      font-size: $emphasis-fontSize;
+      font-size: $stepSize*1.62;
     }
     
-    & span.stepText {
-      font-size: $h5-fontSize;
+    & a.stepText {
+      font-size: $stepSize;
+      text-align: center;
+      text-decoration: none;
     }
 
     &Divider {
       transform: translateY(1.6rem);
-      
+      flex-grow: 1;
       margin: 0 1.6rem;
-      width: 16vw;
-      max-width: 20rem;
-      height: 2.4px;
+      // width: 16vw;
+      // max-width: 20rem;
+      height: 1.6px;
       
       background: linear-gradient(90deg, $color-primary--20, $color-primary--20);
       border-radius: $borderRadius;
