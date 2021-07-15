@@ -7,6 +7,7 @@
 
   &__titleFigureContainer {
     margin: 0 $pageTextPadding;
+    @include responsiveMarginSide;
     padding: $verticalSpacing--medium 0;
     background-color: $color-white;
     display: flex;
@@ -19,17 +20,24 @@
   &__title {
     // margin: 0 auto;
     max-width: 32rem;
+
     & h1.text {
-      transform: translateX(-0.8rem);
+      // transform: translateX(-0.8rem);
       margin-bottom: $verticalSpacing--small;
+
       &::before {
-        content: '▶';
+        content: '';
         position: absolute;
-        left: -$h1-fontSize;
-        color: $color-primary;
+        left: -$h1-fontSize*0.66;
+        top: 1.2rem;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 0 12px 24px;
+        border-color: transparent transparent transparent $color-primary;
       }
     }
-    
+
     & subtitle.sub {
       color: $color-black--60;
     }
@@ -38,11 +46,13 @@
       transform: translateY(1.2rem);
     }
   }
-  
+
   &__figure {
     flex-shrink: 2;
+
     & img,
-    svg, i {
+    svg,
+    i {
       height: 40vh;
       max-height: 40rem;
       width: auto;
@@ -58,15 +68,20 @@
 
     margin-bottom: $sectionSpacerVertical;
     padding: $verticalSpacing--smaller $pageTextPadding;
-    
+    @include responsivePaddingSide;
+
     background-color: $color-white;
     box-shadow: 0 4px 8px -8px $shadow-20;
-
+    
+    @include for-phone-only {
+      display: none;
+    }
   }
 
   &__progressBar {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__step {
@@ -76,13 +91,14 @@
     justify-content: space-between;
     color: $color-primary;
     opacity: 0.2;
-    
+
     $stepSize: 1rem;
 
-    & svg.stepIcon, i.stepIcon {
+    & svg.stepIcon,
+    i.stepIcon {
       font-size: $stepSize*1.62;
     }
-    
+
     & a.stepText {
       font-size: $stepSize;
       text-align: center;
@@ -96,13 +112,16 @@
       // width: 16vw;
       // max-width: 20rem;
       height: 1.6px;
-      
+
+     
+
       background: linear-gradient(90deg, $color-primary--20, $color-primary--20);
       border-radius: $borderRadius;
 
       &--active {
         background: linear-gradient(90deg, $color-primary, $color-primary--20);
       }
+
       &--completed {
         background: linear-gradient(90deg, $color-primary, $color-primary);
       }
@@ -115,4 +134,3 @@
     }
   }
 }
-

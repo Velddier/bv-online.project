@@ -2,6 +2,7 @@ $spacerSmall: 1.2vw;
 
 .registration {
   margin: 0 $pageTextPadding * 1.4;
+  @include responsiveMarginSide;
   margin-bottom: $sectionSpacerVertical;
 
   /* QUESTION SET */
@@ -33,7 +34,8 @@ $spacerSmall: 1.2vw;
     margin: 0;
     color: $color-black;
 
-    & svg, i {
+    & svg,
+    i {
       margin-left: $spacerSmall;
       color: $color-primary;
     }
@@ -53,10 +55,10 @@ $borderSize: 2px;
 $shadowSize: 0.4rem;
 /* ---------------- */
 
-input[type="text"],
-input[type="date"],
-input[type="email"],
-input[type="tel"] {
+.registration__input[type="text"],
+.registration__input[type="date"],
+.registration__input[type="email"],
+.registration__input[type="tel"] {
   align-self: flex-start;
   margin-right: $spacerSmall*3;
   padding: 0 $size;
@@ -114,6 +116,22 @@ input[type="date"] {
   width: $spacerSmall*10;
 }
 
+.registration__inputContainer {
+  @include for-phone-only {
+    flex-direction: column;
+    gap: $verticalSpacing--smaller;
+    margin-bottom: 2rem;
+  }
+}
+
+input:focus+.questionExplainer {
+  
+  
+    height: fit-content;
+    margin-bottom: $verticalSpacing--medium;
+  
+}
+
 .question {
   // background-color: red;
   display: flex;
@@ -140,6 +158,10 @@ input[type="date"] {
     transform: translateX($spacerSmall);
     transition: all 0.2s;
 
+    // @include for-phone-only {
+    //   display: none;
+    // }
+
     align-self: end;
     justify-self: end;
     font-size: $h4-fontSize;
@@ -153,7 +175,8 @@ input[type="date"] {
       max-width: 36ch;
     }
 
-    & svg, i {
+    & svg,
+    i {
       align-self: flex-start;
       font-size: $emphasis-fontSize;
       color: $color-primary--50;
@@ -193,6 +216,7 @@ input[type="date"] {
           text-decoration: underline;
           color: $color-primary;
         }
+
         &:active {
           transform: translateY(0);
         }

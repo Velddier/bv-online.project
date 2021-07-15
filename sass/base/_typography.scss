@@ -15,7 +15,12 @@ p {
   &:last-of-type {
     margin-bottom: $verticalSpacing--large;
   }
+
   font-size: $p-fontSize;
+  @include for-phone-only {
+    font-size: 1.2rem;
+  }
+
   line-height: 1.8;
   min-width: 24ch;
   max-width: 125ch;
@@ -28,6 +33,9 @@ h1 {
   font-weight: 500;
   letter-spacing: -0.1rem;
   line-height: 1.2;
+  @include for-phone-only {
+    font-size: $h1-fontSize*0.7;
+  }
 }
 
 subtitle {
@@ -43,6 +51,9 @@ h2 {
   letter-spacing: -1px;
   line-height: 1.2;
   word-wrap: normal;
+  @include for-phone-only {
+    font-size: $h2-fontSize*0.7;
+  }
 }
 
 h3 {
@@ -52,6 +63,9 @@ h3 {
   color: $color-primary-dark--90;
   font-weight: 600;
   word-wrap: normal;
+  @include for-phone-only {
+    font-size: $h3-fontSize*0.9;
+  }
 }
 
 h4 {
@@ -87,6 +101,20 @@ a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    @include for-phone-only {
+      margin: 2.4rem auto;
+      padding: 1.2rem;
+      background-color: $color-button-primary;
+      border-radius: $borderRadius;
+      text-decoration: none;
+
+      color: $color-white;
+      text-align: center;
+      
+      align-self: center;
+      display: flex;
+      justify-content: center;
+    }
 
     display: flex;
     text-decoration: underline;

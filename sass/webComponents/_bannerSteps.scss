@@ -5,6 +5,7 @@
   
   &Container {
     padding: 6rem $pageTextPadding;
+    @include responsivePaddingSide;
     
     background-color: $color-primary;
     color: $color-white--90;
@@ -33,11 +34,12 @@
     
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: $verticalSpacing--medium;
+    justify-content: space-between;
+    gap: 4vw;
   }
 
   &__step {
+    margin-bottom: 3.2rem;
     max-width: 12rem;
 
     display: flex;

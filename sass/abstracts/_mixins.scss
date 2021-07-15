@@ -25,11 +25,3 @@
     color: none;
   }
 }
-
-
-@mixin mediumLayoutPadding {
-  @media screen and (max-width: $bp-medium) {
-    padding-left: $pageTextPadding--small;
-    padding-right: $pageTextPadding--small;
-  }
-}

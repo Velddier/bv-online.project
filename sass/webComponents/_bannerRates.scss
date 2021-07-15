@@ -2,7 +2,7 @@
   margin-bottom: $sectionSpacerVertical*1.6;
   padding: 0 $pageWidePadding;
 
-  
+
   &Container {
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +25,7 @@
     height: 100%;
     width: 100vw;
   }
+
   &__shape2 {
     position: absolute;
     left: 0;
@@ -41,12 +42,18 @@
 
 .ratesCard {
   transition: all 0.6s 0.2s;
-  
+
   $cardSize: 28rem;
   $cardPadding: 1.2rem;
 
+
   width: $cardSize;
   height: $cardSize*1.62;
+
+  @include for-tablet-landscape-down {
+    width: 100%;
+    height: $cardSize;
+  }
 
   border-radius: $cardPadding;
   overflow: hidden;
@@ -68,6 +75,15 @@
 
   }
 
+  @include for-tablet-landscape-down {
+
+    &__header,
+    &__description {
+      transform: translateY(-2rem);
+    }
+  }
+
+
   position: relative;
 
   &__backgroundImg {
@@ -77,11 +93,17 @@
     position: absolute;
     inset: 0;
     opacity: 0.6;
+    width: 100%;
 
     & img {
       object-fit: cover;
       width: $cardSize;
       height: $cardSize*1.62;
+
+      @include for-tablet-landscape-down {
+        width: 100%;
+        height: $cardSize*1.6;
+      }
     }
   }
 
@@ -96,11 +118,16 @@
       color: $color-white;
 
       &::before {
-        content: '▶';
+        content: '';
         position: absolute;
-        top: 0;
-        left: -2rem;
-        color: $color-primary;
+        top: 0.6rem;
+        left: -1.6rem;
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 10px;
+        border-color: transparent transparent transparent $color-primary;
       }
     }
 
@@ -115,6 +142,11 @@
     transition: all 0.6s;
     z-index: 100;
     opacity: 0;
+
+    @include for-tablet-landscape-down {
+      opacity: 1;
+      margin: 0 2vw;
+    }
 
     margin-bottom: $verticalSpacing--small;
     color: $color-white;
@@ -131,11 +163,15 @@
     display: flex;
     width: 100%;
     justify-content: center;
+
+    @include for-tablet-landscape-down {
+      transform: translateY(6.4rem);
+    }
   }
 
   &__figure {
     z-index: 100;
-    font-size: $p-fontSize;
+    // font-size: $p-fontSize;
     color: $color-white--60;
 
     display: flex;
@@ -143,13 +179,21 @@
     align-items: center;
     gap: 0.8rem;
 
-    & svg.icon, i.icon {
+    & svg.icon,
+    i.icon {
       transform: scale(1);
+      font-size: 1.5rem;
     }
 
     & span.label {
-      color: $color-white--90;
+      text-align: center;
+      color: $color-white--80;
+      font-size: $h5-fontSize;
       opacity: 0;
+
+      @include for-tablet-landscape-down {
+        opacity: 1;
+      }
     }
   }
 
@@ -164,6 +208,13 @@
     padding-top: 2rem;
     width: 100%;
     height: 12%;
+
+    @include for-tablet-landscape-down {
+      height: 20%;
+      background-color: $color-button-primary;
+
+      & span.text {}
+    }
 
     background-color: $color-primary;
     clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
@@ -204,11 +255,13 @@
   }
 }
 
+@include for-tablet-landscape-up {
+  
 .ratesCard:hover {
+  z-index: 1000;
   // transition: all 0.6s;
   transform: translate(-0.4rem, -2rem);
   box-shadow: 0.8rem 1.6rem 1.2rem -4px $shadow-30, 4px 4px 0 $color-primary-dark;
-
 }
 
 .ratesCardContainer {
@@ -253,4 +306,5 @@
   &:hover .ratesCard__backgroundImg {
     opacity: 0.2;
   }
+}
 }

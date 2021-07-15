@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-nl">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,11 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacyverklaring&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren
   </title>
+  
+  <!-- EXTERNAL -->
   <link rel="stylesheet" href="../css/main.css" />
-
-
-  <script defer src="..\node_modules\@fortawesome\fontawesome-free\css\all.css"></script>
-  <script defer src="..\node_modules\@fortawesome\fontawesome-free\js\all.js"></script>
+  <script src="../main.js"></script>
   <script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
 
 
@@ -22,32 +21,53 @@
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="navbarContainer">
+      <div class="navbar__mobileMenu">
+        <i id="navButtonExpand" class="fas fa-bars"></i>
+      </div>
       <div class="navbar__companyLogo">
-        <a href="../index.html" class="navbar__homeLink">
-          <img class='figure' src="../img/logo.svg" alt="BV-ONLINE">
+        <a href="index.html" class="navbar__homeLink">
+          <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
         </a>
       </div>
       <!-- NAVBAR MENU -->
-      <div class="navbar__navMenu">
-        <a href="../index.html" class="navbar__link">
+      <div class="navbar__navMenu" id="navMenu">
+        <a href="index.html" class="navbar__link">
           <span class="text">Home</span>
         </a>
-        <a href="../_about.html" class="navbar__link">
+        <a href="_about.html" class="navbar__link">
           <span class="text">Ontdek BV-Online</span>
         </a>
-        <a href="../_faqs.html" class="navbar__link">
+        <a href="_faqs.html" class="navbar__link">
           <span class="text">Veelgestelde vragen</span>
         </a>
-        <a href="../_aboutus.html" class="navbar__link">
+        <a href="_aboutus.html" class="navbar__link">
           <span class="text">Onze praktijk</span>
         </a>
-        <a href="../_contact.html" class="navbar__link">
+        <a href="_contact.html" class="navbar__link">
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <!-- MOBILE MENU -->
+      <div class="navbar__navMenu--mobile" id="navMenu--mobile">
+        <a href="index.html" class="navbar__link">
+          <span class="text">Home</span>
+        </a>
+        <a href="_about.html" class="navbar__link">
+          <span class="text">Ontdek BV-Online</span>
+        </a>
+        <a href="_faqs.html" class="navbar__link">
+          <span class="text">Veelgestelde vragen</span>
+        </a>
+        <a href="_aboutus.html" class="navbar__link">
+          <span class="text">Onze praktijk</span>
+        </a>
+        <a href="_contact.html" class="navbar__link">
           <span class="text">Contact</span>
         </a>
       </div>
       <div class="navbar__cta">
-        <a href="../registratie/stap_introductie.html" class="button button--large navbar__button">
-          Start registratie
+        <a href="../registratie/stap_introductie.html" class="button navbar__button">
+          <span class="text">Start registratie</span>
         </a>
       </div>
     </div>

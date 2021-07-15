@@ -4,6 +4,7 @@
 
   margin-bottom: $sectionSpacerVertical;
   padding: $verticalSpacing--larger $pageTextPadding;
+  @include responsivePaddingSide;
 
   background-color: $color-white;
 
@@ -44,8 +45,7 @@
   }
 
   &__form {
-
-    min-width: 42rem;
+    // min-width: 42rem;
 
     display: flex;
     flex-direction: column;
@@ -110,6 +110,11 @@
     columns: 104;
 
     @include fieldStyling;
+
+    @include for-tablet-landscape-down {
+      width: 100%;
+    }
+    
   }
 
   &__message {
@@ -127,6 +132,4 @@
     color: $color-white;
     height: 3.2rem;
   }
-
-
 }

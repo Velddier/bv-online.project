@@ -2,7 +2,11 @@
   
   @include noSelectionStyle;
   transform: translateX(-8px);
+  
   padding: 1rem;
+  @include for-tablet-portrait-down {
+    padding: 0.4rem;
+  }
 
   box-shadow: 0.8rem 0 1px $color-primary-dark;
   border: solid 4px transparent;
@@ -10,6 +14,10 @@
   border-end-end-radius: 12px;
 
   font-size: $emphasis-fontSize;
+  @include for-tablet-landscape-down {
+    font-size: $p-fontSize;
+  }
+
   font-weight: 600;
   text-decoration: none;
 
@@ -26,6 +34,8 @@
     filter: brightness(1.1);
     transform: translateX(-9px);
     box-shadow: 0.9rem 0 1px $color-primary-dark;
+
+    color: $color-white--70;
   }
   &:active {
     position: relative;

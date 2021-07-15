@@ -1,10 +1,7 @@
 .homeTop {
   padding: $verticalSpacing--large $pageWidePadding;
-  // background: linear-gradient($color-black--10, $color-black--10), url(https://images.unsplash.com/photo-1542330952-bffc55e812b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80);
-  // background: linear-gradient($color-black--10, $color-black--10), url(https://images.unsplash.com/photo-1571844307880-751c6d86f3f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2017&q=80);
-  // background: linear-gradient($color-black--10, $color-black--10), url(https://images.unsplash.com/photo-1590650423710-ffa6e7f63440?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80);
-  // background: linear-gradient($color-black--20, $color-black--20), url(https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80);
-  background: url(https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
+  @include responsivePaddingSide;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +26,6 @@
   }
 
   &Container {
-    height: 50vh;
 
     // display: grid;
     // grid-template-columns: 1fr 1fr;
@@ -56,7 +52,6 @@
       text-shadow: 2px 2px 8px $shadow-50;
       margin-bottom: $verticalSpacing--small;
       padding-bottom: $verticalSpacing--small;
-      font-size: $h1-fontSize;
       color: $color-white;
 
       &::after {
@@ -88,13 +83,19 @@
     margin: 0 auto;
     margin-bottom: $verticalSpacing--large;
     padding: $verticalSpacing--small $verticalSpacing--medium;
-    min-width: 38rem;
+    // min-width: 38rem;
     max-width: 44rem;
     height: fit-content;
 
     background-color: $color-white--90;
-    box-shadow: 0.8rem 0.8rem 0 $color-primary-dark;
+    box-shadow: -1px 6px 12px 3.5px $shadow-30;
     border-radius: $verticalSpacing--small;
+
+    @include for-tablet-landscape-down {
+      border-radius: $borderRadius;
+      margin: 0 -2.4rem;
+    }
+
 
     align-self: flex-end;
     flex-grow: 1;
@@ -104,6 +105,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: $verticalSpacing--small;
 
     &Header {
@@ -125,6 +127,8 @@
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $verticalSpacing--smaller;
   }
 
   &__figure {

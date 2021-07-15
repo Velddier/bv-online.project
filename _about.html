@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-nl">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ontdek Bv-online&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren</title>
+  <title>Ontdek Bv-online&ndash;Ontdek de laatste actualiteiten op het gebied van BV's en het registreren ervan</title>
+
+  <!-- OPENGRAPH DATA -->
+  <meta property="og:title"
+    content="Ontdek Bv-online&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren">
+  <meta property="og:site_name" content="BV-Online">
+  <meta property="og:url" content="https://www.bvonline.nl/about.html">
+  <meta property="og:description"
+    content="#Bv-online biedt een snelle en makkelijke service voor het registreren van jou BV.">
+  <meta property="og:type" content="product">
+  <meta property="og:image" content="#">
+
+
+  <!-- EXTERNAL -->
   <link rel="stylesheet" href="css/main.css" />
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
 
-
-  <script defer src=".\node_modules\@fortawesome\fontawesome-free\css\all.css"></script>
-  <script defer src=".\node_modules\@fortawesome\fontawesome-free\js\all.js"></script><script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -19,15 +31,34 @@
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="navbarContainer">
+      <div class="navbar__mobileMenu">
+        <i id="navButtonExpand" class="fas fa-bars"></i>
+      </div>
       <div class="navbar__companyLogo">
         <a href="index.html" class="navbar__homeLink">
-          <a href="index.html" class="navbar__homeLink">
-            <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
-          </a>
+          <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
         </a>
       </div>
       <!-- NAVBAR MENU -->
-      <div class="navbar__navMenu">
+      <div class="navbar__navMenu" id="navMenu">
+        <a href="index.html" class="navbar__link">
+          <span class="text">Home</span>
+        </a>
+        <a href="_about.html" class="navbar__link">
+          <span class="text">Ontdek BV-Online</span>
+        </a>
+        <a href="_faqs.html" class="navbar__link">
+          <span class="text">Veelgestelde vragen</span>
+        </a>
+        <a href="_aboutus.html" class="navbar__link">
+          <span class="text">Onze praktijk</span>
+        </a>
+        <a href="_contact.html" class="navbar__link">
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <!-- MOBILE MENU -->
+      <div class="navbar__navMenu--mobile" id="navMenu--mobile">
         <a href="index.html" class="navbar__link">
           <span class="text">Home</span>
         </a>
@@ -45,8 +76,8 @@
         </a>
       </div>
       <div class="navbar__cta">
-        <a href="../registratie/stap_introductie.html" class="button button--large navbar__button">
-          Start registratie
+        <a href="../registratie/stap_introductie.html" class="button navbar__button">
+          <span class="text">Start registratie</span>
         </a>
       </div>
     </div>
@@ -55,7 +86,7 @@
 
   <!-- PAGE TITLE + SUBNAV -->
   <div
-    style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1549923746-b7f3a7e3c35d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80); background-position: center;"
+    style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/banners/twoBusinessMenOneExplaining_banner.jpeg); background-position: center;"
     class="pageHeader">
     <div class="pageHeader__banner">
       <div class="pageHeader__title" id="pageTitleID">
@@ -65,10 +96,10 @@
   </div>
 
   <div class="pageHeader__navigation" id="pageNavigationID">
-    <a href="#" class="pageHeader__link" id="pageHeader__navigationLinkID">Bv-online en mijn bedrijf</a>
-    <a href="#" class="pageHeader__link" id="pageHeader__navigationLinkID">Voorbereiding</a>
-    <a href="#" class="pageHeader__link" id="pageHeader__navigationLinkID">Veiligheid & authenticiteit</a>
-    <a href="#" class="pageHeader__link" id="pageHeader__navigationLinkID">Nieuws & actualiteit</a>
+    <a href="#mijnbedrijf" class="pageHeader__link" id="pageHeader__navigationLinkID">Bv-online en mijn bedrijf</a>
+    <a href="#voorbereiding" class="pageHeader__link" id="pageHeader__navigationLinkID">Voorbereiding</a>
+    <a href="#veiligheid" class="pageHeader__link" id="pageHeader__navigationLinkID">Veiligheid & authenticiteit</a>
+    <a href="#nieuws" class="pageHeader__link" id="pageHeader__navigationLinkID">Nieuws & actualiteit</a>
   </div>
 
   <div class="appContainer" id="#app">
@@ -90,13 +121,13 @@
         </div>
         <div class="contentSectionCard__figure">
           <img
-            src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            src="img/womanTyping.jpeg"
             alt="picture">
         </div>
       </div>
     </div>
 
-    <h2 class="pageHeader__h2" id="section--wat_je_moet_weten">Wat kan Bv-online betekenen voor het opzetten van mijn
+    <h2 id="mijnbedrijf" class="pageHeader__h2">Wat kan Bv-online betekenen voor het opzetten van mijn
       bedrijf?</h2>
 
     <div class="contentSection" id="###ID_NODIG">
@@ -110,7 +141,7 @@
         </div>
         <div class="contentSection__figure">
           <img
-            src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80"
+            src="img/businessManInFrontOfLaptop.jpeg"
             alt="picture">
         </div>
       </div>
@@ -147,7 +178,7 @@
         </div>
         <div class="contentSection__figure">
           <img
-            src="https://images.unsplash.com/photo-1542330952-bffc55e812b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            src="img/casualWomanInFrontOfLaptop.jpeg"
             alt="picture">
         </div>
       </div>
@@ -174,12 +205,12 @@
       </div>
     </div>
 
-    <div style="margin: 6rem 0;" class="decorator decoratorLine decoratorLine__10deg"></div>
+    <div style="margin: 3rem 0;" class="decorator decoratorLine decoratorLine__10deg"></div>
 
 
     <!-- ---------------------- -->
 
-    <h2 class="pageHeader__h2">Hoe je je het best voorbereidt</h2>
+    <h2 id="voorbereiding" class="pageHeader__h2">Hoe je je het best voorbereidt</h2>
 
     <div class="contentSection" id="###ID_NODIG">
       <div class="contentSectionContainer">
@@ -198,7 +229,7 @@
         </div>
         <div class="contentSection__figure">
           <img
-            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80"
+            src="img/laptopOnDesk.jpeg"
             alt="picture">
         </div>
       </div>
@@ -236,7 +267,7 @@
         </div>
         <div class="contentSection__figure">
           <img
-            src="https://images.unsplash.com/photo-1603539279542-e7cf76a92801?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80"
+            src="img/inboxSmartPhone.jpeg"
             alt="picture">
         </div>
       </div>
@@ -270,7 +301,7 @@
       <div class="contactForm__shape1"></div>
       <div class="contactFormContainer">
         <div class="contactForm__header">
-          <h2 class="text">Vragen of opmerkingen?</h2>
+          <h2 id="comments" class="text">Vragen of opmerkingen?</h2>
         </div>
         <div class="contactForm__subheader">
           <h4 class="text">Wij reageren zo snel mogelijk</h4>
@@ -383,7 +414,8 @@
             <div class="footer__listHeader" id="#footerListHeaderID">
               <h4>Gebruikersovereenkomst</h4>
             </div>
-            <a href="../html_doc/_algemenevoorwaarden.html" class="footer__link" id="#footerLinkID">Algemene voorwaarden</a>
+            <a href="../html_doc/_algemenevoorwaarden.html" class="footer__link" id="#footerLinkID">Algemene
+              voorwaarden</a>
             <a href="../html_doc/_privacyverklaring.html" class="footer__link" id="#footerLinkID">Privacy verklaring</a>
           </div>
         </div>

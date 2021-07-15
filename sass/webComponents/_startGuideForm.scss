@@ -1,31 +1,34 @@
 .bannerSignup {
   $angle: -4deg;
-  margin-bottom: $sectionSpacerVertical;
   margin-top: $sectionSpacerVertical;
-  
+  margin-bottom: $sectionSpacerVertical;
+
   // @include sidePadElement;
   overflow: hidden;
-  
+
   color: $color-black;
   transform: skewY($angle);
-  
+
   &Container {
     z-index: 10;
     padding: $verticalSpacing--large $pageTextPadding;
-    
+    @include responsivePaddingSide;
+
     // background: linear-gradient((90deg), $color-secondary-dark, $color-white);
-    
+
     background-color: $color-primary;
-    background-image: linear-gradient($color-primary--20, $color-primary--20), url(https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
+    // background-image: linear-gradient($color-primary--20, $color-primary--20), url(https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
     background-size: cover;
     background-repeat: no-repeat;
-    
+
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: space-evenly;
 
     position: relative;
+
     &::before {
       content: '';
       display: inline-block;
@@ -37,16 +40,8 @@
       inset: 0;
 
     }
-    
-    @media screen and (max-width: $bp-medium) {
-      justify-content: space-around;      
-    }
-    @media screen and (max-width: $bp-smaller) {
-      flex-direction: column;  
-      gap: $verticalSpacing--medium;
-    }
   }
-  
+
   // LEFT SIDE
   &__leftSide {
     transform: skewY(-$angle) translateY($verticalSpacing--small);
@@ -62,7 +57,7 @@
     font-size: $h2-fontSize;
     @include underline($color: $color-white--40);
   }
-  
+
   &__paragraph {
     transform: translateY(-2rem);
     font-size: $p-fontSize;

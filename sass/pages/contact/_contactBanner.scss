@@ -20,7 +20,6 @@
   &__panelDetails {
     padding-left: $pageTextPadding;
     padding-right: 4rem;
-    @include mediumLayoutPadding;
     
     min-width: 32rem;
     height: inherit;

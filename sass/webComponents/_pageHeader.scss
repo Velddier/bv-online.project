@@ -9,7 +9,6 @@
   &__banner {
     position: relative;
     padding: $verticalSpacing--large $pageTextPadding;
-    @include mediumLayoutPadding;
     height: 8rem;
     
     overflow: hidden;

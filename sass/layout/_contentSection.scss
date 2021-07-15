@@ -2,14 +2,18 @@
   margin-bottom: $sectionSpacerVertical;
   background-color: $color-white;
   overflow: hidden;
-  
+
   &Container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     column-gap: 2.4rem;
+
     // grid-area: 'a b';
+    & * {
+      margin-bottom: $verticalSpacing--medium;
+    }
   }
-  
+
   &__copy {
     padding-top: $verticalSpacing--medium;
     // grid-area: 'a';
@@ -24,6 +28,7 @@
     }
 
     $listSize: 2rem;
+
     ul {
       margin: $listSize*2 0;
       padding: $listSize*0.33 0;
@@ -45,6 +50,7 @@
         margin-right: $listSize*0.2;
         color: $color-primary-dark--90;
       }
+
       &:not(:last-of-type) {
         margin-bottom: $listSize*0.62;
       }
@@ -57,15 +63,25 @@
 
   &__ctaRow {
     display: flex;
-    align-items: baseline;
-    gap: 1.2vw;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.6rem;
+    @include for-tablet-portrait-down {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
+
 
   &__button {
     width: 40%;
     background-color: $color-button-primary;
     text-align: center;
     color: $color-white;
+    flex-grow: 1;
+    height: 3.2rem;
+    align-self: center;
   }
 }
 
@@ -76,7 +92,13 @@
     object-fit: cover;
   }
 
-  & svg, i {
+  @include for-tablet-landscape-down {
+    padding: none;
+    margin: none;
+  }
+
+  & svg,
+  i {
     font-size: $svgSize;
     color: $color-primary-dark--90;
     min-height: 16rem;
@@ -92,6 +114,8 @@ $svgSize: 8vw;
   margin: 0 $pageTextPadding - 3.6;
   @include sectionStyleCommon;
 
+  @include responsiveMarginSide;
+
   $borderSize: $verticalSpacing--small;
   border-left: $borderSize solid $color-primary;
   border-radius: $borderRadius;
@@ -104,12 +128,15 @@ $svgSize: 8vw;
   &__figure {
     margin: -$borderSize 0;
     margin-right: -$borderSize*2;
+    @include for-tablet-portrait-down {
+      margin: -$borderSize*2;
+    }
 
     grid-area: 'b';
 
     overflow: hidden;
 
-    flex-grow: 1;
+    flex-grow: 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,13 +148,14 @@ $svgSize: 8vw;
 
 .contentSection {
   margin: 0 $pageTextPadding;
+  @include responsiveMarginSide;
 
   @include sectionStyleCommon;
 
   &__figure {
 
     overflow: hidden;
-
+        
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +164,17 @@ $svgSize: 8vw;
     @include contentFigureStyle;
     clip-path: polygon(4% 4%, 100% 0%, 96% 96%, 0% 100%);
 
+    @include for-tablet-landscape-down {
+      margin-top: $verticalSpacing--small;
+      margin-bottom: $verticalSpacing--smaller;
+      clip-path: none;
+
+      border-radius: $borderRadius;
+      // box-shadow: 2px 2px 12px -4px $shadow-10;
+
+      gap: 0.8rem;
+    }
+
 
   }
 }
-

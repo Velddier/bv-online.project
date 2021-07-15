@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-nl">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Introductie &ndash;Bv registratie process</title>
+
+
+  <!-- EXTERNAL -->
   <link rel="stylesheet" href="../css/main.css" />
-
-
-  <script defer src="..\node_modules\@fortawesome\fontawesome-free\css\all.css"></script>
-  <script defer src="..\node_modules\@fortawesome\fontawesome-free\js\all.js"></script>
+  <script src="../main.js"></script>
   <script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
 
 
@@ -21,32 +21,53 @@
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="navbarContainer">
+      <div class="navbar__mobileMenu">
+        <i id="navButtonExpand" class="fas fa-bars"></i>
+      </div>
       <div class="navbar__companyLogo">
-        <a href="../index.html" class="navbar__homeLink">
-          <img class='figure' src="../img/logo.svg" alt="BV-ONLINE">
+        <a href="index.html" class="navbar__homeLink">
+          <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
         </a>
       </div>
       <!-- NAVBAR MENU -->
-      <div class="navbar__navMenu">
-        <a href="../index.html" class="navbar__link">
+      <div class="navbar__navMenu" id="navMenu">
+        <a href="index.html" class="navbar__link">
           <span class="text">Home</span>
         </a>
-        <a href="../_about.html" class="navbar__link">
+        <a href="_about.html" class="navbar__link">
           <span class="text">Ontdek BV-Online</span>
         </a>
-        <a href="../_faqs.html" class="navbar__link">
+        <a href="_faqs.html" class="navbar__link">
           <span class="text">Veelgestelde vragen</span>
         </a>
-        <a href="../_aboutus.html" class="navbar__link">
+        <a href="_aboutus.html" class="navbar__link">
           <span class="text">Onze praktijk</span>
         </a>
-        <a href="../_contact.html" class="navbar__link">
+        <a href="_contact.html" class="navbar__link">
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <!-- MOBILE MENU -->
+      <div class="navbar__navMenu--mobile" id="navMenu--mobile">
+        <a href="index.html" class="navbar__link">
+          <span class="text">Home</span>
+        </a>
+        <a href="_about.html" class="navbar__link">
+          <span class="text">Ontdek BV-Online</span>
+        </a>
+        <a href="_faqs.html" class="navbar__link">
+          <span class="text">Veelgestelde vragen</span>
+        </a>
+        <a href="_aboutus.html" class="navbar__link">
+          <span class="text">Onze praktijk</span>
+        </a>
+        <a href="_contact.html" class="navbar__link">
           <span class="text">Contact</span>
         </a>
       </div>
       <div class="navbar__cta">
-        <a href="../registratie/stap_introductie.html" class="button button--large navbar__button">
-          Start registratie
+        <a href="../registratie/stap_introductie.html" class="button navbar__button">
+          <span class="text">Start registratie</span>
         </a>
       </div>
     </div>
@@ -111,7 +132,7 @@
               <span class="labelText">Naam</span>
             </div>
             <div class="registration__inputContainer">
-              <input type="text" id="input#" placeholder="Voor- en achternaam">
+              <input class="registration__input" type="text" id="input#" placeholder="Voor- en achternaam">
               <div class="questionExplainer">
                 <i class="fas fa-question"></i>
                 <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores enim
@@ -125,7 +146,7 @@
               <span class="labelText">Geboortedatum</span>
             </div>
             <div class="registration__inputContainer">
-              <input type="date" id="input#">
+              <input class="registration__input" type="date" id="input#">
               <div class="questionExplainer">
                 <i class="fas fa-question"></i>
                 <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores enim
@@ -139,7 +160,7 @@
               <span class="labelText">Email</span>
             </div>
             <div class="registration__inputContainer">
-              <input type="email" id="input#" placeholder="naam@email.nl">
+              <input class="registration__input" type="email" id="input#" placeholder="naam@email.nl">
               <div class="questionExplainer">
                 <i class="fas fa-question"></i>
                 <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores enim
@@ -161,11 +182,11 @@
               <span class="labelText">Bedrijfsnaam</span>
             </div>
             <div class="registration__inputContainer">
-              <input type="text" id="input#" placeholder="">
+              <input class="registration__input" type="text" id="input#" placeholder="">
               <div class="questionExplainer">
                 <i class="fas fa-question"></i>
                 <span class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus esse totam, aut
-                  vero magni exercitationem cupiditate, minus atque alias minima perferendis perspiciatis ratione!
+                  vero magni minima perferendis perspiciatis ratione!
                   Corporis?</span>
               </div>
             </div>
@@ -176,7 +197,7 @@
               <span class="labelText">Kvk-nummer</span>
             </div>
             <div class="registration__inputContainer">
-              <input type="text" inputmode="numeric" id="input#" placeholder="">
+              <input class="registration__input" type="text" inputmode="numeric" id="input#" placeholder="">
               <div class="questionExplainer">
                 <i class="fas fa-question"></i>
                 <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit adipisci
@@ -190,7 +211,7 @@
               <span class="labelText">Datum van stichting</span>
             </div>
             <div class="registration__inputContainer">
-              <input type="date" id="input#">
+              <input class="registration__input" type="date" id="input#">
               <div class="questionExplainer">
                 <i class="fas fa-question"></i>
                 <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores enim
@@ -206,19 +227,19 @@
             </div>
             <div class="questionRadioCheckbox__selection">
               <label class="questionLabel" for="#CHECKID1">
-                <input type="checkbox" name="RADIOSET" id="#CHECKID1">
+                <input class="registration__input" type="checkbox" name="RADIOSET" id="#CHECKID1">
                 <span class="radioLabelText">Keuze 1</span>
               </label>
             </div>
             <div class="questionRadioCheckbox__selection">
               <label class="questionLabel" for="#CHECKID2">
-                <input type="checkbox" name="RADIOSET" id="#CHECKID2">
+                <input class="registration__input" type="checkbox" name="RADIOSET" id="#CHECKID2">
                 <span class="radioLabelText">Keuze 2</span>
               </label>
             </div>
             <div class="questionRadioCheckbox__selection">
               <label class="questionLabel" for="#CHECKID3">
-                <input type="checkbox" name="RADIOSET" id="#CHECKID3">
+                <input class="registration__input" type="checkbox" name="RADIOSET" id="#CHECKID3">
                 <span class="radioLabelText">Keuze 3</span>
               </label>
             </div>
@@ -230,13 +251,13 @@
             </div>
             <div class="questionRadioCheckbox__selection">
               <label class="questionLabel" for="RADIOID1">
-                <input type="radio" name="RADIOSET" id="RADIOID1" value="yes">
+                <input class="registration__input" type="radio" name="RADIOSET" id="RADIOID1" value="yes">
                 <span class="radioLabelText">Ja</span>
               </label>
             </div>
             <div class="questionRadioCheckbox__selection">
               <label class="questionLabel" for="RADIOID2">
-                <input type="radio" name="RADIOSET" id="RADIOID2" value="no">
+                <input class="registration__input" type="radio" name="RADIOSET" id="RADIOID2" value="no">
                 <span class="radioLabelText">Nee</span>
               </label>
             </div>
@@ -247,7 +268,7 @@
               <span class="labelText">Ga hier verder</span>
             </div>
             <div class="registration__inputContainer">
-              <input type="text" id="input#">
+              <input class="registration__input" type="text" id="input#">
               <div class="questionExplainer">
                 <i class="fas fa-question"></i>
                 <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores enim
@@ -375,7 +396,8 @@
             <div class="footer__listHeader" id="#footerListHeaderID">
               <h4>Gebruikersovereenkomst</h4>
             </div>
-            <a href="../html_doc/_algemenevoorwaarden.html" class="footer__link" id="#footerLinkID">Algemene voorwaarden</a>
+            <a href="../html_doc/_algemenevoorwaarden.html" class="footer__link" id="#footerLinkID">Algemene
+              voorwaarden</a>
             <a href="../html_doc/_privacyverklaring.html" class="footer__link" id="#footerLinkID">Privacy verklaring</a>
 
           </div>

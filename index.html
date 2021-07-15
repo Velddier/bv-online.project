@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-nl">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren</title>
+
+  <!-- OPEN GRAPH DATA -->
+  <meta property="og:title"
+    content="Home&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren">
+  <meta property="og:site_name" content="BV-Online">
+  <meta property="og:url" content="https://www.bvonline.nl">
+  <meta property="og:description"
+    content="#Bv-online biedt een snelle en makkelijke service voor het registreren van jou BV.">
+  <meta property="og:type" content="product">
+  <meta property="og:image" content="#">
+
+  <!-- EXTERNAL -->
   <link rel="stylesheet" href="./css/main.css" />
-
-
-  <script defer src=".\node_modules\@fortawesome\fontawesome-free\css\all.css"></script>
-  <script defer src=".\node_modules\@fortawesome\fontawesome-free\js\all.js"></script>
+  <script src="main.js"></script>
   <script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
 
 </head>
@@ -19,13 +28,34 @@
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="navbarContainer">
+      <div class="navbar__mobileMenu">
+        <i id="navButtonExpand" class="fas fa-bars"></i>
+      </div>
       <div class="navbar__companyLogo">
         <a href="index.html" class="navbar__homeLink">
           <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
         </a>
       </div>
       <!-- NAVBAR MENU -->
-      <div class="navbar__navMenu">
+      <div class="navbar__navMenu" id="navMenu">
+        <a href="index.html" class="navbar__link">
+          <span class="text">Home</span>
+        </a>
+        <a href="_about.html" class="navbar__link">
+          <span class="text">Ontdek BV-Online</span>
+        </a>
+        <a href="_faqs.html" class="navbar__link">
+          <span class="text">Veelgestelde vragen</span>
+        </a>
+        <a href="_aboutus.html" class="navbar__link">
+          <span class="text">Onze praktijk</span>
+        </a>
+        <a href="_contact.html" class="navbar__link">
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <!-- MOBILE MENU -->
+      <div class="navbar__navMenu--mobile" id="navMenu--mobile">
         <a href="index.html" class="navbar__link">
           <span class="text">Home</span>
         </a>
@@ -43,8 +73,8 @@
         </a>
       </div>
       <div class="navbar__cta">
-        <a href="../registratie/stap_introductie.html" class="button button--large navbar__button">
-          Start registratie
+        <a href="../registratie/stap_introductie.html" class="button navbar__button">
+          <span class="text">Start registratie</span>
         </a>
       </div>
     </div>
@@ -56,7 +86,7 @@
   <div class="appContainer" id="#app">
 
     <!-- HOMEPAGE BANNER LARGE -->
-    <div class="homeTop">
+    <div class="homeTop" style="background-image: url(img/banners/home_banner.jpeg);">
       <div class="homeTopContainer">
         <div class="homeTop__pageHeader">
           <div class="homeTop__title">
@@ -89,9 +119,10 @@
               <span class="label">vandaag gedaan<i class="check fas fa-check"></i></span>
             </div>
           </div>
-          <a href="#tarieven" class="homeTop__cta button" id="#ID_NODIG">
+          <button onclick="uiScript.scrollToTarieven('tarieven')" href="#tarieven" class="homeTop__cta button"
+            id="#ID_NODIG">
             Ontdek onze tarieven
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -100,10 +131,10 @@
     <div class="bannerNews">
       <div class="bannerNews__shape1"></div>
       <div class="bannerNewsContainer">
+        <div class="bannerNews__header">
+          <h3>Laatste nieuws</h3>
+        </div>
         <div class="bannerNews__content">
-          <div class="bannerNews__header">
-            <h3>Laatste nieuws</h3>
-          </div>
           <ul class="bannerNews__list">
             <li class="bannerNews__item" id="ID_NODIG">
               <a href="#" class="bannerNews__link" id="ID_NODIG">
@@ -132,7 +163,7 @@
               </a>
             </li>
             <div class="bannerNews__more">
-              <a href="_about.html#nieuws" class="bannerNews__button link bannerNews__link">Meer</a>
+              <a href="_about.html#nieuws" class="bannerNews__button link bannerNews__link">Meer artikels</a>
             </div>
           </ul>
           <div class="bannerNews__highlight">
@@ -157,7 +188,7 @@
         </div>
         <div class="contentSection__figure">
           <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            src="./img/clutteredDesk.jpeg"
             alt="picture">
         </div>
       </div>
@@ -168,7 +199,7 @@
       <div class="contentSectionContainer">
         <div class="contentSection__figure">
           <img loading="lazy"
-            src="https://images.unsplash.com/photo-1533229613598-751dc97ec35f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            src="img/coupleAndLaptop.jpeg"
             alt="picture">
         </div>
         <div class="contentSection__copy">
@@ -226,7 +257,7 @@
       <div class="contentSectionContainer">
         <div class="contentSection__figure">
           <img loading="lazy"
-            src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            src="img/manCheckingPhoneInCafe.jpeg"
             alt="picture">
         </div>
         <div class="contentSection__copy">
@@ -274,7 +305,7 @@
         </div>
         <div class="contentSection__figure">
           <img loading="lazy"
-            src="https://images.unsplash.com/photo-1554007460-791a7b8945d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2096&q=80"
+            src="img/EUSeats.jpeg"
             alt="picture">
         </div>
       </div>
@@ -297,7 +328,7 @@
             <span class="badge">Zeer voordelig</span>
             <div class="ratesCard__backgroundImg">
               <img loading="lazy"
-                src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+                src="img/womanWithLaptopMakingPhoneCall.jpeg"
                 alt="">
             </div>
             <div class="ratesCard__header">
@@ -313,20 +344,20 @@
             </div>
             <div class="ratesCard__figureList">
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-asterisk"></i>
+                <span class="label">Nieuwe zaken</span>
               </div>
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-headset"></i>
+                <span class="label">Advies & assistentie</span>
               </div>
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-user-shield"></i>
+                <span class="label">Verzekerd confidentiaal</span>
               </div>
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-wifi"></i>
+                <span class="label">Volledig online</span>
               </div>
             </div>
             <div class="ratesCard__cta">
@@ -340,7 +371,7 @@
             <span class="badge">Alles inbegrepen</span>
             <div class="ratesCard__backgroundImg">
               <img loading="lazy"
-                src="https://images.unsplash.com/photo-1603202662747-00e33e7d1468?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1958&q=80"
+                src="img/peopleHavingMeeting.jpeg"
                 alt="">
             </div>
             <div class="ratesCard__header">
@@ -356,20 +387,20 @@
             </div>
             <div class="ratesCard__figureList">
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-building"></i>
+                <span class="label">Bestaande zaken</span>
               </div>
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-comment-medical"></i>
+                <span class="label">Het beste advies</span>
               </div>
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-paperclip"></i>
+                <span class="label">Flexibel per zaak</span>
               </div>
               <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
+                <i class="icon fas fa-binoculars"></i>
+                <span class="label">Zorgvuldig geregeld</span>
               </div>
             </div>
             <div class="ratesCard__cta">
@@ -383,7 +414,7 @@
             <span class="badge">Niet zeker?</span>
             <div class="ratesCard__backgroundImg">
               <img loading="lazy"
-                src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"
+                src="img/manPointingAtTablet.jpeg"
                 alt="">
             </div>
             <div class="ratesCard__header">
@@ -433,8 +464,8 @@
           <!-- PROFILE PICTURE -->
           <div class="testimonial__userProfile">
             <img loading="lazy"
-              src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
-              alt="#ALT_NODIG" class="profileImg">
+              src="img/thumbnails/profileImageWoman.jpeg"
+              alt="profielfoto van een vrouw" class="profileImg">
           </div>
           <!-- QUOTE -->
           <div class="testimonial__blockquote">
@@ -461,7 +492,7 @@
         <div class="testimonial__userQuote">
           <!-- PROFILE PICTURE -->
           <div class="testimonial__userProfile">
-            <img loading="lazy" src="https://uifaces.co/our-content/donated/FRdmYcK0.jpg" alt="#ALT_NODIG"
+            <img loading="lazy" src="img/thumbnails/profileImageMan.jpeg" alt="Profielfoto van een man"
               class="profileImg">
           </div>
           <!-- QUOTE -->
@@ -486,7 +517,7 @@
 
 
     <div class="bannerSignup">
-      <div class="bannerSignupContainer">
+      <div class="bannerSignupContainer" style="background-image: url(img/womanBitingPencilAtDesk.jpeg);">
         <!-- Left side copy -->
         <div class="bannerSignup__leftSide">
           <div class="bannerSignup__largeHeader" id="#bannerSignupHeaderID">
@@ -530,7 +561,7 @@
         </div>
         <div class="contentSection__figure">
           <img loading="lazy"
-            src="https://images.unsplash.com/photo-1557425493-6f90ae4659fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            src="img/manAndWomanLaughingAtDesk.jpeg"
             alt="picture">
         </div>
       </div>

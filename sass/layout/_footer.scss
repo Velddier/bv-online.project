@@ -26,12 +26,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include for-phone-only {
+      position: relative;
+      height: 6rem;
+      justify-content: center;
+      padding-top: $verticalSpacing--small;
+      gap: 2rem;
+    }
   }
 
   &__socials {
     display: flex;
     align-content: flex-end;
     gap: 1rem;
+    @include for-phone-only {
+      &--logo {
+        font-size: 2rem;
+      }
+      justify-content: space-evenly;
+      gap: 2rem;
+    }
 
     &--logo {
       font-size: 1.8rem;
@@ -67,6 +82,7 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 2.4rem;
 
     @media screen and (max-width: $bp-smaller) {
       margin-top: $verticalSpacing--medium;
@@ -114,6 +130,13 @@
 
     &:hover {
       color: $color-button-primary;
+    }
+
+    @include for-phone-only {
+      padding: 0.8rem;
+      padding-left: 0;
+      text-decoration: none;
+      font-size: $p-fontSize*1.2;
     }
   }
 }

@@ -1,15 +1,16 @@
 .bannerNews {
   margin-bottom: $verticalSpacing--medium;
+
   padding: $verticalSpacing--large $pageTextPadding;
+  @include responsivePaddingSide;
   padding-bottom: $sectionSpacerVertical;
 
   background-color: $color-white;
-  
-  &Container {
-    
-  }
+
+  &Container {}
 
   position: relative;
+
   &__shape1 {
     position: absolute;
     z-index: 0;
@@ -22,24 +23,57 @@
     background: linear-gradient(-120deg, transparent, $color-primary--30);
   }
 
-  &__header h3 {
+
+  &__header {
     margin: 0;
-    max-width: 8rem;
+    // max-width: 8rem;
     color: $color-primary-dark;
+
   }
 
   &__content {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+
+    @include for-tablet-landscape-up {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
     gap: 2.4rem;
   }
 
+  @include for-desktop-up {
+    &__header {
+      margin-bottom: -4rem;
+    }
+
+    &__content {}
+
+    &__highlight {
+      align-self: center;
+    }
+  }
+
+  // @include for-tablet-portrait-down {
+  //   &__list, &__header {
+  //     display: none;
+  //   }
+  // }
+
   &__list {
     list-style: none;
+    min-width: 12rem;
+    width: auto;
+    max-width: 32rem;
     padding-right: 0.8rem;
     border-right: solid 1px $color-primary-dark--10;
 
-    flex-grow: 0.4;
+    // flex-grow: 0.4;
   }
 
   &__item {
@@ -54,6 +88,7 @@
       font-size: $p-fontSize;
       text-decoration: none;
       font-weight: 500;
+
       & span.text {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -69,23 +104,25 @@
   }
 
   &__highlight {
-    padding-left: 2rem;
+    // padding-left: 2rem;
 
     width: fit-content;
     max-width: 30rem;
 
-    flex-grow: 0.2;
-    
+    // flex-grow: 0.2;
+
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 
     & span.text {
-      transform: translateY(-12px);
-      
-
       font-size: $h2-fontSize;
+
+      @include for-phone-only {
+        font-size: $h2-fontSize*0.7;
+      }
+
       font-weight: 700;
       line-height: 1.2;
       color: $color-primary;
@@ -93,10 +130,18 @@
 
     & a.sub {
       transform: translate(2px, 6px);
+      padding: 1.2rem;
+      padding-left: 0;
+
+      @include for-phone-only {
+        padding: 1.2rem;
+      }
     }
   }
 
   &__more {
+    padding: 1.2rem;
+    padding-left: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
