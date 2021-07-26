@@ -27,6 +27,14 @@
 
 
 .pageHeader {
+  &, h2 {
+    &:target:before {
+      content: "";
+      display: block;
+      height: $navbarHeight*8;
+      margin-top: -$navbarHeight*8;
+    }
+  }
 
   &__h1 {
     margin: $verticalSpacing--large $pageTextPadding;
@@ -41,15 +49,16 @@
 
     width: fit-content;
     max-width: 14ch;
-      
-      &::after {
-        content: '';
-        transform: translateY(-2rem);
-        display: inline-block;
-        width: 100%;
-        height: 1px;
-        background-color: $color-primary-light;
-      }
+
+    &::after {
+      content: '';
+      transform: translateY(-2rem);
+      display: inline-block;
+      display: none;
+      width: 100%;
+      height: 1px;
+      background-color: $color-primary-light;
+    }
   }
 }
 

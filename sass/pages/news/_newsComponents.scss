@@ -1,0 +1,35 @@
+.newsFeed {
+
+}
+
+.newsItem {
+  margin-bottom: $verticalSpacing__medium;
+  @include responsiveMarginSide;
+
+  &Container {
+    width: fit-content;
+    padding-bottom: $verticalSpacing__small;
+    border-bottom: solid 1px $color-primary-dark--10;
+  }
+  &__meta {
+    & h5.date {
+      color: $color-black--50;
+    }
+  }
+  &__title {
+    & a {
+      text-decoration: none;
+    }
+    & h3 {
+      margin-bottom: $verticalSpacing--smallest;
+    }
+  }
+
+  &__text {
+    max-width: 120ch;
+    & p {
+      text-align: justify;
+      margin: 0;
+    }
+  }
+}

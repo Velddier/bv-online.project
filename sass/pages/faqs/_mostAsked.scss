@@ -5,7 +5,9 @@
 $pWidth: 80ch;
 
 .mostAsked {
-  margin: 0 $pageTextPadding - 2;
+  @include responsiveMarginSide;
+  transform: translateX(-4rem);
+
   margin-bottom: $sectionSpacerVertical;
 
   &Container {
@@ -27,13 +29,14 @@ $pWidth: 80ch;
     // grid-area: a;
     padding: 3.8rem;
     padding-bottom: 3.2rem;
+
     background-color: $color-primary;
     border-radius: $borderRadius;
     @include shadow;
     color: $color-white;
     flex-grow: 1;
     min-width: 24rem;
-    width: 40vw;
+    width: 32vw;
     max-width: 90rem;
 
     & a:hover {
@@ -72,9 +75,7 @@ $pWidth: 80ch;
     }
 
     & h4 {
-      opacity: 0.9;
-      font-size: $h4-fontSize;
-      font-style: italic;
+      font-size: $h4-fontSize * 1.33;
     }
 
     & p {
@@ -88,18 +89,18 @@ $pWidth: 80ch;
 
     padding: 4rem;
     border-left: 0.8rem solid $color-primary;
-    
+
     background-color: $color-white;
     border-radius: $borderRadius;
     @include shadow;
-    
+
     display: flex;
     justify-content: center;
-    
+
     &Container {
       width: fit-content;
       height: 100%;
-      
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -120,7 +121,9 @@ $pWidth: 80ch;
 
     & span.contactMethod {
       color: $color-primary;
-      & , i {
+
+      &,
+      i {
         font-size: $h4-fontSize;
         margin-right: 0.4rem;
       }
@@ -143,10 +146,10 @@ $pWidth: 80ch;
 
   &__cta {
     // grid-area: c;
-    
+
     padding: 3.2rem;
-    
-    
+
+
     background-color: $color-white;
     border-radius: $borderRadius;
     @include shadow;
@@ -155,7 +158,7 @@ $pWidth: 80ch;
     justify-content: center;
     flex-grow: 1;
 
-    &Container {      
+    &Container {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -163,6 +166,7 @@ $pWidth: 80ch;
 
     & div.header {
       color: $color-primary--90;
+
       & h3 {
         margin-bottom: $verticalSpacing--smaller;
       }
@@ -179,28 +183,30 @@ $pWidth: 80ch;
 ul.questionList {
   list-style: none;
   margin-bottom: $sectionSpacerVertical;
-  padding: 0 $pageTextPadding;
+  @include responsiveMarginSide;
 
-    & li {
-      $borderOffset: 15px;
-      margin-bottom: $verticalSpacing--small;
-      padding-left: $borderOffset;
-      margin-left: -$borderOffset;
-      border-left: 2px solid $color-primary;
-    }
 
-    & h4 {
-      opacity: 0.9;
-      font-size: $emphasis-fontSize;
-      font-style: italic;
-    }
+  & li {
+    $borderOffset: 15px;
+    margin-bottom: $verticalSpacing--small;
+    padding-left: $borderOffset;
+    margin-left: -$borderOffset;
+    border-left: 2px solid $color-primary;
+  }
 
-    & p {
-      max-width: $pWidth;
-    }
+  & h4 {
+    opacity: 0.9;
+    font-size: $emphasis-fontSize;
+    font-style: italic;
+  }
+
+  & p {
+    max-width: $pWidth;
+  }
 }
 
-.questionList, h4 {
+.questionList,
+h4 {
   &:target:before {
     content: "";
     display: block;

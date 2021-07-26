@@ -113,10 +113,10 @@ $svgSize: 8vw;
 .contentSectionCard {
   margin: 0 $pageTextPadding - 3.6;
   @include sectionStyleCommon;
-
+  
   @include responsiveMarginSide;
-
-  $borderSize: $verticalSpacing--small;
+  
+  $borderSize: $verticalSpacing--medium;
   border-left: $borderSize solid $color-primary;
   border-radius: $borderRadius;
   box-shadow: 2px 2px 8px $shadow-10;
@@ -126,6 +126,9 @@ $svgSize: 8vw;
   }
 
   &__figure {
+    & img {
+      margin: 0;
+    }
     margin: -$borderSize 0;
     margin-right: -$borderSize*2;
     @include for-tablet-portrait-down {

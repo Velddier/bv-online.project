@@ -8,8 +8,12 @@
 
   &__banner {
     position: relative;
-    padding: $verticalSpacing--large $pageTextPadding;
-    height: 8rem;
+    padding: $verticalSpacing--large $pageWidePadding;
+    @include responsivePaddingSide;
+
+    min-height: 3rem;
+    height: 6vh;
+    max-height: 12rem;
     
     overflow: hidden;
 
@@ -32,8 +36,10 @@
     height: fit-content;
 
     margin-bottom: $verticalSpacing--large;
-    padding: $verticalSpacing--smaller $pageTextPadding;
-    // @include mediumLayoutPadding;
+    
+    padding: $verticalSpacing--smaller $pageWidePadding;
+    @include responsivePaddingSide;
+    // @include layoutTextPadding;
     
     background-color: $color-primary;
     

@@ -106,9 +106,22 @@
         </div>
         <!-- Right side -->
         <div class="contactBanner__panelMap">
-          <img class="mapPlaceholder" src="img/placeholder_map.png" alt="">
+          <!-- MAP -->
+          <div style="overflow:hidden;max-width:100%;width:1080px;height:920px;">
+            <div id="mymap-display" style="height:100%; width:100%;max-width:100%;"><iframe
+                style="height:100%;width:100%;border:0;" frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?q=Peulenstraat+151,+3371+AL+Hardinxveld-Giessendam&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+            </div><a class="googlemap-enabler" rel="nofollow" href="https://dedicatedserver.expert"
+              id="authmaps-data">Dedicated Server Expert</a>
+            <style>
+              #mymap-display img {
+                max-height: none;
+                max-width: none !important;
+                background: none !important;
+              }
+            </style>
+          </div>
         </div>
-        <a href="#" class="contactBanner__button button">Toon route</a>
       </div>
     </div>
 

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ontdek Bv-online&ndash;Ontdek de laatste actualiteiten op het gebied van BV's en het registreren ervan</title>
+  <title>Ontdek Bv-online&ndash;Ontdek het laatste nieuws over het online regelen van zaken.</title>
 
   <!-- OPENGRAPH DATA -->
   <meta property="og:title"
@@ -86,11 +86,11 @@
 
   <!-- PAGE TITLE + SUBNAV -->
   <div
-    style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/banners/twoBusinessMenOneExplaining_banner.jpeg); background-position: center;"
+    style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80); background-position: center;"
     class="pageHeader">
     <div class="pageHeader__banner">
       <div class="pageHeader__title" id="pageTitleID">
-        <h1>Over BV-Online</h1>
+        <h1>Nieuws & Actualiteit</h1>
       </div>
     </div>
   </div>
@@ -106,195 +106,158 @@
     <div class="contentSectionCard" id="###ID_NODIG">
       <div class="contentSectionCardContainer">
         <div class="contentSectionCard__copy">
-          <h3>Header</h3>
+          <h3>Uitgelicht</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
             voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-          </ul>
+
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
             voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
+
+          <a href="#" class="link">Lees meer</a>
         </div>
         <div class="contentSectionCard__figure">
           <img
-            src="img/womanTyping.jpeg"
+            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
             alt="picture">
         </div>
       </div>
     </div>
 
-    <h2  class="pageHeader__h2">Wat kan Bv-online betekenen voor het opzetten van mijn
-      bedrijf?</h2>
+    <h2 id="meestRecent" class="pageHeader__h2">Meest recent</h2>
 
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__copy">
-          <h3>Flexibele service</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-        </div>
-        <div class="contentSection__figure">
-          <img
-            src="img/businessManInFrontOfLaptop.jpeg"
-            alt="picture">
-        </div>
+    <!-- 
+      http://service.innotar.nl/innotar/content.ashx?u=interwaert&p=innotar
+
+http://service.innotar.nl/innotar/news.ashx?u=interwaert&p=innotar
+
+https://service.innotar.nl/innotar/news/ondernemenbedrijf.ashx?u=interwaert&p=innotar
+
+https://service.innotar.nl/innotar/news/verenigingstichting.ashx?u=notariswessel&p=innotar
+     -->
+
+    <div class="newsFeed">
+
+      <div id="test">
+        ok
       </div>
-    </div>
 
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__figure">
-          <i class="fas fa-scroll" style="opacity: 0.8;"></i>
-          <i class="fas fa-desktop"></i>
-        </div>
-        <div class="contentSection__copy">
-          <h3>Hoe verschilt Bv-online met regelen op papier?</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <a href="" class="link">Klik hier</a>
-        </div>
-      </div>
-    </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          let url = '../content.xml';
+          fetch(url)
+            .then(res => res.text())
+            .then(data => {
+              console.log(data)
+              let parser = new DOMParser();
+              let xml = parser.parseFromString(data, "application/xml");
+              document.getElementById('test').textContent = data;
+              console.log(xml);
+            })
+        });
 
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__copy">
-          <h3>Digitaal opzetten is veiliger</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <a href="" class="link">Klik hier</a>
-        </div>
-        <div class="contentSection__figure">
-          <img
-            src="img/casualWomanInFrontOfLaptop.jpeg"
-            alt="picture">
-        </div>
-      </div>
-    </div>
+        function buildList(x) {
+          let list = document.getElementById('output');
+          let items = x.getElementsByTagName('bericht');
+          console.log(items);
+          for (let i = 0; i < items.length; i++) {
+            let li = document.createElement('li');
+            let folder = items[i].firstChild.nodeValue;
+            li.textContent = folder;
+            list.appendChild(li);
+          }
+        }
+      </script>
 
-    <div class="highlightedText" style="border: none;">
-      <div class="highlightedTextContainer">
-        <div class="highlightedText__blockquoteArea">
-          <div class="highlightedText__figure">
-            <i class="fas fa-fingerprint"></i>
+      <ul id="output">
+
+      </ul>
+
+
+      <div class="newsItem">
+        <div class="newsItemContainer">
+          <div class="newsItem__meta">
+            <h5 class="date">01-01-2021</h5>
           </div>
-          <blockquote class="text">
-            Bv-online werkt volgens de meest recente wettelijk vereiste beveiligingsmethodes.
-          </blockquote>
-        </div>
-        <div class="highlightedText__cta">
-          <div class="highlightedText__message">
-            <span class="text">Nu is de beste tijd een bv te starten</span>
+          <div class="newsItem__title">
+            <a href="#">
+              <h3>Article title</h3>
+            </a>
+
           </div>
-          <a href="/registratie/stap_introductie.html" class="highlightedText__button button button--large">
-            <span class="text">Registreer nu</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin: 3rem 0;" class="decorator decoratorLine decoratorLine__10deg"></div>
-
-
-    <!-- ---------------------- -->
-
-    <h2 id="voorbereiding" class="pageHeader__h2">Hoe je je het best voorbereidt</h2>
-
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__copy">
-          <h3>Nodige gegevens en documenten</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-          </ul>
-        </div>
-        <div class="contentSection__figure">
-          <img
-            src="img/laptopOnDesk.jpeg"
-            alt="picture">
-        </div>
-      </div>
-    </div>
-
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__figure">
-          <i class="fas fa-passport"></i>
-          <i class="fas fa-id-card"></i>
-          <i class="fas fa-check"></i>
-        </div>
-        <div class="contentSection__copy">
-          <h3>Verificatie van je identiteit</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <a href="" class="link">Klik hier</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__copy">
-          <h3>Hoe lang duurt het process?</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <a href="" class="link">Klik hier</a>
-        </div>
-        <div class="contentSection__figure">
-          <img
-            src="img/inboxSmartPhone.jpeg"
-            alt="picture">
-        </div>
-      </div>
-    </div>
-
-    <div class="highlightedText" style="border: none;">
-      <div class="highlightedTextContainer">
-        <div class="highlightedText__blockquoteArea">
-          <div class="highlightedText__figure">
-            <i class="far fa-paper-plane"></i>
+          <div class="newsItem__text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eum, sapiente laudantium atque est
+              repudiandae voluptates cupiditate ex velit alias incidunt aut quisquam accusamus magni eos officia
+              excepturi. Commodi a assumenda dolorem?
+            </p>
           </div>
-          <blockquote class="text">
-            Een bv oprichten met Bv-online is zo gedaan.
-          </blockquote>
-        </div>
-        <div class="highlightedText__cta">
-          <div class="highlightedText__message">
-            <span class="text">Nu is de beste tijd een bv te starten</span>
-          </div>
-          <a href="registratie/stap_introductie.html" class="highlightedText__button button button--large">
-            <span class="text">Registreer nu</span>
-          </a>
         </div>
       </div>
+
+      <div class="newsItem">
+        <div class="newsItemContainer">
+          <div class="newsItem__meta">
+            <h5 class="date">01-01-2021</h5>
+          </div>
+          <div class="newsItem__title">
+            <a href="#">
+              <h3>Article title</h3>
+            </a>
+
+          </div>
+          <div class="newsItem__text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eum, sapiente laudantium atque est
+              repudiandae voluptates cupiditate ex velit alias incidunt aut quisquam accusamus magni eos officia
+              excepturi. Commodi a assumenda dolorem?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsItem">
+        <div class="newsItemContainer">
+          <div class="newsItem__meta">
+            <h5 class="date">01-01-2021</h5>
+          </div>
+          <div class="newsItem__title">
+            <a href="#">
+              <h3>Article title</h3>
+            </a>
+
+          </div>
+          <div class="newsItem__text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eum, sapiente laudantium atque est
+              repudiandae voluptates cupiditate ex velit alias incidunt aut quisquam accusamus magni eos officia
+              excepturi. Commodi a assumenda dolorem?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsItem">
+        <div class="newsItemContainer">
+          <div class="newsItem__meta">
+            <h5 class="date">01-01-2021</h5>
+          </div>
+          <div class="newsItem__title">
+            <a href="#">
+              <h3>Article title</h3>
+            </a>
+
+          </div>
+          <div class="newsItem__text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eum, sapiente laudantium atque est
+              repudiandae voluptates cupiditate ex velit alias incidunt aut quisquam accusamus magni eos officia
+              excepturi. Commodi a assumenda dolorem?
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <div style="margin: 6rem 0;" class="decorator decoratorLine decoratorLine__10deg"></div>
-
 
     <div class="contactForm">
       <div class="contactForm__shape1"></div>

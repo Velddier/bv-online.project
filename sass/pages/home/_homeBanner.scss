@@ -1,15 +1,18 @@
 .homeTop {
   padding: $verticalSpacing--large $pageWidePadding;
   @include responsivePaddingSide;
-
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+  
   clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
 
-
-
+  height: 40vh;
+  max-height: 48rem;
+  
+  display: flex;
+  align-items: flex-end;
 
   position: relative;
 
@@ -24,15 +27,11 @@
     position: absolute;
     inset: 0;
   }
-
+  
   &Container {
+    margin: auto 0;
+    width: 100%;
 
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-areas: "left right";
-    // column-gap: $verticalSpacing--large;
-
-    // align-items: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,6 +40,7 @@
   }
 
   &__pageHeader {
+    
     // grid-area: "left";
     flex-grow: 1;
   }
