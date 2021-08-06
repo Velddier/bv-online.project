@@ -14,7 +14,7 @@
     min-height: 3rem;
     height: 6vh;
     max-height: 12rem;
-    
+
     overflow: hidden;
 
     display: flex;
@@ -36,13 +36,13 @@
     height: fit-content;
 
     margin-bottom: $verticalSpacing--large;
-    
+
     padding: $verticalSpacing--smaller $pageWidePadding;
     @include responsivePaddingSide;
     // @include layoutTextPadding;
-    
+
     background-color: $color-primary;
-    
+
     color: $color-white;
     box-shadow: 0 1px $color-black--30;
 
@@ -57,12 +57,12 @@
   &__link {
     transform: translateY(2px);
     height: 2rem;
-    
+
     text-decoration: none;
     font-size: $h4-fontSize;
     font-weight: 500;
-    
-    
+
+
     &:hover {
       color: $color-primary-light;
       text-decoration: underline;

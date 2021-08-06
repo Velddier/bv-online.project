@@ -1,5 +1,7 @@
 .bannerSignup {
   $angle: -4deg;
+  transform: skewY($angle);
+
   margin-top: $sectionSpacerVertical;
   margin-bottom: $sectionSpacerVertical;
 
@@ -7,7 +9,7 @@
   overflow: hidden;
 
   color: $color-black;
-  transform: skewY($angle);
+  box-shadow: 2rem 2rem 4rem $shadow-30;
 
   &Container {
     z-index: 10;
@@ -19,6 +21,7 @@
     background-color: $color-primary;
     // background-image: linear-gradient($color-primary--20, $color-primary--20), url(https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 
     display: flex;
@@ -32,10 +35,10 @@
     &::before {
       content: '';
       display: inline-block;
-      background-color: $color-primary--70;
+      background-color: $color-primary--90;
       height: 100%;
-      width: 88vw;
-      clip-path: polygon(47% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
+      // width: 88vw;
+      clip-path: polygon(49% 0, 90% 38%, 100% 100%, 20% 100%, 10% 54%, 15% 0);
       position: absolute;
       inset: 0;
 
@@ -51,6 +54,8 @@
     background-color: transparent;
     border-radius: $borderRadius;
     color: $color-white;
+    text-shadow: 2px 2px 10px $shadow-30;
+
   }
 
   &__largeHeader {
