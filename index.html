@@ -1,703 +1,795 @@
 <!DOCTYPE html>
 <html lang="nl-nl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Home - Registreer vliegensvlug jou BV en UBO
+    </title>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren</title>
+    <!-- OPEN GRAPH DATA -->
+    <meta property="og:title" content="Home - Registreer vliegensvlug jou BV en UBO" />
+    <meta property="og:site_name" content="BV-Online" />
+    <meta property="og:url" content="https://www.bvonline.nl" />
+    <meta
+      property="og:description"
+      content="#Bv-online biedt een snelle en makkelijke service voor het registreren van jou BV."
+    />
+    <meta property="og:type" content="product" />
+    <meta property="og:image" content="#" />
 
-  <!-- OPEN GRAPH DATA -->
-  <meta property="og:title"
-    content="Home&ndash;BV-online is de beste manier om jou bv snel en gemakkelijk te registreren">
-  <meta property="og:site_name" content="BV-Online">
-  <meta property="og:url" content="https://www.bvonline.nl">
-  <meta property="og:description"
-    content="#Bv-online biedt een snelle en makkelijke service voor het registreren van jou BV.">
-  <meta property="og:type" content="product">
-  <meta property="og:image" content="#">
+    <!-- EXTERNAL -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
+  </head>
 
-  <!-- EXTERNAL -->
-  <link rel="stylesheet" href="./css/main.css" />
-  <script src="main.js"></script>
-  <script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
-
-</head>
-
-<body>
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="navbarContainer">
-      <div class="navbar__mobileMenu">
-        <i id="navButtonExpand" class="fas fa-bars"></i>
-      </div>
-      <div class="navbar__companyLogo">
-        <a href="index.html" class="navbar__homeLink">
-          <img class='figure' src="img/logo.svg" alt="BV-ONLINE">
-        </a>
-      </div>
-      <!-- NAVBAR MENU -->
-      <div class="navbar__navMenu" id="navMenu">
-        <a href="index.html" class="navbar__link">
-          <span class="text">Home</span>
-        </a>
-        <a href="_about.html" class="navbar__link">
-          <span class="text">Ontdek BV-Online</span>
-        </a>
-        <a href="_faqs.html" class="navbar__link">
-          <span class="text">Veelgestelde vragen</span>
-        </a>
-        <a href="_aboutus.html" class="navbar__link">
-          <span class="text">Onze praktijk</span>
-        </a>
-        <a href="_contact.html" class="navbar__link">
-          <span class="text">Contact</span>
-        </a>
-      </div>
-      <!-- MOBILE MENU -->
-      <div class="navbar__navMenu--mobile" id="navMenu--mobile">
-        <a href="index.html" class="navbar__link">
-          <span class="text">Home</span>
-        </a>
-        <a href="_about.html" class="navbar__link">
-          <span class="text">Ontdek BV-Online</span>
-        </a>
-        <a href="_faqs.html" class="navbar__link">
-          <span class="text">Veelgestelde vragen</span>
-        </a>
-        <a href="_aboutus.html" class="navbar__link">
-          <span class="text">Onze praktijk</span>
-        </a>
-        <a href="_contact.html" class="navbar__link">
-          <span class="text">Contact</span>
-        </a>
-      </div>
-      <div class="navbar__cta">
-        <a href="../registratie/stap_introductie.html" class="button navbar__button">
-          <span class="text">Start registratie</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- CONTENT CONTAINER -->
-  <div class="appContainer" id="#app">
-
-    <!-- HOMEPAGE BANNER LARGE -->
-    <div class="homeTop" style="background-image: url(img/banners/home_banner.jpeg);">
-      <div class="homeTopContainer">
-        <div class="homeTop__pageHeader">
-          <div class="homeTop__title">
-            <h1 class="text" id="pageTitle">Een bv oprichten <br>was nog nooit <br>zo makkelijk</h1>
-          </div>
-          <div class="homeTop__subtitle">
-            <subtitle class="text">Start snel en gemakkelijk een nieuw bv of zet een bestaande zaak om, zelf of met onze
-              assistentie. Nu al vanaf &euro;123,-</subtitle>
-          </div>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="navbarContainer">
+        <div class="navbar__mobileMenu">
+          <i id="navButtonExpand" class="fas fa-bars"></i>
         </div>
-        <div class="homeTop__modal">
-          <div class="homeTop__modalHeader">
-            <h3 class="text">Registreren is&hellip;</h3>
-          </div>
-          <div class="homeTop__figureList">
-            <div class="homeTop__figure">
-              <i class="icon fas fa-feather"></i>
-              <span class="label">snel, gemakkelijk<i class="check fas fa-check"></i></span>
-            </div>
-            <div class="homeTop__figure">
-              <i class="icon fas fa-desktop"></i>
-              <span class="label">volledig digitaal<i class="check fas fa-check"></i></span>
-            </div>
-            <div class="homeTop__figure">
-              <i class="icon fas fa-lock"></i>
-              <span class="label">confidentieel<i class="check fas fa-check"></i></span>
-            </div>
-            <div class="homeTop__figure">
-              <i class="icon fas fa-clock"></i>
-              <span class="label">vandaag gedaan<i class="check fas fa-check"></i></span>
-            </div>
-          </div>
-          <button onclick="uiScript.scrollToTarieven('tarieven')" href="#tarieven" class="homeTop__cta button"
-            id="#ID_NODIG">
-            Ontdek onze tarieven
-          </button>
+        <div class="navbar__companyLogo">
+          <a href="../index.html" class="navbar__homeLink">
+            <img class="figure" src="../img/logo.svg" alt="BV-ONLINE" />
+          </a>
         </div>
-      </div>
-    </div>
-
-    <!-- NEWS -->
-    <div class="bannerNews">
-      <div class="bannerNews__shape1"></div>
-      <div class="bannerNewsContainer">
-        <div class="bannerNews__header">
-          <h3>Laatste nieuws</h3>
+        <!-- NAVBAR MENU -->
+        <div class="navbar__navMenu" id="navMenu">
+          <a href="../index.html" class="navbar__link">
+            <span class="text">Home</span>
+          </a>
+          <a href="../html/introductie-bv-online.html" class="navbar__link">
+            <span class="text">Ontdek BV-Online</span>
+          </a>
+          <a href="../html/veelgestelde-vragen.html" class="navbar__link">
+            <span class="text">Veelgestelde vragen</span>
+          </a>
+          <a href="../html/onze-praktijk.html" class="navbar__link">
+            <span class="text">Onze praktijk</span>
+          </a>
+          <a href="../html/contact.html" class="navbar__link">
+            <span class="text">Contact</span>
+          </a>
         </div>
-        <div class="bannerNews__content">
-          <ul class="bannerNews__list">
-            <li class="bannerNews__item" id="ID_NODIG">
-              <a href="#" class="bannerNews__link" id="ID_NODIG">
-                <span class="text">Consultatie digitale oprichting bv gestart
-                </span>
-              </a>
-            </li>
-            <li class="bannerNews__item" id="ID_NODIG">
-              <a href="#" class="bannerNews__link" id="ID_NODIG">
-                <span class="text">Effecten van samenlevingsvormen verschillen</span>
-              </a>
-            </li>
-            <li class="bannerNews__item" id="ID_NODIG">
-              <a href="#" class="bannerNews__link" id="ID_NODIG">
-                <span class="text">Vrij uitzicht is onvoldoende om weilanden aan te merken als aanhorigheden</span>
-              </a>
-            </li>
-            <li class="bannerNews__item" id="ID_NODIG">
-              <a href="#" class="bannerNews__link" id="ID_NODIG">
-                <span class="text">Consultatie over openbaarheid gegevens Handelsregister</span>
-              </a>
-            </li>
-            <li class="bannerNews__item" id="ID_NODIG">
-              <a href="#" class="bannerNews__link" id="ID_NODIG">
-                <span class="text">Erfgenaam moet jaarlijks het vermogen opgeven bij een tweetrapsmaking</span>
-              </a>
-            </li>
-            <div class="bannerNews__more">
-              <a href="_about.html#nieuws" class="bannerNews__button link bannerNews__link">Meer artikels</a>
-            </div>
-          </ul>
-          <div class="bannerNews__highlight">
-            <span class="text">Wij bieden nu ook assistentie bij UBO registraties <i
-                class="icon fas fa-check"></i></span>
-            <a href="_contact.html" class="sub link">Neem snel contact op</a>
-          </div>
+        <!-- MOBILE MENU -->
+        <div class="navbar__navMenu--mobile" id="navMenu--mobile">
+          <a href="../index.html" class="navbar__link">
+            <span class="text">Home</span>
+          </a>
+          <a href="../html/introductie-bv-online.html" class="navbar__link">
+            <span class="text">Ontdek BV-Online</span>
+          </a>
+          <a href="../html/veelgestelde-vragen.html" class="navbar__link">
+            <span class="text">Veelgestelde vragen</span>
+          </a>
+          <a href="../html/onze-praktijk.html" class="navbar__link">
+            <span class="text">Onze praktijk</span>
+          </a>
+          <a href="../html/contact.html" class="navbar__link">
+            <span class="text">Contact</span>
+          </a>
         </div>
-      </div>
-    </div>
-
-    <h2 class="pageHeader__h2">Nu is de tijd voor het online opzetten van een bv</h2>
-
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__copy">
-          <h3>De nieuwe manier is zakelijk digitaal</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-        </div>
-        <div class="contentSection__figure">
-          <img
-            src="./img/clutteredDesk.jpeg"
-            alt="picture">
-        </div>
-      </div>
-    </div>
-
-
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__figure">
-          <img loading="lazy"
-            src="img/coupleAndLaptop.jpeg"
-            alt="picture">
-        </div>
-        <div class="contentSection__copy">
-          <h3>Online vestigen is sneller, makkelijker en veiliger </h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <a href="#tarieven" class="link">Bekijk onze tarieven</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- BANNER STEPS PROCESS -->
-    <div class="steps">
-      <div class="stepsContainer">
-        <div class="steps__header">
-          <h3>Het process in 4 simpele stappen</h3>
-        </div>
-        <div class="steps__list">
-          <div class="steps__step">
-            <span class="stage">1</span>
-            <i class="fas fa-keyboard"></i>
-            <span class="text">Vul het gegevensformulier in (8&ndash;12 min)</span>
-          </div>
-          <div class="steps__step">
-            <span class="stage">2</span>
-            <i class="fas fa-key"></i>
-            <span class="text">Ontvang toegang tot de veilige digitale omgeving voor interactie met de notaris</span>
-          </div>
-          <div class="steps__step">
-            <span class="stage">3</span>
-            <i class="fas fa-fingerprint"></i>
-            <span class="text">Zet uw handtekening en maak het document officieel</span>
-          </div>
-          <div class="steps__step">
-            <span class="stage">4</span>
-            <i class="fas fa-thumbs-up"></i>
-            <span class="text">De registratie is gedaan!</span>
-          </div>
-          <div class="steps__step">
-            <span class="stage"><i class="fas fa-flag" style="font-size: 1.2rem; margin: 0;"></i></span>
-            <i class="fas fa-envelope-open-text"></i>
-            <span class="text">Ontvangt alle relevante documenten per post of email</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <h2 class="pageHeader__h2">Gegarandeerde zekerheid over de gegevens van onze gebruikers</h2>
-
-
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__figure">
-          <img loading="lazy"
-            src="img/manCheckingPhoneInCafe.jpeg"
-            alt="picture">
-        </div>
-        <div class="contentSection__copy">
-          <h3>Beveiligde interactie, waar dan ook</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <a href="_about.html" class="link">Ontdek hoe ons veilige systeem werkt</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="highlightedText">
-      <div class="highlightedTextContainer">
-        <div class="highlightedText__blockquoteArea">
-          <div class="highlightedText__figure">
-            <i class="fas fa-pen-alt"></i>
-          </div>
-          <blockquote class="text">
-            Velen maken al gebruik van een volledig digitale werkwijze in het runnen van hun bedrijf.
-          </blockquote>
-        </div>
-        <div class="highlightedText__cta">
-          <div class="highlightedText__message">
-            <span class="text">Nu is de beste tijd een bv te starten</span>
-          </div>
-          <a href="registratie\stap_introductie.html" class="highlightedText__button button button--large">
-            <span class="text">Registreer nu</span>
+        <div class="navbar__cta">
+          <a href="../registratie/stap_introductie.html" class="button navbar__button">
+            <span class="text">Start registratie</span>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__copy">
-          <h3>We opereren volgens de meest recente richtlijnen</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <a href="https://www.digitaleoverheid.nl/dossiers/eidas/" target="_blank" class="link"><i
-              class="fas fa-external-link-square-alt"></i>Lees meer over de eIDAS wetgeving</a>
-        </div>
-        <div class="contentSection__figure">
-          <img loading="lazy"
-            src="img/EUSeats.jpeg"
-            alt="picture">
-        </div>
-      </div>
-    </div>
-
-
-    <div style="margin: 6rem 0;" class="decorator decoratorLine decoratorLine__10deg"></div>
-
-
-
-    <h2 id="tarieven" class="pageHeader__h2">Is er een bv-online <br> pakket voor jou bedrijf?</h2>
-
-    <div class="ratesDeck">
-      <div class="ratesDeck__shape1"></div>
-      <div class="ratesDeck__shape2"></div>
-      <div class="ratesDeckContainer">
-
-        <div class="ratesCard">
-          <div class="ratesCardContainer">
-            <span class="badge">Zeer voordelig</span>
-            <div class="ratesCard__backgroundImg">
-              <img loading="lazy"
-                src="img/womanWithLaptopMakingPhoneCall.jpeg"
-                alt="">
+    <!-- CONTENT CONTAINER -->
+    <div class="appContainer" id="#app">
+      <!-- HOMEPAGE BANNER LARGE -->
+      <div class="homeTop" style="background-image: url(img/banners/home_banner.jpeg);">
+        <div class="homeTopContainer">
+          <div class="homeTop__pageHeader">
+            <div class="homeTop__title">
+              <h1 class="text" id="pageTitle">
+                Een BV oprichten <br />was nog nooit <br />zo makkelijk
+              </h1>
             </div>
-            <div class="ratesCard__header">
-              <h3 class="text">Voor Starters</h3>
-              <span class="subheader">De beste service</span>
+            <div class="homeTop__subtitle">
+              <subtitle class="text"
+                >Start snel en voordelig een nieuw BV of zet een bestaande zaak om. Zelf of met onze
+                assistentie. Nu al vanaf &euro;123,-.</subtitle
+              >
             </div>
-            <div class="ratesCard__description">
-              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem, sequi sed id quam
-                ipsam
-                modi, consectetur a quibusdam, tempora sapiente alias doloremque distinctio nihil. Voluptatum, vel
-                veniam!
-                Numquam provident magni exercitationem.</p>
-            </div>
-            <div class="ratesCard__figureList">
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-asterisk"></i>
-                <span class="label">Nieuwe zaken</span>
-              </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-headset"></i>
-                <span class="label">Advies & assistentie</span>
-              </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-user-shield"></i>
-                <span class="label">Verzekerd confidentiaal</span>
-              </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-wifi"></i>
-                <span class="label">Volledig online</span>
-              </div>
-            </div>
-            <div class="ratesCard__cta">
-              <span class="text">Al vanaf &euro;123&comma;&ndash;</span>
-            </div>
-            <a href="#" class="ratesCard__link">Ontdek nu</a>
           </div>
-        </div>
-        <div class="ratesCard">
-          <div class="ratesCardContainer">
-            <span class="badge">Alles inbegrepen</span>
-            <div class="ratesCard__backgroundImg">
-              <img loading="lazy"
-                src="img/peopleHavingMeeting.jpeg"
-                alt="">
+          <div class="homeTop__modal">
+            <div class="homeTop__modalHeader">
+              <h3 class="text">Registreren is&hellip;</h3>
             </div>
-            <div class="ratesCard__header">
-              <h3 class="text">Business Class</h3>
-              <span class="subheader">De beste service</span>
-            </div>
-            <div class="ratesCard__description">
-              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem, sequi sed id quam
-                ipsam
-                modi, consectetur a quibusdam, tempora sapiente alias doloremque distinctio nihil. Voluptatum, vel
-                veniam!
-                Numquam provident magni exercitationem.</p>
-            </div>
-            <div class="ratesCard__figureList">
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-building"></i>
-                <span class="label">Bestaande zaken</span>
+            <div class="homeTop__figureList">
+              <div class="homeTop__figure">
+                <i class="icon fas fa-feather"></i>
+                <span class="label"><h5>snel, gemakkelijk</h5></span>
               </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-comment-medical"></i>
-                <span class="label">Het beste advies</span>
+              <div class="homeTop__figure">
+                <i class="icon fas fa-desktop"></i>
+                <span class="label"><h5>volledig digitaal</h5></span>
               </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-paperclip"></i>
-                <span class="label">Flexibel per zaak</span>
+              <div class="homeTop__figure">
+                <i class="icon fas fa-lock"></i>
+                <span class="label"><h5>confidentieel</h5></span>
               </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-binoculars"></i>
-                <span class="label">Zorgvuldig geregeld</span>
+              <div class="homeTop__figure">
+                <i class="icon fas fa-clock"></i>
+                <span class="label"><h5>vandaag gedaan</h5></span>
               </div>
             </div>
-            <div class="ratesCard__cta">
-              <span class="text">Al vanaf &euro;123&comma;&ndash;</span>
-            </div>
-            <a href="#" class="ratesCard__link">Ontdek nu</a>
-          </div>
-        </div>
-        <div class="ratesCard">
-          <div class="ratesCardContainer">
-            <span class="badge">Niet zeker?</span>
-            <div class="ratesCard__backgroundImg">
-              <img loading="lazy"
-                src="img/manPointingAtTablet.jpeg"
-                alt="">
-            </div>
-            <div class="ratesCard__header">
-              <h3 class="text">Service op maat</h3>
-              <span class="subheader">Wij staan klaar bij het process</span>
-            </div>
-            <div class="ratesCard__description">
-              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem, sequi sed id quam
-                ipsam
-                modi, consectetur a quibusdam, tempora sapiente alias doloremque distinctio nihil. Voluptatum, vel
-                veniam!
-                Numquam provident magni exercitationem.</p>
-            </div>
-            <div class="ratesCard__figureList">
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
-              </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
-              </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
-              </div>
-              <div class="ratesCard__figure">
-                <i class="icon fas fa-pen"></i>
-                <span class="label">Label hier</span>
-              </div>
-            </div>
-            <div class="ratesCard__cta">
-              <span class="text">Neem contact op</span>
-            </div>
-            <a href="#" class="ratesCard__link">Ontdek nu</a>
+            <button
+              onclick="uiScript.scrollToTarieven('tarieven')"
+              href="#tarieven"
+              class="homeTop__cta button"
+              id="home-banner-cta"
+            >
+              Ontdek onze tarieven
+            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- TESTIMONIALS -->
-    <h2 class="pageHeader__h2">Wat onze <br> klanten zeggen <br> over BV-Online</h2>
-
-    <div class="testimonial" style="margin-bottom: 4rem">
-      <div class="testimonialContainer">
-        <div class="testimonial__userQuote">
-          <!-- PROFILE PICTURE -->
-          <div class="testimonial__userProfile">
-            <img loading="lazy"
-              src="img/thumbnails/profileImageWoman.jpeg"
-              alt="profielfoto van een vrouw" class="profileImg">
+      <!-- NEWS -->
+      <div class="bannerNews">
+        <div class="bannerNews__shape1"></div>
+        <div class="bannerNewsContainer">
+          <div class="bannerNews__header">
+            <h3>Laatste nieuws</h3>
           </div>
-          <!-- QUOTE -->
-          <div class="testimonial__blockquote">
-            <blockquote>
-              De service was zeer snel en makkelijk te doen. Erg behulpzaam!
+          <div class="bannerNews__content">
+            <ul class="bannerNews__list">
+              <li class="bannerNews__item" id="ID_NODIG">
+                <a href="#" class="bannerNews__link" id="ID_NODIG">
+                  <span class="text">Consultatie digitale oprichting bv gestart </span>
+                </a>
+              </li>
+              <li class="bannerNews__item" id="ID_NODIG">
+                <a href="#" class="bannerNews__link" id="ID_NODIG">
+                  <span class="text">Effecten van samenlevingsvormen verschillen</span>
+                </a>
+              </li>
+              <li class="bannerNews__item" id="ID_NODIG">
+                <a href="#" class="bannerNews__link" id="ID_NODIG">
+                  <span class="text"
+                    >Vrij uitzicht is onvoldoende om weilanden aan te merken als aanhorigheden</span
+                  >
+                </a>
+              </li>
+              <li class="bannerNews__item" id="ID_NODIG">
+                <a href="#" class="bannerNews__link" id="ID_NODIG">
+                  <span class="text">Consultatie over openbaarheid gegevens Handelsregister</span>
+                </a>
+              </li>
+              <li class="bannerNews__item" id="ID_NODIG">
+                <a href="#" class="bannerNews__link" id="ID_NODIG">
+                  <span class="text"
+                    >Erfgenaam moet jaarlijks het vermogen opgeven bij een tweetrapsmaking</span
+                  >
+                </a>
+              </li>
+              <div class="bannerNews__more">
+                <a
+                  href="../html/introductie-bv-online.html#nieuws"
+                  class="bannerNews__button link bannerNews__link"
+                  >Meer artikels</a
+                >
+              </div>
+            </ul>
+            <div class="bannerNews__highlight">
+              <span class="text"
+                >Wij bieden nu ook assistentie bij UBO registraties <i class="icon fas fa-check"></i
+              ></span>
+              <a href="../html/onze-praktijk.html" class="sub link">Neem snel contact op</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="pageHeader__h2">De nieuwe manier van zaken is digitaal en op afstand</h2>
+
+      <div class="contentSection" id="index-p1">
+        <div class="contentSectionContainer">
+          <div class="contentSection__copy">
+            <h3>Waarom nu de beste tijd is voor het online opzetten van een BV</h3>
+            <p>
+              Het regelen van jou bedrijf als een BV beneficiaal op vele gebieden, maar in het
+              huidige digitale tijdperk staat niets stil. Zo ook niet het registreren van een
+              bedrijf. Met het gemak van interactie en transactie op afstand, is het regelen van een
+              BV registratie nooit zo makkelijk geweest.
+            </p>
+            <p>
+              Ook qua veiligheid heeft online registreren vele voordelen over de ouderwetse
+              'papierrijke' manier. Overal en direct toegang tot gegevens en documenten, registreren
+              waar dan ook, en altijd jou notaris binnen handbereik;
+              <a href="registratie/stap_introductie.html" class="">BV-Online maakt het mogelijk</a>.
+            </p>
+          </div>
+          <div class="contentSection__figure">
+            <img src="../img/clutteredDesk.jpeg" alt="picture" />
+          </div>
+        </div>
+      </div>
+
+      <div class="contentSection" id="index-p2">
+        <div class="contentSectionContainer">
+          <div class="contentSection__figure">
+            <img loading="lazy" src="../img/illustratie_manmetlaptop.png" alt="picture" />
+          </div>
+          <div class="contentSection__copy">
+            <h3>Hoe online vestigen sneller, makkelijker en veiliger is</h3>
+            <p>
+              Tot nu was voor het starten of het omzetten van een BV een bezoek aan de notaris
+              vrijwel vereist. Nu kan dat digitaal en op afstand: door progressie in de Nederlandse
+              wetgeving is dit nu mogelijk.
+            </p>
+            <p>
+              Door het nieuwe Europese eIDAS systeem kunnen persoonlijke en zakelijke gegevens
+              worden geverifieerd en in volledige confidentie worden verstuurd en ontvangen.
+              Daardoor is het regelen van een BV nu volledig digitaal te doen, makkelijker,
+              vliegensvlug en met onze juridische expertise. Zo kan jij je volledig op belangrijke
+              zaken richten
+            </p>
+            <a href="#tarieven" class="link">Bekijk onze tarieven</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANNER STEPS PROCESS -->
+      <div class="steps">
+        <div class="stepsContainer">
+          <div class="steps__header">
+            <h3>Het process in 4 simpele stappen</h3>
+          </div>
+          <div class="steps__list">
+            <div class="steps__step">
+              <span class="stage">1</span>
+              <i class="fas fa-keyboard"></i>
+              <span class="text">Vul het gegevensformulier in (8&ndash;12 min)</span>
+            </div>
+            <div class="steps__step">
+              <span class="stage">2</span>
+              <i class="fas fa-key"></i>
+              <span class="text"
+                >Ontvang toegang tot de veilige digitale omgeving voor interactie met de
+                notaris</span
+              >
+            </div>
+            <div class="steps__step">
+              <span class="stage">3</span>
+              <i class="fas fa-fingerprint"></i>
+              <span class="text">Zet uw handtekening en maak het document officieel</span>
+            </div>
+            <div class="steps__step">
+              <span class="stage">4</span>
+              <i class="fas fa-thumbs-up"></i>
+              <span class="text">De registratie is gedaan!</span>
+            </div>
+            <div class="steps__step">
+              <span class="stage"
+                ><i class="fas fa-flag" style="font-size: 1.2rem; margin: 0;"></i
+              ></span>
+              <i class="fas fa-envelope-open-text"></i>
+              <span class="text">Ontvangt alle relevante documenten per post of email</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="pageHeader__h2">Volledig veilige interactie, waar dan ook</h2>
+
+      <div class="contentSection" id="index-p3">
+        <div class="contentSectionContainer">
+          <div class="contentSection__figure">
+            <img loading="lazy" src="../img/manCheckingPhoneInCafe.jpeg" alt="picture" />
+          </div>
+          <div class="contentSection__copy">
+            <h3>Wij garanderen zekerheid over de gegevens van onze gebruikers</h3>
+            <p>
+              Het versturen van data en transactie online kan risico's met zich meebrengen. Daarom
+              neemt BV-Online alle voorzorgsmaatregelen om de veiligheid van uw gegevens en
+              interacties te garanderen.
+            </p>
+            <p>
+              Wanneer je met ons een BV regelt, werk je met ons systeem dat gebruik maakt van de
+              eIDAS authenticatie richtlijnen: de door de EU toegewezen manier voor het digitaal
+              verifieren van gegevens. De gegevens die je ons toestuurt zijn daarmee volledig
+              confidentieel en beschermd tegen buitenstaande partijen.
+            </p>
+            <a href="https://www.digitaleoverheid.nl/dossiers/eidas/" target="_blank" class="link"
+              ><i class="fas fa-external-link-square-alt"></i>Lees meer over de eIDAS wetgeving</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="highlightedText">
+        <div class="highlightedTextContainer">
+          <div class="highlightedText__blockquoteArea">
+            <div class="highlightedText__figure">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <blockquote class="text">
+              Overal en direct toegang tot gegevens en documenten, registreren waar dan ook, en
+              altijd jou notaris binnen handbereik; BV-Online maakt het mogelijk.
             </blockquote>
           </div>
-          <div class="testimonial__source">
-            <h5>Anne Hasselt, <i>Bedrijfshoudster</i></h5>
-          </div>
-        </div>
-        <!-- SHORT PARAGRAPH -->
-        <div class="testimonial__text">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis, nulla facilis reprehenderit
-            adipisci, eius quam consectetur, voluptatem animi sunt quidem blanditiis reiciendis facere in soluta placeat
-            itaque impedit deleniti ad modi. Eum quis porro sunt!</p>
-        </div>
-      </div>
-      <div class="testimonial__shape testimonial__shape1"></div>
-    </div>
-
-    <div class="testimonial">
-      <div class="testimonialContainer">
-        <div class="testimonial__userQuote">
-          <!-- PROFILE PICTURE -->
-          <div class="testimonial__userProfile">
-            <img loading="lazy" src="img/thumbnails/profileImageMan.jpeg" alt="Profielfoto van een man"
-              class="profileImg">
-          </div>
-          <!-- QUOTE -->
-          <div class="testimonial__blockquote">
-            <blockquote>
-              De service was zeer snel en makkelijk te doen. Erg behulpzaam!
-            </blockquote>
-          </div>
-          <div class="testimonial__source">
-            <h5>Jaap Alleman, <i>Entrepreneur</i></h5>
-          </div>
-        </div>
-        <!-- SHORT PARAGRAPH -->
-        <div class="testimonial__text">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis, nulla facilis reprehenderit
-            adipisci, eius quam consectetur, voluptatem animi sunt quidem blanditiis reiciendis facere in soluta placeat
-            itaque impedit deleniti ad modi. Eum quis porro sunt!</p>
-        </div>
-      </div>
-      <div class="testimonial__shape testimonial__shape2"></div>
-    </div>
-
-
-    <div class="bannerSignup">
-      <div class="bannerSignupContainer" style="background-image: url(img/womanBitingPencilAtDesk.jpeg);">
-        <!-- Left side copy -->
-        <div class="bannerSignup__leftSide">
-          <div class="bannerSignup__largeHeader" id="#bannerSignupHeaderID">
-            <h2> Ontvang de gratis startergids en ga aan de slag</h2>
-          </div>
-          <p class="bannerSignup__paragraph" id="#bannerSignupParagraphID">
-            Gebruik deze handige startergids om alles te weten te komen over digitaal stichten van een bv en kom meer te
-            weten over ons process.
-          </p>
-        </div>
-        <!-- Right side form -->
-        <div class="bannerSignup__form">
-          <!-- -Header -->
-          <div class="bannerSignup__smallHeader" id="#bannerSignupHeaderID">
-            <h3></h3>
-          </div>
-          <!-- -Button -->
-          <a href="#" class="bannerSignup__button button button--large" id="#bannerSignupButtonID">Download de
-            startergids</a>
-          <div class="bannerSignup__buttonDescription" id="#bannerSignupButtonDescriptionID">
-            <h5>formaat: pdf / bestandgrootte: 32MB###</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="contentSection" id="###ID_NODIG">
-      <div class="contentSectionContainer">
-        <div class="contentSection__copy">
-          <h3>Registreer vandaag nog je bv</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam, ut adipisci numquam
-            voluptatum eligendi laborum, iste quia, assumenda quod facilis at obcaecati.</p>
-          <div class="contentSection__ctaRow">
-            <a href="../registratie/stap_introductie.html" class="contentSection__button button button--large">Begin met
-              een registratie
+          <div class="highlightedText__cta">
+            <div class="highlightedText__message">
+              <span class="text">Nu is de beste tijd een bv te starten</span>
+            </div>
+            <a
+              href="registratie\stap_introductie.html"
+              class="highlightedText__button button button--large"
+            >
+              <span class="text">Registreer nu</span>
             </a>
-            <a href="_about.html" class="link">ontdek meer over bv-online</a>
-          </div>
-        </div>
-        <div class="contentSection__figure">
-          <img loading="lazy"
-            src="img/manAndWomanLaughingAtDesk.jpeg"
-            alt="picture">
-        </div>
-      </div>
-    </div>
-
-    <div class="contactForm">
-      <div class="contactForm__shape1"></div>
-      <div class="contactFormContainer">
-        <div class="contactForm__header">
-          <h2 class="text">Vragen of opmerkingen?</h2>
-        </div>
-        <div class="contactForm__subheader">
-          <h4 class="text">Wij reageren zo snel mogelijk</h4>
-        </div>
-        <form action="#ACTION_NODIG" class="contactForm__form">
-          <!-- NAAM -->
-          <label class="contactForm__label" for="contactFormName">
-            <span class="label__text">
-              Naam&ast;
-            </span>
-          </label>
-          <input class="contactForm__input" type="text" name="name" id="contactFormName" required>
-          <!-- EMAIL -->
-          <label class="contactForm__label" for="contactFormEmail">
-            <span class="label__text">
-              Email&ast;
-            </span>
-          </label>
-          <input class="contactForm__input" type="email" name="email" id="contactFormEmail" required>
-          <!-- TELEFOON -->
-          <label class="contactForm__label" for="contactFormTel">
-            <span class="label__text">
-              Tel <span class="textAdd">&lpar;voor telefonisch contact&rpar;</span>
-            </span>
-          </label>
-          <input class="contactForm__input" type="tel" name="tel" id="contactFormTel">
-          <!-- TEXT AREA -->
-          <label class="contactForm__label" for="contactFormTextarea">
-            <span class="label__icon">
-              <i class="fas fa-question-circle"></i>
-            </span>
-            <span class="label__text">
-              Vraag/opmerking&ast;
-            </span>
-          </label>
-          <textarea class="contactForm__textarea" name="textarea" id="contactFormTextarea" cols="64"
-            rows="6"></textarea>
-          <div class="contactForm__message">
-            <span class="text">&ast;vereist</span>
-          </div>
-          <button class="contactForm__button button button--large">
-            Bericht versturen
-          </button>
-        </form>
-      </div>
-    </div>
-
-
-
-
-
-  </div> <!-- END PAGE CONTAINER -->
-
-  <!-- Top Layer -->
-  <div class="footer__layerContact">
-    <div class="footer__socials">
-
-      <a href="#" class="socialLinkLogo">
-        <i class="footer__socials--logo fab fa-linkedin"></i>
-      </a>
-      <a href="#" class="socialLinkLogo">
-        <i class="footer__socials--logo fab fa-facebook-square"></i>
-      </a>
-      <a href="#" class="socialLinkLogo">
-        <i class="footer__socials--logo fab fa-facebook-messenger"></i>
-      </a>
-
-    </div>
-    <div class="footer__contactUs">
-      <h4>
-        <i class="icon icon--small fa fa-phone"></i>
-        0184-123-1234 <em>Neem contact met ons op tussen 9:00 en
-          17:00</em>
-      </h4>
-    </div>
-  </div>
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footerContainer">
-
-      <!-- Main Footer -->
-      <div class="footer__main">
-        <!-- --navigation -->
-        <div class="footer__navigation">
-          <!-- --brand Logo -->
-          <div class="footer__brandLogo">
-            <img src="img/logo.svg" alt="Logo voor BV-Online" />
-            <div class="footer__logoSubline">
-              onderdeel van Notarispraktijk Interwaert
-            </div>
-          </div>
-          <div class="footer__list">
-            <div class="footer__listHeader" id="#footerListHeaderID">
-              <h4>BV-Online</h4>
-            </div>
-            <a href="../index.html" class="footer__link" id="#footerLinkID">Home</a>
-            <a href="../registratie/stap_introductie.html" class="footer__link" id="#footerLinkID">Start
-              nieuwe registratie</a>
-            <a href="../_about.html" class="footer__link" id="#footerLinkID">Ontdek Bv-online</a>
-            <a href="../_faqs.html" class="footer__link" id="#footerLinkID">Veelgestelde vragen</a>
-          </div>
-          <div class="footer__list">
-            <div class="footer__listHeader" id="#footerListHeaderID">
-              <h4>Wie zijn wij</h4>
-            </div>
-            <a href="../_aboutus.html" class="footer__link" id="#footerLinkID">Onze praktijk</a>
-            <a href="../_contact.html" class="footer__link" id="#footerLinkID">Contact</a>
-            <a href="https://www.interwaert.nl/" target="_blank" class="footer__link" id="#footerLinkID">Interwaert <i
-                class="fas fa-external-link-square-alt"></i></a>
-          </div>
-          <div class="footer__list">
-            <div class="footer__listHeader" id="#footerListHeaderID">
-              <h4>Gebruikersovereenkomst</h4>
-            </div>
-            <a href="../html_doc/_algemenevoorwaarden.html" class="footer__link" id="#footerLinkID">Algemene
-              voorwaarden</a>
-            <a href="../html_doc/_privacyverklaring.html" class="footer__link" id="#footerLinkID">Privacy verklaring</a>
-
           </div>
         </div>
       </div>
+
+      <h2 id="tarieven" class="pageHeader__h2">
+        Vind het ideale pakket voor jou BV
+      </h2>
+
+      <div class="ratesDeck">
+        <!-- DECORATION -->
+        <div class="ratesDeck__shape1"></div>
+        <div class="ratesDeck__shape2"></div>
+        <!-- CONTENT -->
+        <div class="ratesDeckContainer">
+          <div class="ratesCard">
+            <div class="ratesCardContainer">
+              <span class="badge">Zeer voordelig</span>
+              <div class="ratesCard__backgroundImg">
+                <img loading="lazy" src="../img/womanWithLaptopMakingPhoneCall.jpeg" alt="" />
+              </div>
+              <div class="ratesCard__header">
+                <h3 class="text">Voor Starters</h3>
+                <span class="subheader">Meest voordelig en snel</span>
+              </div>
+              <div class="ratesCard__description">
+                <p class="text">
+                  Een BV is de ideale bedrijfsvorm, ook voor starters en kleinschalige bedrijven.
+                  Voor een voordelige prijs heb je een BV ingeschreven en zijn uw zakelijke risico's
+                  verminderd.
+                </p>
+              </div>
+              <div class="ratesCard__figureList">
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-asterisk"></i>
+                  <span class="label">Nieuwe zaken</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-headset"></i>
+                  <span class="label">Advies & assistentie</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-user-shield"></i>
+                  <span class="label">Verzekerd confidentiaal</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-wifi"></i>
+                  <span class="label">Volledig online</span>
+                </div>
+              </div>
+              <div class="ratesCard__cta">
+                <span class="text">Al vanaf &euro;123&comma;&ndash;</span>
+              </div>
+              <a href="#" class="ratesCard__link">Ontdek nu</a>
+            </div>
+          </div>
+          <div class="ratesCard">
+            <div class="ratesCardContainer">
+              <span class="badge">Alles inbegrepen</span>
+              <div class="ratesCard__backgroundImg">
+                <img loading="lazy" src="../img/peopleHavingMeeting.jpeg" alt="" />
+              </div>
+              <div class="ratesCard__header">
+                <h3 class="text">Business Class</h3>
+                <span class="subheader">De beste service</span>
+              </div>
+              <div class="ratesCard__description">
+                <p class="text">
+                  Een BV starten op grotere schaal of een bestaande zaak omzetten naar een BV is op
+                  BV-Online zo gedaan. Je krijgt volledige beschikking tot onze notarieele expertise
+                  van meer dan 20 jaar.
+                </p>
+              </div>
+              <div class="ratesCard__figureList">
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-building"></i>
+                  <span class="label">Bestaande zaken</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-comment-medical"></i>
+                  <span class="label">Het beste advies</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-paperclip"></i>
+                  <span class="label">Flexibel per zaak</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-binoculars"></i>
+                  <span class="label">Zorgvuldig geregeld</span>
+                </div>
+              </div>
+              <div class="ratesCard__cta">
+                <span class="text">Al vanaf &euro;123&comma;&ndash;</span>
+              </div>
+              <a href="#" class="ratesCard__link">Ontdek nu</a>
+            </div>
+          </div>
+          <div class="ratesCard">
+            <div class="ratesCardContainer">
+              <span class="badge">Flexible service</span>
+              <div class="ratesCard__backgroundImg">
+                <img loading="lazy" src="../img/manPointingAtTablet.jpeg" alt="" />
+              </div>
+              <div class="ratesCard__header">
+                <h3 class="text">Service op maat</h3>
+                <span class="subheader">Wij staan voor je klaar</span>
+              </div>
+              <div class="ratesCard__description">
+                <p class="text">
+                  Niet volledig zeker welk pakket het best bij jou zaak past? Wij werken met
+                  clienten op iedere schaal en bieden persoonlijke aandacht in onze assistentie.
+                  Neem snel contact op over de mogelijkheden.
+                </p>
+              </div>
+              <div class="ratesCard__figureList">
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-building"></i>
+                  <span class="label">Nieuw of bestaand</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-question"></i>
+                  <span class="label">Advies op maat</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-lock"></i>
+                  <span class="label">Veilig en confidentieel</span>
+                </div>
+                <div class="ratesCard__figure">
+                  <i class="icon fas fa-search"></i>
+                  <span class="label">Flexibele aandacht</span>
+                </div>
+              </div>
+              <div class="ratesCard__cta">
+                <span class="text"><a href="html/contact.html">Neem contact op</a></span>
+              </div>
+              <a href="html/contact.html" class="ratesCard__link">Ontdek nu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <h2 id="testimonials" class="pageHeader__h2">
+        Wat onze <br />
+        klanten zeggen <br />
+        over BV-Online
+      </h2>
+
+      <div class="testimonial">
+        <div class="testimonialContainer">
+          <div class="testimonial__userQuote">
+            <!-- PROFILE PICTURE -->
+            <div class="testimonial__userProfile">
+              <img
+                loading="lazy"
+                src="../img/thumbnails/profileImageMan.jpeg"
+                alt="Profielfoto van een man"
+                class="profileImg"
+              />
+            </div>
+            <!-- QUOTE -->
+            <div class="testimonial__blockquote">
+              <blockquote>
+                BV-Online biedt top service voor een zeer voordelige prijs!
+              </blockquote>
+            </div>
+            <div class="testimonial__source">
+              <h5>Jaap Alleman, <i>Entrepreneur</i></h5>
+            </div>
+          </div>
+          <!-- SHORT PARAGRAPH -->
+          <div class="testimonial__text">
+            <p>
+              Als entrepreneur ben ik altijd op zoek naar manieren om mijn zaken zo gestroomlijnd
+              mogelijk te doen. Voor het opzetten van een BV, raadt ik iedereen BV-Online aan. Ze
+              bieden top service voor een zeer voordelige prijs!
+            </p>
+          </div>
+        </div>
+        <div class="testimonial__shape testimonial__shape1"></div>
+      </div>
+
+      <div class="testimonial" style="margin-bottom: 4rem;">
+        <div class="testimonialContainer">
+          <div class="testimonial__userQuote">
+            <!-- PROFILE PICTURE -->
+            <div class="testimonial__userProfile">
+              <img
+                loading="lazy"
+                src="../img/thumbnails/profileImageWoman.jpeg"
+                alt="profielfoto van een vrouw"
+                class="profileImg"
+              />
+            </div>
+            <!-- QUOTE -->
+            <div class="testimonial__blockquote">
+              <blockquote>
+                Ik was verbaasd hoe makkelijk het kon met de hulp van
+                <div>BV-Online</div>
+              </blockquote>
+            </div>
+            <div class="testimonial__source">
+              <h5>Anne Hasselt, <i>Bedrijfshoudster</i></h5>
+            </div>
+          </div>
+          <!-- SHORT PARAGRAPH -->
+          <div class="testimonial__text">
+            <p>
+              Na lange voorbereiding besloot ik mijn eerste zaak te starten als een BV. Ik was
+              achteraf verbaasd hoe makkelijk dit kon met de hulp van BV-Online. De service was zeer
+              snel en makkelijk te doen en BV-Online was behulpzaam en vriendelijk!
+            </p>
+          </div>
+        </div>
+        <div class="testimonial__shape testimonial__shape2"></div>
+      </div>
+
+      <div class="highlightedText">
+        <div class="highlightedTextContainer">
+          <div class="highlightedText__blockquoteArea">
+            <div class="highlightedText__figure">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <blockquote class="text">
+              Onze praktijk biedt service aan iedere soort klant, los van de schaal of complexiteit
+              van uw zaak.
+            </blockquote>
+          </div>
+          <div class="highlightedText__cta">
+            <div class="highlightedText__message">
+              <span class="text">Nu is de beste tijd een bv te starten</span>
+            </div>
+            <a
+              href="registratie\stap_introductie.html"
+              class="highlightedText__button button button--large"
+            >
+              <span class="text">Registreer nu</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bannerSignup">
+        <div
+          class="bannerSignupContainer"
+          style="background-image: url(img/womanBitingPencilAtDesk.jpeg);"
+        >
+          <!-- Left side copy -->
+          <div class="bannerSignup__leftSide">
+            <div class="bannerSignup__largeHeader" id="#bannerSignupHeaderID">
+              <h2>
+                <i class="icon fas fa-paperclip"></i> Download onze startergids en ga aan de slag
+              </h2>
+            </div>
+            <p class="bannerSignup__paragraph" id="#bannerSignupParagraphID">
+              Gebruik deze handige startergids om alles te weten te komen over digitaal stichten van
+              een bv en kom meer te weten over ons process.
+            </p>
+          </div>
+          <!-- Right side form -->
+          <div class="bannerSignup__form">
+            <!-- -Header -->
+            <div class="bannerSignup__smallHeader" id="#bannerSignupHeaderID">
+              <h3></h3>
+            </div>
+            <!-- -Button -->
+            <a href="#" class="bannerSignup__button button button--large" id="#bannerSignupButtonID"
+              >Download de startergids</a
+            >
+            <div class="bannerSignup__buttonDescription" id="#bannerSignupButtonDescriptionID">
+              <h5>formaat: pdf / bestandgrootte: 3.2MB###</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="conclusie" class="pageHeader__h2">
+        Start de registratie van uw BV vandaag
+      </h2>
+
+      <div class="contentSection" id="index-p4">
+        <div class="contentSectionContainer">
+          <div class="contentSection__copy">
+            <p>
+              Een BV starten heeft nu alle wind met zich mee. Als je je nieuwe zaak regelt met
+              BV-Online ben je verzekerd van onze volledige aandacht en expertise. Onze registratie
+              is zo simpel mogelijk, maar wij zijn altijd bereid om assistentie te bieden op
+              persoonlijk en zakelijk niveau.
+            </p>
+            <p>
+              Neem vandaag nog de volgende stap en start een registratie. Of lees meer over onze
+              methodes en hoe je je het beste voorbereid.
+            </p>
+            <div class="contentSection__ctaRow">
+              <a
+                href="../registratie/stap_introductie.html"
+                class="contentSection__button button button--large"
+                >Begin met een registratie
+              </a>
+              <a href="../html/introductie-bv-online.html" class="link"
+                >ontdek meer over bv-online</a
+              >
+            </div>
+          </div>
+          <div class="contentSection__figure">
+            <img loading="lazy" src="../img/manAndWomanLaughingAtDesk.jpeg" alt="picture" />
+          </div>
+        </div>
+      </div>
+
+      <div class="contactForm">
+        <div class="contactForm__shape1"></div>
+        <div class="contactFormContainer">
+          <div class="contactForm__header">
+            <h2 class="text">Vragen of opmerkingen?</h2>
+          </div>
+          <div class="contactForm__subheader">
+            <h4 class="text">Wij reageren zo snel mogelijk</h4>
+          </div>
+          <form action="#ACTION_NODIG" class="contactForm__form">
+            <!-- NAAM -->
+            <label class="contactForm__label" for="contactFormName">
+              <span class="label__text">
+                Naam&ast;
+              </span>
+            </label>
+            <input
+              class="contactForm__input"
+              type="text"
+              name="name"
+              id="contactFormName"
+              required
+            />
+            <!-- EMAIL -->
+            <label class="contactForm__label" for="contactFormEmail">
+              <span class="label__text">
+                Email&ast;
+              </span>
+            </label>
+            <input
+              class="contactForm__input"
+              type="email"
+              name="email"
+              id="contactFormEmail"
+              required
+            />
+            <!-- TELEFOON -->
+            <label class="contactForm__label" for="contactFormTel">
+              <span class="label__text">
+                Tel <span class="textAdd">&lpar;voor telefonisch contact&rpar;</span>
+              </span>
+            </label>
+            <input class="contactForm__input" type="tel" name="tel" id="contactFormTel" />
+            <!-- TEXT AREA -->
+            <label class="contactForm__label" for="contactFormTextarea">
+              <span class="label__icon">
+                <i class="fas fa-question-circle"></i>
+              </span>
+              <span class="label__text">
+                Vraag/opmerking&ast;
+              </span>
+            </label>
+            <textarea
+              class="contactForm__textarea"
+              name="textarea"
+              id="contactFormTextarea"
+              cols="64"
+              rows="6"
+            ></textarea>
+            <div class="contactForm__message">
+              <span class="text">&ast;vereist</span>
+            </div>
+            <button class="contactForm__button button button--large">
+              Bericht versturen
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-  </footer>
+    <!-- END PAGE CONTAINER -->
 
-  <!-- END________ -->
-  <script type="module" src="/main.js"></script>
-</body>
+    <!-- Top Layer -->
+    <div class="footer__layerContact">
+      <div class="footer__socials">
+        <a href="#" class="socialLinkLogo">
+          <i class="footer__socials--logo fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="socialLinkLogo">
+          <i class="footer__socials--logo fab fa-facebook-square"></i>
+        </a>
+        <a href="#" class="socialLinkLogo">
+          <i class="footer__socials--logo fab fa-facebook-messenger"></i>
+        </a>
+      </div>
+      <div class="footer__contactUs">
+        <h4>
+          <i class="icon icon--small fa fa-phone"></i>
+          (0184) 612 933 <em>Neem contact met ons op tussen 9:00 en 17:00</em>
+        </h4>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footerContainer">
+        <!-- Main Footer -->
+        <div class="footer__main">
+          <!-- --navigation -->
+          <div class="footer__navigation">
+            <!-- --brand Logo -->
+            <div class="footer__brandLogo">
+              <img src="../img/logo.svg" alt="Logo voor BV-Online" />
+              <div class="footer__logoSubline">
+                onderdeel van Notarispraktijk Interwaert
+              </div>
+            </div>
+            <div class="footer__list">
+              <div class="footer__listHeader" id="#footerListHeaderID">
+                <h4>BV-Online</h4>
+              </div>
+              <a href="../index.html" class="footer__link" id="#footerLinkID">Home</a>
+              <a href="../registratie/stap_introductie.html" class="footer__link" id="#footerLinkID"
+                >Start nieuwe registratie</a
+              >
+              <a href="../html/introductie-bv-online.html" class="footer__link" id="#footerLinkID"
+                >Ontdek Bv-online</a
+              >
+              <a href="../html/veelgestelde-vragen.html" class="footer__link" id="#footerLinkID"
+                >Veelgestelde vragen</a
+              >
+            </div>
+            <div class="footer__list">
+              <div class="footer__listHeader" id="#footerListHeaderID">
+                <h4>Wie zijn wij</h4>
+              </div>
+              <a href="../html/onze-praktijk.html" class="footer__link" id="#footerLinkID"
+                >Onze praktijk</a
+              >
+              <a href="../html/contact.html" class="footer__link" id="#footerLinkID">Contact</a>
+              <a
+                href="https://www.interwaert.nl/"
+                target="_blank"
+                class="footer__link"
+                id="#footerLinkID"
+                >Interwaert <i class="fas fa-external-link-square-alt"></i
+              ></a>
+            </div>
+            <div class="footer__list">
+              <div class="footer__listHeader" id="#footerListHeaderID">
+                <h4>Gebruikersovereenkomst</h4>
+              </div>
+              <a href="../html/algemene-voorwaarden.html" class="footer__link" id="#footerLinkID"
+                >Algemene voorwaarden</a
+              >
+              <a href="../html/privacy-verklaring.html" class="footer__link" id="#footerLinkID"
+                >Privacy verklaring</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- END________ -->
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
+l>

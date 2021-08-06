@@ -1,16 +1,22 @@
 .homeTop {
   padding: $verticalSpacing--large $pageWidePadding;
   @include responsivePaddingSide;
-  
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
 
-  height: 40vh;
-  max-height: 48rem;
-  
+  height: 50vh;
+  // max-height: 48rem;
+
+  @include for-small-desktop-down {
+    height: 120vh;
+    max-height: 60rem;
+  }
+
+
   display: flex;
   align-items: flex-end;
 
@@ -27,29 +33,29 @@
     position: absolute;
     inset: 0;
   }
-  
+
   &Container {
     margin: auto 0;
     width: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     gap: $verticalSpacing--medium;
     flex-wrap: wrap;
   }
 
   &__pageHeader {
-    
+
     // grid-area: "left";
-    flex-grow: 1;
+
   }
 
   &__title {
 
 
     & h1.text {
-      text-shadow: 2px 2px 8px $shadow-50;
+      text-shadow: 2px 2px 10px $shadow-90;
       margin-bottom: $verticalSpacing--small;
       padding-bottom: $verticalSpacing--small;
       color: $color-white;
@@ -69,7 +75,7 @@
     max-width: 80ch;
 
     & subtitle.text {
-      text-shadow: 2px 2px 8px $shadow-50;
+      text-shadow: 2px 2px 10px $shadow-90;
       font-weight: 400;
       color: $color-white--90;
       line-height: 1.4;
@@ -80,16 +86,19 @@
 
   &__modal {
     z-index: 1000;
+    transform: translateY(10%);
     margin: 0 auto;
     margin-bottom: $verticalSpacing--large;
-    padding: $verticalSpacing--small $verticalSpacing--medium;
+    padding: $verticalSpacing--medium $verticalSpacing--small;
     // min-width: 38rem;
     max-width: 44rem;
     height: fit-content;
 
-    background-color: $color-white--90;
-    box-shadow: -1px 6px 12px 3.5px $shadow-30;
+    background: linear-gradient(45deg, $color-white--70 0%, $color-white--70 62%, $color-primary--30);
+    box-shadow: -1px 6px 12px 3.5px $shadow-40;
     border-radius: $verticalSpacing--small;
+    border-bottom-left-radius: $borderRadius;
+
 
     @include for-tablet-landscape-down {
       border-radius: $borderRadius;
@@ -106,16 +115,20 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: $verticalSpacing--small;
+    gap: $verticalSpacing--smaller;
+    $border: $verticalSpacing--smaller $color-primary-dark solid;
+    border-bottom: $border;
+    border-right: $border;
 
     &Header {
-      transform: translateY(0.8rem);
+      // transform: translateY(0.8rem);
       margin-right: auto;
 
       & h3.text {
-        font-size: $h4-fontSize;
+        // font-size: $h4-fontSize;
         color: $color-primary-dark;
         margin-bottom: $verticalSpacing--smaller;
+        text-shadow: 2px 2px 10px $color-white;
       }
     }
 
@@ -134,32 +147,31 @@
   &__figure {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.4rem;
+    padding: 0.8rem;
+    background: linear-gradient(45deg, $color-white--20, $color-white--40);
+    border-radius: $borderRadius;
+    border: 2px solid $color-primary--60;
+    clip-path: polygon(4% 4%, 100% 0%, 96% 96%, 0% 100%);
 
     & svg.icon,
     i.icon {
       font-size: 2.4rem;
       color: $color-primary;
-      transform: translateX($verticalSpacing--small);
     }
 
     & span.label {
       font-size: $h5-fontSize;
       color: $color-primary-dark;
-
-      & .check {
-        margin-left: 0.2rem;
-        font-size: inherit;
-        color: $color-button-secondary;
-      }
     }
   }
 
   &__cta {
     background-color: $color-button-primary;
     color: $color-white;
-    width: 88%;
+    width: 97%;
+    height: $navbarHeight;
 
     &--message {
       text-transform: uppercase;
