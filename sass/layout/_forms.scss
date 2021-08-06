@@ -2,11 +2,14 @@
 
 .contactForm {
 
-  margin-bottom: $sectionSpacerVertical;
-  padding: $verticalSpacing--larger $pageTextPadding;
+  // margin-bottom: $sectionSpacerVertical;
+  padding: $verticalSpacing--large $pageTextPadding;
+  padding-bottom: $verticalSpacing--larger;
   @include responsivePaddingSide;
 
-  background-color: $color-white;
+  background-color: $color-primary;
+
+  color: $color-white;
 
   display: flex;
   justify-content: center;
@@ -41,7 +44,9 @@
   &__subheader {
     margin-bottom: $verticalSpacing--small;
 
-    &h4.text {}
+    &h4.text {
+      color: $color-white
+    }
   }
 
   &__form {
@@ -53,23 +58,24 @@
 
   &__label {
     margin-bottom: $verticalSpacing--smaller;
-    font-size: $h4-fontSize;
+    font-size: $h5-fontSize;
 
-    color: $color-primary;
+    // color: $color-white--70;
 
 
     span.label__icon {
       opacity: 0.6;
       margin-right: 4px;
 
-      svg, i {
+      svg,
+      i {
         font-size: $h4-fontSize;
         transform: translatex(3px);
       }
     }
 
     span.label__text {
-      color: $color-black;
+      color: $color-white--70;
 
       & span.textAdd {
         opacity: 0.6;
@@ -95,7 +101,7 @@
   }
 
   &__input {
-    font-size: $p-fontSize;
+    font-size: $emphasis-fontSize;
     margin-bottom: $verticalSpacing--small;
     padding-left: 0.8rem;
     max-width: 36rem;
@@ -103,18 +109,21 @@
 
 
     @include fieldStyling;
+    color: $color-white;
   }
 
   &__textarea {
+    font-size: $emphasis-fontSize;
     padding: 0.8rem;
     columns: 104;
 
     @include fieldStyling;
+    color: $color-white;
 
     @include for-tablet-landscape-down {
       width: 100%;
     }
-    
+
   }
 
   &__message {
