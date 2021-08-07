@@ -12,13 +12,11 @@ $blockquote-fontSize: 2.4rem;
 
 p {
   margin-bottom: $verticalSpacing--small;
-
   &:last-of-type {
     margin-bottom: $verticalSpacing--large;
   }
 
   font-size: $p-fontSize;
-
   @include for-phone-only {
     font-size: 1.2rem;
   }
@@ -35,7 +33,6 @@ h1 {
   font-weight: 500;
   letter-spacing: -0.1rem;
   line-height: 1.2;
-
   @include for-phone-only {
     font-size: $h1-fontSize*0.7;
   }
@@ -54,7 +51,6 @@ h2 {
   letter-spacing: -1px;
   line-height: 1.2;
   word-wrap: normal;
-
   @include for-phone-only {
     font-size: $h2-fontSize*0.7;
   }
@@ -67,7 +63,6 @@ h3 {
   color: $color-primary-dark--90;
   font-weight: 600;
   word-wrap: normal;
-
   @include for-phone-only {
     font-size: $h3-fontSize*0.9;
   }
@@ -94,13 +89,11 @@ blockquote {
   padding: 0 1rem;
 }
 
-a {
+a { 
   color: inherit;
-
   &:hover {
     color: $color-primary;
   }
-
   &.link {
     font-size: $emphasis-fontSize;
     font-weight: 500;
@@ -108,7 +101,6 @@ a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-
     @include for-phone-only {
       margin: 2.4rem auto;
       padding: 1.2rem;
@@ -118,7 +110,7 @@ a {
 
       color: $color-white;
       text-align: center;
-
+      
       align-self: center;
       display: flex;
       justify-content: center;
@@ -127,8 +119,7 @@ a {
     display: flex;
     text-decoration: underline;
 
-    & svg,
-    i {
+    & svg, i {
       transform: translateY(3px);
       margin-right: 4px;
       color: $color-black--50;
@@ -139,7 +130,6 @@ a {
       transform: translateY(-1px);
       text-decoration: underline;
     }
-
     &:active {
       color: $color-primary-dark;
       transform: translateY(0);

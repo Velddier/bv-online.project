@@ -33,7 +33,10 @@
     z-index: 1000;
     position: sticky;
     top: $navbarHeight;
-    height: fit-content;
+
+    @include for-tablet-landscape-down {
+      top: $navbarHeight * 1.45;
+    }
 
     margin-bottom: $verticalSpacing--large;
 

@@ -119,9 +119,11 @@ $svgSize: 8vw;
   margin: 0 1.2vw;
 
   $borderSize: $verticalSpacing--smaller;
-  border-left: $borderSize solid $color-primary;
-  border-radius: $borderRadius;
-  box-shadow: 2px 2px 12px $shadow-20;
+  @include for-tablet-landscape-up {
+    border-left: $borderSize solid $color-primary;
+    border-radius: $borderRadius;
+    box-shadow: 2px 2px 12px $shadow-20;
+  }
 
   &Container {
     padding: $borderSize 0;

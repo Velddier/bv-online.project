@@ -52,17 +52,17 @@ $for-big-desktop: 1800px;
 
 @mixin responsivePaddingSide {
   @include for-phone-only() {
-    $paddingSize: 3.2rem;
+    $paddingSize: 1.2rem;
     padding-left: $paddingSize;
     padding-right: $paddingSize;
   }
   @include for-tablet-portrait-up() {
-    $paddingSize: 4vw;
+    $paddingSize: 2rem;
     padding-left: $paddingSize;
     padding-right: $paddingSize;
   }
   @include for-tablet-landscape-up() {
-    $paddingSize: 4vw;
+    $paddingSize: 4rem;
     padding-left: $paddingSize;
     padding-right: $paddingSize;
   }
@@ -82,19 +82,20 @@ $for-big-desktop: 1800px;
     padding-right: $paddingSize;
   }
 }
+
 @mixin responsiveMarginSide {
   @include for-phone-only() {
-    $marginSize: 4vw;
+    $marginSize: 1.2rem;
     margin-left: $marginSize;
     margin-right: $marginSize;
   }
   @include for-tablet-portrait-up() {
-    $marginSize: 4vw;
+    $marginSize: 2rem;
     margin-left: $marginSize;
     margin-right: $marginSize;
   }
   @include for-tablet-landscape-up() {
-    $marginSize: 4vw;
+    $marginSize: 4rem;
     margin-left: $marginSize;
     margin-right: $marginSize;
   }
