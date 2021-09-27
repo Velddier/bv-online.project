@@ -204,7 +204,7 @@ input:focus + .questionExplainer {
   padding: $spacerSmall 0;
   flex-direction: column;
   align-items: baseline;
-  gap: $spacerSmall * 2.4;
+  gap: $spacerSmall;
 
   $borderSpacing: $spacerSmall;
 
