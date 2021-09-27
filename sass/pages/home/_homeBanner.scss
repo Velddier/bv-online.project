@@ -8,7 +8,7 @@
 
   clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
 
-  height: 50vh;
+  // height: 50vh;
   // max-height: 48rem;
 
   @include for-small-desktop-down {
@@ -59,6 +59,7 @@
       margin-bottom: $verticalSpacing--small;
       padding-bottom: $verticalSpacing--small;
       color: $color-white;
+      font-weight: 800;
 
       &::after {
         content: '';

@@ -1,9 +1,25 @@
-$spacerSmall: 1.2vw;
+$spacerSmall: 1.6vw;
 
 .registration {
   margin: 0 $pageTextPadding * 1.4;
   @include responsiveMarginSide;
   margin-bottom: $sectionSpacerVertical;
+
+  &__nextStep {
+    margin: $verticalSpacing--medium min(12rem, 4vw);
+    margin-bottom: $verticalSpacing--larger;
+
+    & .button {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &__prevStep {
+    font-size: $h5-fontSize;
+    color: $color-black--80;
+    text-decoration: none;
+  }
 
   /* QUESTION SET */
   &__section {
@@ -14,7 +30,7 @@ $spacerSmall: 1.2vw;
 
     display: flex;
     flex-direction: column;
-    gap: $spacerSmall * 2.4;
+    gap: $spacerSmall;
 
     &:focus-within {
       border-color: $color-primary;
@@ -27,7 +43,6 @@ $spacerSmall: 1.2vw;
         border-color: $color-primary--40;
       }
     }
-
   }
 
   & h3.sectionHeader {
@@ -50,21 +65,22 @@ $spacerSmall: 1.2vw;
 }
 
 /* INPUT DIMENSIONS */
-$size: 0.4rem;
+$size: 0.28rem;
 $borderSize: 2px;
 $shadowSize: 0.4rem;
 /* ---------------- */
 
-.registration__input[type="text"],
-.registration__input[type="date"],
-.registration__input[type="email"],
-.registration__input[type="tel"] {
+.registration__input[type='text'],
+.registration__input[type='date'],
+.registration__input[type='email'],
+.registration__input[type='tel'] {
   align-self: flex-start;
-  margin-right: $spacerSmall*3;
+  margin-right: $spacerSmall * 4;
   padding: 0 $size;
+  margin-bottom: $spacerSmall * 2;
 
   min-width: 24rem;
-  width: $spacerSmall*24;
+  width: $spacerSmall * 24;
   max-width: 36rem;
   height: $size * 10;
 
@@ -86,15 +102,14 @@ $shadowSize: 0.4rem;
     outline: none;
     box-shadow: $shadowSize 0 1px $color-primary-dark;
 
-    font-size: $size * 3.6;
+    font-size: $size * 3.4;
     color: $color-black;
   }
-
 }
 
-input[type="checkbox"] input[type="radio"] {
+input[type='checkbox'] input[type='radio'] {
   align-self: flex-start;
-  margin-right: $spacerSmall*3;
+  margin-right: $spacerSmall * 3;
   padding: 0 $size;
 
   width: $size * 4;
@@ -104,16 +119,15 @@ input[type="checkbox"] input[type="radio"] {
   border: $borderSize solid $color-black--20;
 }
 
-input:focus+.questionExplainer {
+input:focus + .questionExplainer {
   opacity: 1;
   transform: translateX(0);
   height: fit-content;
 }
 
-
-input[type="date"] {
+input[type='date'] {
   min-width: 16rem;
-  width: $spacerSmall*10;
+  width: $spacerSmall * 10;
 }
 
 .registration__inputContainer {
@@ -124,12 +138,11 @@ input[type="date"] {
   }
 }
 
-input:focus+.questionExplainer {
-  
-  
-    height: fit-content;
-    margin-bottom: $verticalSpacing--medium;
-  
+input:focus + .questionExplainer {
+  display: flex;
+
+  height: fit-content;
+  margin-bottom: $verticalSpacing--medium;
 }
 
 .question {
@@ -149,7 +162,7 @@ input:focus+.questionExplainer {
     display: flex;
     align-items: center;
     gap: $spacerSmall * 0.5;
-    font-size: $h4-fontSize;
+    font-size: $size * 3.2;
     font-weight: 600;
   }
 
@@ -162,15 +175,15 @@ input:focus+.questionExplainer {
     //   display: none;
     // }
 
-    align-self: end;
-    justify-self: end;
-    font-size: $h4-fontSize;
-    display: flex;
+    align-self: flex-start;
+    font-size: $size * 3.2;
+    // display: flex;
+    display: none;
     align-items: center;
     gap: $spacerSmall * 0.5;
 
     & span.text {
-      color: $color-black--40;
+      color: $color-black--60;
       max-height: $spacerSmall * 2.4;
       max-width: 36ch;
     }
@@ -180,6 +193,9 @@ input:focus+.questionExplainer {
       align-self: flex-start;
       font-size: $emphasis-fontSize;
       color: $color-primary--50;
+    }
+    &::selection {
+      display: none;
     }
   }
 }
@@ -194,6 +210,7 @@ input:focus+.questionExplainer {
 
   padding-left: $borderSpacing;
   margin-left: -$borderSpacing;
+  margin-bottom: $verticalSpacing--medium;
 
   border-left: 2px $color-primary--20 solid;
 
@@ -207,7 +224,6 @@ input:focus+.questionExplainer {
     & input {
       width: $radioSize;
       height: $radioSize;
-
     }
 
     .questionLabel {

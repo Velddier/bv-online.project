@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="nl-nl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introductie &ndash;Bv registratie process</title>
+
+    <!-- EXTERNAL -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../main.js"></script>
+    <script src="https://kit.fontawesome.com/ccfa9bf437.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="navbarContainer">
+        <div class="navbar__mobileMenu">
+          <i id="navButtonExpand" class="fas fa-bars"></i>
+        </div>
+        <div class="navbar__companyLogo">
+          <a href="../index.html" class="navbar__homeLink">
+            <img class="figure" src="../img/logo.svg" alt="BV-ONLINE" />
+          </a>
+        </div>
+        <!-- NAVBAR MENU -->
+        <div class="navbar__navMenu" id="navMenu">
+          <a href="../index.html" class="navbar__link">
+            <span class="text">Home</span>
+          </a>
+          <a href="../_about.html" class="navbar__link">
+            <span class="text">Ontdek BV-Online</span>
+          </a>
+          <a href="../_faqs.html" class="navbar__link">
+            <span class="text">Veelgestelde vragen</span>
+          </a>
+          <a href="../_aboutus.html" class="navbar__link">
+            <span class="text">Onze praktijk</span>
+          </a>
+          <a href="../_contact.html" class="navbar__link">
+            <span class="text">Contact</span>
+          </a>
+        </div>
+        <!-- MOBILE MENU -->
+        <div class="navbar__navMenu--mobile" id="navMenu--mobile">
+          <a href="../index.html" class="navbar__link">
+            <span class="text">Home</span>
+          </a>
+          <a href="../_about.html" class="navbar__link">
+            <span class="text">Ontdek BV-Online</span>
+          </a>
+          <a href="../_faqs.html" class="navbar__link">
+            <span class="text">Veelgestelde vragen</span>
+          </a>
+          <a href="../_aboutus.html" class="navbar__link">
+            <span class="text">Onze praktijk</span>
+          </a>
+          <a href="../_contact.html" class="navbar__link">
+            <span class="text">Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="processHeader__progressBarContainer">
+      <div class="processHeader__progressBar">
+        <div class="processHeader__step processHeader__step--current">
+          <i class="stepIcon fas fa-briefcase"></i>
+          <a href="../#" class="stepText link">Bedrijfsgegevens</a>
+        </div>
+        <div class="processHeader__stepDivider processHeader__stepDivider--active"></div>
+        <div class="processHeader__step">
+          <i class="stepIcon fas fa-walking"></i>
+          <a href="../#" class="stepText link">Persoonsgegevens</a>
+        </div>
+        <div class="processHeader__stepDivider"></div>
+        <div class="processHeader__step">
+          <i class="stepIcon fas fa-flag"></i>
+          <a href="../#" class="stepText link">Betaling</a>
+        </div>
+        <div class="processHeader__stepDivider"></div>
+        <div class="processHeader__step">
+          <i class="stepIcon fas fa-flag-checkered"></i>
+          <a href="../#" class="stepText link">Verstuur opdracht</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="processHeader">
+      <div class="processHeaderContainer">
+        <div class="processHeader__titleFigureContainer">
+          <div class="processHeader__title">
+            <h1 class="text">Stap 1: Bedrijfsgegevens</h1>
+            <subtitle class="sub"
+              ></subtitle
+            >
+            <p class="text"></p>
+          </div>
+          <div class="processHeader__figure">
+            <!-- <img src="../svg/character 13.svg" alt="" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="appContainer" id="#app">
+      <div class="registration">
+        <form
+          id="persoonlijk-formulier"
+          autocomplete="on"
+          method="POST"
+          action="#"
+          class="registrationForm"
+        >
+          <div class="registration__section">
+            <h3 class="sectionHeader">Algemene informatie<i class="fas fa-briefcase"></i></h3>
+
+            <!-- Inputfield RADIO -->
+            <div class="question questionRadioCheckbox">
+              <div class="questionRadioCheckBox__setLabel">
+                <span class="text">Deze aanvraag is voor</span>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="RADIOID1a">
+                  <input
+                    class="registration__input"
+                    type="radio"
+                    name="RADIOSET"
+                    id="RADIOID1a"
+                    value="yes"
+                  />
+                  <span class="radioLabelText">Een nieuwe onderneming</span>
+                </label>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="RADIOID2b">
+                  <input
+                    class="registration__input"
+                    type="radio"
+                    name="RADIOSET"
+                    id="RADIOID2b"
+                    value="no"
+                  />
+                  <span class="radioLabelText">Omzetting van een bestaande onderneming</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Statutaire naam</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="Venootschap naam"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text"
+                    >Statutaire naam van de op te richten vennootschap (incl. letters B.V.) *
+                  </span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Doelomschrijving</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="max. 20 woorden"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text">Doelomschrijving / Kernomschrijving van de BV </span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Adres van vestiging</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="1234AA"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text">Postcode van fysieke locatie BV </span>
+                </div>
+              </div>
+            </label>
+
+            <h3 class="sectionHeader">Kapitaal en aandelen<i class="fas fa-briefcase"></i></h3>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Geplaatst kapitaal</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="bedrag geplaats kapitaal"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text">Hoeveelheid kapitaal dat zich huidig in het BV bevindt. </span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Inputfield checkbox -->
+            <div class="question questionRadioCheckbox">
+              <div class="questionRadioCheckBox__setLabel">
+                <span class="text">Soorten aandelen (meerdere keuzes mogelijk)</span>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="#CHECKID1">
+                  <input
+                    class="registration__input"
+                    type="checkbox"
+                    name="RADIOSET"
+                    id="#CHECKID1"
+                  />
+                  <span class="radioLabelText">Gewone aandelen</span>
+                </label>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="#CHECKID2">
+                  <input
+                    class="registration__input"
+                    type="checkbox"
+                    name="RADIOSET"
+                    id="#CHECKID2"
+                  />
+                  <span class="radioLabelText">Prioriteitsaandelen</span>
+                </label>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="#CHECKID3">
+                  <input
+                    class="registration__input"
+                    type="checkbox"
+                    name="RADIOSET"
+                    id="#CHECKID3"
+                  />
+                  <span class="radioLabelText">Preferente aandelen</span>
+                </label>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="#CHECKID4">
+                  <input
+                    class="registration__input"
+                    type="checkbox"
+                    name="RADIOSET"
+                    id="#CHECKID4"
+                  />
+                  <span class="radioLabelText">Letter aandelen</span>
+                </label>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="#CHECKID5">
+                  <input
+                    class="registration__input"
+                    type="checkbox"
+                    name="RADIOSET"
+                    id="#CHECKID5"
+                  />
+                  <span class="radioLabelText">Winstrechtloze aandelen</span>
+                </label>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="#CHECKID6">
+                  <input
+                    class="registration__input"
+                    type="checkbox"
+                    name="RADIOSET"
+                    id="#CHECKID6"
+                  />
+                  <span class="radioLabelText">Stemrechtloze aandelen</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Nominale waarde van enkelvoudig aandeel</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="bijv. &euro;12,&mdash;"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text"
+                    >Wat is de nominale waarde van een aandeel van het BV in euro's?
+                  </span>
+                </div>
+              </div>
+            </label>
+
+            <h3 class="sectionHeader">
+              BV raad van commissarissen<i class="fas fa-briefcase"></i>
+            </h3>
+
+            <!-- Inputfield RADIO -->
+            <div class="question questionRadioCheckbox">
+              <div class="questionRadioCheckBox__setLabel">
+                <span class="text">Heeft het BV een raad van commissarissen</span>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="RADIOID1">
+                  <input
+                    class="registration__input"
+                    type="radio"
+                    name="RADIOSET"
+                    id="RADIOID1"
+                    value="yes"
+                  />
+                  <span class="radioLabelText">ja</span>
+                </label>
+              </div>
+              <div class="questionRadioCheckbox__selection">
+                <label class="questionLabel" for="RADIOID2">
+                  <input
+                    class="registration__input"
+                    type="radio"
+                    name="RADIOSET"
+                    id="RADIOID2"
+                    value="no"
+                  />
+                  <span class="radioLabelText">nee</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Personalia van commissarissen</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="Volledige naam"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text"
+                    >Statutaire naam van de op te richten vennootschap (incl. letters B.V.) *
+                    <button>voeg persoon toe</button>
+                  </span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Verhouding geplaatste aandelen</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="Venootschap naam"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text"
+                    >Bij wie worden de aandelen geplaatst (aandeelhouder(s)) en in welke verhouding?
+                  </span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="vennootschap-naam">
+              <div class="questionLabel">
+                <span class="labelText">Voltooiing stortingsplicht</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="text"
+                  id="vennootschap-naam"
+                  placeholder="Manier van storting"
+                />
+                <div class="questionExplainer">
+                  <i class="fas fa-question"></i>
+                  <span class="text"
+                    >Hoe wordt aan de stortingsplicht voldaan (contant of via inbreng, ingeval van
+                    inbreng van een onderneming)?
+                  </span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Inputfield -->
+            <label class="question" id="input-label" for="persoon-email">
+              <div class="questionLabel">
+                <span class="labelText">Email</span>
+              </div>
+              <div class="registration__inputContainer">
+                <input
+                  class="registration__input"
+                  type="email"
+                  id="persoon-email"
+                  placeholder="naam@email.nl"
+                />
+              </div>
+            </label>
+          </div>
+        </form>
+        <div class="registration__nextStep">
+          <a href="./stap_2.html" class="button">Volgende stap</a>
+        </div>
+      </div>
+
+      <div class="contactForm">
+        <div class="contactForm__shape1"></div>
+        <div class="contactFormContainer">
+          <div class="contactForm__header">
+            <h2 class="text">Vragen of opmerkingen?</h2>
+          </div>
+          <div class="contactForm__subheader">
+            <h4 class="text">Wij reageren zo snel mogelijk</h4>
+          </div>
+          <form action="#ACTION_NODIG" class="contactForm__form">
+            <!-- NAAM -->
+            <label class="contactForm__label" for="contactFormName">
+              <span class="label__text">
+                Naam&ast;
+              </span>
+            </label>
+            <input
+              class="contactForm__input"
+              type="text"
+              name="name"
+              id="contactFormName"
+              required
+            />
+            <!-- EMAIL -->
+            <label class="contactForm__label" for="contactFormEmail">
+              <span class="label__text">
+                Email&ast;
+              </span>
+            </label>
+            <input
+              class="contactForm__input"
+              type="email"
+              name="email"
+              id="contactFormEmail"
+              required
+            />
+            <!-- TELEFOON -->
+            <label class="contactForm__label" for="contactFormTel">
+              <span class="label__text">
+                Tel <span class="textAdd">&lpar;voor telefonisch contact&rpar;</span>
+              </span>
+            </label>
+            <input class="contactForm__input" type="tel" name="tel" id="contactFormTel" />
+            <!-- TEXT AREA -->
+            <label class="contactForm__label" for="contactFormTextarea">
+              <span class="label__icon">
+                <i class="fas fa-question-circle"></i>
+              </span>
+              <span class="label__text">
+                Vraag/opmerking&ast;
+              </span>
+            </label>
+            <textarea
+              class="contactForm__textarea"
+              name="textarea"
+              id="contactFormTextarea"
+              cols="64"
+              rows="6"
+            ></textarea>
+            <div class="contactForm__message">
+              <span class="text">&ast;vereist</span>
+            </div>
+            <button class="contactForm__button button button--large">
+              Bericht versturen
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END CONTENT -->
+
+    <!-- Top Layer -->
+    <div class="footer__layerContact">
+      <div class="footer__socials">
+        <a href="../#" class="socialLinkLogo">
+          <i class="footer__socials--logo fab fa-linkedin"></i>
+        </a>
+        <a href="../#" class="socialLinkLogo">
+          <i class="footer__socials--logo fab fa-facebook-square"></i>
+        </a>
+        <a href="../#" class="socialLinkLogo">
+          <i class="footer__socials--logo fab fa-facebook-messenger"></i>
+        </a>
+      </div>
+      <div class="footer__contactUs">
+        <h4>
+          <i class="icon icon--small fa fa-phone"></i>
+          0184-123-1234 <em>Neem contact met ons op tussen 9:00 en 17:00</em>
+        </h4>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footerContainer">
+        <!-- Main Footer -->
+        <div class="footer__main">
+          <!-- --navigation -->
+          <div class="footer__navigation">
+            <!-- --brand Logo -->
+            <div class="footer__brandLogo">
+              <img src="../img/logo.svg" alt="Logo voor BV-Online" />
+              <div class="footer__logoSubline">
+                onderdeel van Notarispraktijk Interwaert
+              </div>
+            </div>
+            <div class="footer__list">
+              <div class="footer__listHeader" id="#footerListHeaderID">
+                <h4>BV-Online</h4>
+              </div>
+              <a href="../index.html" class="footer__link" id="#footerLinkID">Home</a>
+              <a href="../_about.html" class="footer__link" id="#footerLinkID">Ontdek Bv-online</a>
+              <a href="../_faqs.html" class="footer__link" id="#footerLinkID"
+                >Veelgestelde vragen</a
+              >
+            </div>
+            <div class="footer__list">
+              <div class="footer__listHeader" id="#footerListHeaderID">
+                <h4>Wie zijn wij</h4>
+              </div>
+              <a href="../_aboutus.html" class="footer__link" id="#footerLinkID">Onze praktijk</a>
+              <a href="../_contact.html" class="footer__link" id="#footerLinkID">Contact</a>
+              <a
+                href="../https://www.interwaert.nl/"
+                target="_blank"
+                class="footer__link"
+                id="#footerLinkID"
+                >Interwaert <i class="fas fa-external-link-square-alt"></i
+              ></a>
+            </div>
+            <div class="footer__list">
+              <div class="footer__listHeader" id="#footerListHeaderID">
+                <h4>Gebruikersovereenkomst</h4>
+              </div>
+              <a
+                href="../html_doc/_algemenevoorwaarden.html"
+                class="footer__link"
+                id="#footerLinkID"
+                >Algemene voorwaarden</a
+              >
+              <a href="../html_doc/_privacyverklaring.html" class="footer__link" id="#footerLinkID"
+                >Privacy verklaring</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- END________ -->
+    <script type="module" src="..//main.js"></script>
+  </body>
+</html>
