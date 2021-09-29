@@ -1,7 +1,7 @@
 @mixin sectionStyleCommon {
   margin-bottom: $sectionSpacerVertical;
   background-color: $color-white;
-  overflow: hidden;
+  // overflow: hidden;
 
   &Container {
     display: grid;
@@ -22,6 +22,7 @@
 
     & h3 {
       max-width: 28ch;
+      color: $color-primary;
     }
 
     & p:last-of-type {
@@ -31,12 +32,12 @@
     $listSize: 1.2rem;
 
     ul {
-      margin: $listSize*1.6 0;
-      padding: $listSize*0.33 0;
+      margin: $listSize * 1.6 0;
+      padding: $listSize * 0.33 0;
       padding-left: $listSize;
-      padding-bottom: $listSize*0.1;
+      padding-bottom: $listSize * 0.1;
 
-      border-left: $listSize*.05 solid $color-primary;
+      border-left: $listSize * 0.05 solid $color-primary;
 
       list-style: none;
     }
@@ -48,12 +49,12 @@
 
       &::before {
         content: '▪';
-        margin-right: $listSize*0.2;
+        margin-right: $listSize * 0.2;
         color: $color-primary-dark--90;
       }
 
       &:not(:last-of-type) {
-        margin-bottom: $listSize*0.62;
+        margin-bottom: $listSize * 0.62;
       }
     }
   }
@@ -74,7 +75,6 @@
       justify-content: flex-start;
     }
   }
-
 
   &__button {
     width: 40%;
@@ -110,8 +110,6 @@
 /* SVG SIZE */
 $svgSize: 8vw;
 
-
-
 .contentSectionCard {
   @include sectionStyleCommon;
 
@@ -139,20 +137,18 @@ $svgSize: 8vw;
   }
 
   &__figure {
-
     & img {
       margin: 0;
     }
 
     margin: -$borderSize 0;
-    margin-right: -$borderSize*20;
+    margin-right: -$borderSize * 20;
 
     @include for-tablet-portrait-down {
-      margin: -$borderSize*2;
+      margin: -$borderSize * 2;
     }
 
-
-    overflow: hidden;
+    // overflow: hidden;
 
     flex-grow: 1;
     display: flex;
@@ -163,16 +159,14 @@ $svgSize: 8vw;
   }
 }
 
-
 .contentSection {
   margin: 0 $pageTextPadding;
   @include responsiveMarginSide;
 
-  @include sectionStyleCommon;
+    @include sectionStyleCommon;
 
   &__figure {
-
-    overflow: hidden;
+    // overflow: hidden;
 
     display: flex;
     align-items: center;
@@ -183,7 +177,7 @@ $svgSize: 8vw;
     clip-path: polygon(4% 4%, 100% 0%, 96% 96%, 0% 100%);
 
     @include for-tablet-landscape-down {
-      margin-top: $verticalSpacing--small;
+      margin-top: $verticalSpacing--smaller;
       margin-bottom: $verticalSpacing--smaller;
       clip-path: none;
 
@@ -192,7 +186,5 @@ $svgSize: 8vw;
 
       gap: 0.8rem;
     }
-
-
   }
 }

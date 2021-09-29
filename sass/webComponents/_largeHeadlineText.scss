@@ -4,6 +4,9 @@
   padding-bottom: $verticalSpacing--larger*0.9;
   @include responsivePaddingSide;
 
+  background-color: $color-primary;
+  color: $color-white;
+
   $border: solid 1px $color-primary--40;
   border-top: $border;
   border-bottom: $border;
@@ -28,7 +31,7 @@
 
     & blockquote.text {
       max-width: 42ch;
-      color: $color-primary-dark;
+      color: inherit;
 
       &::before {
         content: open-quote;
@@ -44,7 +47,7 @@
 
     & svg, i {
       font-size: 6rem;
-      color: $color-primary-dark;
+      color: $color-white--40;
     }
   }
 

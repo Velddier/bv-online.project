@@ -6,6 +6,7 @@
   padding-bottom: $sectionSpacerVertical;
 
   background-color: $color-white;
+  border-bottom: $verticalSpacing--smaller dotted $color-primary--20;
 
   &Container {}
 
@@ -26,6 +27,7 @@
 
   &__header {
     margin: 0;
+    transform: translateY(-4rem);
     // max-width: 8rem;
     color: $color-primary-dark;
 
