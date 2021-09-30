@@ -5,11 +5,12 @@
 
   &Container {
     z-index: 100;
+    @include responsivePaddingSide;
 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     gap: $verticalSpacing--medium;
   }
   

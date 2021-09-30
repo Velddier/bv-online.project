@@ -65,21 +65,21 @@
 
     <div class="processHeader__progressBarContainer">
       <div class="processHeader__progressBar">
-        <div class="processHeader__step">
+        <div class="processHeader__step processHeader__step--current">
           <i class="stepIcon fas fa-briefcase"></i>
           <a href="../#" class="stepText link">Bedrijfsgegevens</a>
         </div>
-        <div class="processHeader__stepDivider processHeader__stepDivider"></div>
-        <div class="processHeader__step">
+        <div class="processHeader__stepDivider processHeader__stepDivider--completed"></div>
+        <div class="processHeader__step processHeader__step--current">
           <i class="stepIcon fas fa-walking"></i>
           <a href="../#" class="stepText link">Persoonsgegevens</a>
         </div>
-        <div class="processHeader__stepDivider"></div>
-        <div class="processHeader__step">
+        <div class="processHeader__stepDivider processHeader__stepDivider--completed"></div>
+        <div class="processHeader__step processHeader__step--current">
           <i class="stepIcon fas fa-flag"></i>
           <a href="../#" class="stepText link">Betaling</a>
         </div>
-        <div class="processHeader__stepDivider"></div>
+        <div class="processHeader__stepDivider processHeader__stepDivider--active"></div>
         <div class="processHeader__step">
           <i class="stepIcon fas fa-flag-checkered"></i>
           <a href="../#" class="stepText link">Opdracht voltooid</a>
@@ -87,103 +87,110 @@
       </div>
     </div>
 
-    <div class="processHeader">
+    <!-- <div class="processHeader">
       <div class="processHeaderContainer">
         <div class="processHeader__titleFigureContainer">
           <div class="processHeader__title">
-            <h1 class="text">Begin een registratie</h1>
-            <subtitle class="sub"
-              >Hier zijn een paar dingen om van tevoren rekening mee te houden.</subtitle
-            >
-            <p class="text">
-              Om de registratie zo vlekkeloos te doorlopen is het handig om alle nodige informatie
-              alvast bij de hand te hebben. We vragen je om gegevens over uw bedrijf: naam, adres en
-              doeleinden, maar ook de omvang van kapitaal, de aandelen en eventueel raad van
-              commissarissen. Neem ook alvast de tijd om een kopie van je identiteitsbewijs voor te
-              bereiden.
-            </p>
+            <div class="processHeader__figure">
+              <img src="../svg/menLaptop1.png" alt="" />
+            </div>
+            <h1 class="text">Uw bestelling</h1>
+            <subtitle class="sub"></subtitle>
+            <p class="text"></p>
           </div>
           <div class="processHeader__figure">
-            <img src="../svg/womanLaptop1.svg" alt="" />
-            <img src="../svg/manLaptop1.svg" alt="" />
           </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- MAIN CONTENT -->
+    <div class="appContainer" id="#app">
+      <div class="paymentForm">
+        <img src="../svg/cardPay.svg" class="paymentForm__img" alt="">
+        <h3 class="paymentForm__header">Betaalgegevens <i class="fas fa-credit-card"></i></h3>
+        <form class="paymentForm__form" action="">
+          <label for="" class="paymentForm__inputLabel">Naam</label>
+          <input type="text" placeholder="Naam van kaarthouder" class="paymentForm__input" />
+          <label for="" class="paymentForm__inputLabel">Nummer</label>
+          <input type="text" placeholder="Nummer op kaart" class="paymentForm__input" />
+          <div class="paymentForm__formRow">
+            <div>
+              <label for="" class="paymentForm__inputLabel">Verloopdatum</label>
+              <input type="text" placeholder="mm/jj" class="paymentForm__input paymentForm__input--small" />
+            </div>
+            <div>
+              <label for="" class="paymentForm__inputLabel">Beveiligingscode</label>
+              <input type="text" placeholder="cvc #" class="paymentForm__input" />
+            </div>
+          </div>
+        </form>
+        <div class="paymentForm__buttonComplete">
+          <a href="../404.html" class="button">Plaats bestelling</a>
         </div>
       </div>
     </div>
 
-    <div class="registration__nextStep">
-      <a href="./stap_1.html" class="button">Begin het process</a>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="appContainer" id="#app">
-      <div class="contactForm">
-        <div class="contactForm__shape1"></div>
-        <div class="contactFormContainer">
-          <div class="contactForm__header">
-            <h2 class="text">Vragen of opmerkingen?</h2>
-          </div>
-          <div class="contactForm__subheader">
-            <h4 class="text">Wij reageren zo snel mogelijk</h4>
-          </div>
-          <form action="#ACTION_NODIG" class="contactForm__form">
-            <!-- NAAM -->
-            <label class="contactForm__label" for="contactFormName">
-              <span class="label__text">
-                Naam&ast;
-              </span>
-            </label>
-            <input
-              class="contactForm__input"
-              type="text"
-              name="name"
-              id="contactFormName"
-              required
-            />
-            <!-- EMAIL -->
-            <label class="contactForm__label" for="contactFormEmail">
-              <span class="label__text">
-                Email&ast;
-              </span>
-            </label>
-            <input
-              class="contactForm__input"
-              type="email"
-              name="email"
-              id="contactFormEmail"
-              required
-            />
-            <!-- TELEFOON -->
-            <label class="contactForm__label" for="contactFormTel">
-              <span class="label__text">
-                Tel <span class="textAdd">&lpar;voor telefonisch contact&rpar;</span>
-              </span>
-            </label>
-            <input class="contactForm__input" type="tel" name="tel" id="contactFormTel" />
-            <!-- TEXT AREA -->
-            <label class="contactForm__label" for="contactFormTextarea">
-              <span class="label__icon">
-                <i class="fas fa-question-circle"></i>
-              </span>
-              <span class="label__text">
-                Vraag/opmerking&ast;
-              </span>
-            </label>
-            <textarea
-              class="contactForm__textarea"
-              name="textarea"
-              id="contactFormTextarea"
-              cols="64"
-              rows="6"
-            ></textarea>
-            <div class="contactForm__message">
-              <span class="text">&ast;vereist</span>
-            </div>
-            <button class="contactForm__button button button--large">
-              Bericht versturen
-            </button>
-          </form>
+    <div class="contactForm">
+      <div class="contactForm__shape1"></div>
+      <div class="contactFormContainer">
+        <div class="contactForm__header">
+          <h2 class="text">Vragen of opmerkingen?</h2>
         </div>
+        <div class="contactForm__subheader">
+          <h4 class="text">Wij reageren zo snel mogelijk</h4>
+        </div>
+        <form action="#ACTION_NODIG" class="contactForm__form">
+          <!-- NAAM -->
+          <label class="contactForm__label" for="contactFormName">
+            <span class="label__text">
+              Naam&ast;
+            </span>
+          </label>
+          <input class="contactForm__input" type="text" name="name" id="contactFormName" required />
+          <!-- EMAIL -->
+          <label class="contactForm__label" for="contactFormEmail">
+            <span class="label__text">
+              Email&ast;
+            </span>
+          </label>
+          <input
+            class="contactForm__input"
+            type="email"
+            name="email"
+            id="contactFormEmail"
+            required
+          />
+          <!-- TELEFOON -->
+          <label class="contactForm__label" for="contactFormTel">
+            <span class="label__text">
+              Tel <span class="textAdd">&lpar;voor telefonisch contact&rpar;</span>
+            </span>
+          </label>
+          <input class="contactForm__input" type="tel" name="tel" id="contactFormTel" />
+          <!-- TEXT AREA -->
+          <label class="contactForm__label" for="contactFormTextarea">
+            <span class="label__icon">
+              <i class="fas fa-question-circle"></i>
+            </span>
+            <span class="label__text">
+              Vraag/opmerking&ast;
+            </span>
+          </label>
+          <textarea
+            class="contactForm__textarea"
+            name="textarea"
+            id="contactFormTextarea"
+            cols="64"
+            rows="6"
+          ></textarea>
+          <div class="contactForm__message">
+            <span class="text">&ast;vereist</span>
+          </div>
+          <button class="contactForm__button button button--large">
+            Bericht versturen
+          </button>
+        </form>
       </div>
     </div>
     <!-- END CONTENT -->

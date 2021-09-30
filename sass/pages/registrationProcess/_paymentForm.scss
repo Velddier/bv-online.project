@@ -1,0 +1,97 @@
+.paymentForm {
+  margin: 0 auto;
+  margin-bottom: $verticalSpacing--larger;
+  padding: $verticalSpacing--medium;
+  max-width: fit-content;
+
+  background-color: $color-white;
+  border-top: $verticalSpacing--small solid $color-primary;
+  border-bottom: $verticalSpacing--small solid $color-primary;
+  border-radius: $borderRadius;
+  box-shadow: $verticalSpacing--small $verticalSpacing--small 3rem $shadow-30;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__header {
+    margin-bottom: $verticalSpacing--medium;
+    font-size: 1.4rem;
+    align-self: flex-start;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &Row {
+      display: flex;
+      gap: $verticalSpacing--small;
+    }
+  }
+
+  &__buttonComplete {
+    margin-top: $verticalSpacing--large;
+    width: 100%;
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+
+  &__img {
+    margin-top: -4rem;
+    margin-bottom: $verticalSpacing--small;
+    max-width: 62%;
+    // align-self: flex-start;
+  }
+}
+
+.paymentForm__inputLabel {
+  align-self: flex-start;
+}
+
+/* INPUT DIMENSIONS */
+$size: 0.28rem;
+$borderSize: 2px;
+$shadowSize: 0.4rem;
+$spacerSmall: 1rem;
+/* ---------------- */
+
+
+.paymentForm__input {
+  align-self: flex-start;
+  margin-bottom: $verticalSpacing--medium;
+  padding: 0 $size;
+
+  width: 100%;
+  max-width: 36rem;
+  height: $size * 10;
+
+  border-radius: $size;
+  border: $borderSize solid $color-black--20;
+
+  font-size: $size * 3.2;
+  font-family: inherit;
+  font-weight: 500;
+
+  &--small {
+    max-width: 12rem;
+  }
+
+  &::placeholder {
+    color: $color-black--20;
+  }
+
+  &:focus {
+    transform: translateX(-$shadowSize);
+
+    border: $borderSize solid $color-primary;
+    outline: none;
+    box-shadow: $shadowSize 0 1px $color-primary-dark;
+
+    font-size: $size * 3.4;
+    color: $color-black;
+  }
+}

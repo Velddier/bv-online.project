@@ -5,6 +5,9 @@ $spacerSmall: 1.6vw;
   @include responsiveMarginSide;
   margin-bottom: $sectionSpacerVertical;
 
+  border-top: $verticalSpacing--smaller solid $color-primary;
+  padding-top: $verticalSpacing--smaller;
+
   &__nextStep {
     margin: $verticalSpacing--medium min(12rem, 4vw);
     margin-bottom: $verticalSpacing--larger;

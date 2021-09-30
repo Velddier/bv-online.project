@@ -1,14 +1,14 @@
 // MAIN TEXT TYPOGRAPHY
 $h1-fontSize: 4rem;
-$h2-fontSize: 3.2rem;
-$h3-fontSize: 1.8rem;
+$h2-fontSize: 3.6rem;
+$h3-fontSize: 1.6rem;
 $h4-fontSize: 1.1rem;
 $h5-fontSize: 0.9rem;
 
 $p-fontSize: 1rem;
 $emphasis-fontSize: 1.2rem;
-$subtitle-fontSize: 1.6rem;
-$blockquote-fontSize: 2.4rem;
+$subtitle-fontSize: 1.4rem;
+$blockquote-fontSize: 2rem;
 
 p {
   margin-bottom: $verticalSpacing--small;
@@ -79,6 +79,7 @@ h4 {
 h5 {
   font-size: $h5-fontSize;
   letter-spacing: 0.6px;
+  opacity: .88;
 }
 
 // OTHER TYPOGRAPHY
@@ -87,6 +88,7 @@ blockquote {
   font-weight: 600;
   line-height: 1.2;
   padding: 0 1rem;
+  opacity: .88;
 }
 
 a { 
@@ -95,7 +97,7 @@ a {
     color: $color-primary;
   }
   &.link {
-    font-size: $emphasis-fontSize;
+    font-size: $p-fontSize;
     font-weight: 500;
     letter-spacing: -0.06rem;
     text-decoration: none;

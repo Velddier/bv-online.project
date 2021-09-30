@@ -6,7 +6,7 @@ $pWidth: 80ch;
 
 .mostAsked {
   @include responsiveMarginSide;
-  transform: translateX(-4rem);
+  
 
   margin-bottom: $sectionSpacerVertical;
 
@@ -19,9 +19,16 @@ $pWidth: 80ch;
     //   "a b"
     //   "a c";
 
+    margin: 0 2rem;
+
     display: flex;
     flex-wrap: wrap;
     gap: 1.2rem;
+
+    @include for-tablet-portrait-down {
+      margin: 0;
+      width: 100%;
+    }
   }
 
 
